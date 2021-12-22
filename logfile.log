@@ -1,0 +1,1127 @@
+[2021-12-11 21:38:04,688.688] INFO [9416] - Will watch for changes in these directories: ['C:\\Users\\nevil\\PycharmProjects\\fast1']
+[2021-12-11 21:38:04,688.688] INFO [9416] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2021-12-11 21:38:04,766.766] INFO [9416] - Started reloader process [12320] using watchgod
+[2021-12-11 21:38:05,140.140] WARNING [3128] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:38:08,339.339] INFO [3128] - Started server process [10232]
+[2021-12-11 21:38:08,339.339] INFO [3128] - Waiting for application startup.
+[2021-12-11 21:38:08,339.339] INFO [3128] - Application startup complete.
+[2021-12-11 21:38:30,296.296] INFO [3128] - 127.0.0.1:53190 - "GET /projects HTTP/1.1" 200
+[2021-12-11 21:38:30,313.313] INFO [3128] - 127.0.0.1:53190 - "GET /projects HTTP/1.1" 200
+[2021-12-11 21:38:45,447.447] INFO [8540] - logging from the root logger
+[2021-12-11 21:38:45,448.448] INFO [3128] - 127.0.0.1:53208 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:39:13,208.208] INFO [3128] - 127.0.0.1:53214 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:39:13,208.208] ERROR [3128] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 234, in app
+    response_data = await serialize_response(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 148, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 145, in jsonable_encoder
+    return jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 11; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+[2021-12-11 21:40:36,275.275] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:40:37,010.010] WARNING [10040] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:40:42,472.472] INFO [10040] - Started server process [12432]
+[2021-12-11 21:40:42,473.473] INFO [10040] - Waiting for application startup.
+[2021-12-11 21:40:42,473.473] INFO [10040] - Application startup complete.
+[2021-12-11 21:40:42,482.482] INFO [11224] - --------------------------------------------------
+[2021-12-11 21:40:42,483.483] INFO [11224] - {}
+[2021-12-11 21:40:42,483.483] INFO [11224] - --------------------------------------------------
+[2021-12-11 21:40:42,484.484] INFO [10040] - 127.0.0.1:53233 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:41:17,066.066] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:41:17,519.519] WARNING [3996] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:41:20,812.812] INFO [3996] - Started server process [9616]
+[2021-12-11 21:41:20,812.812] INFO [3996] - Waiting for application startup.
+[2021-12-11 21:41:20,812.812] INFO [3996] - Application startup complete.
+[2021-12-11 21:41:24,545.545] INFO [4528] - --------------------------------------------------
+[2021-12-11 21:41:24,545.545] INFO [4528] - experiment
+[2021-12-11 21:41:24,545.545] INFO [4528] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:41:24,545.545] INFO [4528] - model_dict
+[2021-12-11 21:41:24,546.546] INFO [4528] - {}
+[2021-12-11 21:41:24,546.546] INFO [4528] - --------------------------------------------------
+[2021-12-11 21:41:24,548.548] INFO [3996] - 127.0.0.1:53244 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:42:41,131.131] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:42:41,759.759] WARNING [10360] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:42:44,996.996] INFO [10360] - Started server process [11944]
+[2021-12-11 21:42:44,996.996] INFO [10360] - Waiting for application startup.
+[2021-12-11 21:42:44,996.996] INFO [10360] - Application startup complete.
+[2021-12-11 21:42:47,955.955] INFO [11740] - --------------------------------------------------
+[2021-12-11 21:42:47,955.955] INFO [11740] - model_dict
+[2021-12-11 21:42:47,955.955] INFO [11740] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:42:47,960.960] INFO [11740] - experiment
+[2021-12-11 21:42:47,960.960] INFO [11740] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}}
+[2021-12-11 21:42:47,961.961] INFO [11740] - model_dict
+[2021-12-11 21:42:47,961.961] INFO [11740] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:42:47,963.963] INFO [11740] - --------------------------------------------------
+[2021-12-11 21:42:47,963.963] INFO [11740] - logging from the root logger
+[2021-12-11 21:42:47,964.964] INFO [10360] - 127.0.0.1:53262 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:43:16,220.220] INFO [11740] - --------------------------------------------------
+[2021-12-11 21:43:16,221.221] INFO [11740] - experiment
+[2021-12-11 21:43:16,221.221] INFO [11740] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}}
+[2021-12-11 21:43:16,222.222] INFO [11740] - model_dict
+[2021-12-11 21:43:16,222.222] INFO [11740] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:43:16,224.224] INFO [11740] - --------------------------------------------------
+[2021-12-11 21:43:16,225.225] INFO [10360] - 127.0.0.1:53267 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:43:16,226.226] ERROR [10360] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 234, in app
+    response_data = await serialize_response(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 148, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 145, in jsonable_encoder
+    return jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 11; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+[2021-12-11 21:44:22,637.637] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:44:23,065.065] WARNING [10064] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:44:26,854.854] INFO [10064] - Started server process [3960]
+[2021-12-11 21:44:26,855.855] INFO [10064] - Waiting for application startup.
+[2021-12-11 21:44:26,855.855] INFO [10064] - Application startup complete.
+[2021-12-11 21:44:27,233.233] INFO [7500] - --------------------------------------------------
+[2021-12-11 21:44:27,233.233] INFO [7500] - experiment
+[2021-12-11 21:44:27,233.233] INFO [7500] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:44:27,233.233] INFO [7500] - model_dict
+[2021-12-11 21:44:27,233.233] INFO [7500] - {}
+[2021-12-11 21:44:27,233.233] INFO [7500] - --------------------------------------------------
+[2021-12-11 21:44:27,234.234] INFO [10064] - 127.0.0.1:53280 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:44:46,337.337] INFO [7500] - --------------------------------------------------
+[2021-12-11 21:44:46,337.337] INFO [7500] - experiment
+[2021-12-11 21:44:46,337.337] INFO [7500] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:44:46,337.337] INFO [7500] - model_dict
+[2021-12-11 21:44:46,337.337] INFO [7500] - {}
+[2021-12-11 21:44:46,337.337] INFO [7500] - --------------------------------------------------
+[2021-12-11 21:44:46,338.338] INFO [10064] - 127.0.0.1:53284 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:45:07,514.514] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:45:08,073.073] WARNING [2796] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:45:11,097.097] INFO [2796] - Started server process [1148]
+[2021-12-11 21:45:11,097.097] INFO [2796] - Waiting for application startup.
+[2021-12-11 21:45:11,097.097] INFO [2796] - Application startup complete.
+[2021-12-11 21:45:23,060.060] INFO [8368] - --------------------------------------------------
+[2021-12-11 21:45:23,060.060] INFO [8368] - experiment
+[2021-12-11 21:45:23,060.060] INFO [8368] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:45:23,060.060] INFO [8368] - model_dict
+[2021-12-11 21:45:23,060.060] INFO [8368] - {}
+[2021-12-11 21:45:23,060.060] INFO [8368] - --------------------------------------------------
+[2021-12-11 21:45:23,062.062] INFO [2796] - 127.0.0.1:53293 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:45:41,327.327] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:45:41,688.688] WARNING [856] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:45:45,084.084] INFO [856] - Started server process [3416]
+[2021-12-11 21:45:45,085.085] INFO [856] - Waiting for application startup.
+[2021-12-11 21:45:45,085.085] INFO [856] - Application startup complete.
+[2021-12-11 21:45:45,105.105] INFO [12176] - predict(experiment_id=
+[2021-12-11 21:45:45,105.105] INFO [12176] - --------------------------------------------------
+[2021-12-11 21:45:45,105.105] INFO [12176] - experiment
+[2021-12-11 21:45:45,105.105] INFO [12176] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:45:45,105.105] INFO [12176] - model_dict
+[2021-12-11 21:45:45,105.105] INFO [12176] - {}
+[2021-12-11 21:45:45,105.105] INFO [12176] - --------------------------------------------------
+[2021-12-11 21:45:45,106.106] INFO [856] - 127.0.0.1:53301 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:46:13,186.186] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:46:13,551.551] WARNING [11616] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:46:16,499.499] INFO [11616] - Started server process [4856]
+[2021-12-11 21:46:16,499.499] INFO [11616] - Waiting for application startup.
+[2021-12-11 21:46:16,515.515] INFO [11616] - Application startup complete.
+[2021-12-11 21:46:17,824.824] INFO [13044] - --------------------------------------------------
+[2021-12-11 21:46:17,824.824] INFO [13044] - experiment
+[2021-12-11 21:46:17,824.824] INFO [13044] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:46:17,825.825] INFO [13044] - model_dict
+[2021-12-11 21:46:17,825.825] INFO [13044] - {}
+[2021-12-11 21:46:17,825.825] INFO [13044] - --------------------------------------------------
+[2021-12-11 21:46:17,826.826] INFO [11616] - 127.0.0.1:53309 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:46:26,565.565] INFO [13044] - --------------------------------------------------
+[2021-12-11 21:46:26,566.566] INFO [13044] - experiment
+[2021-12-11 21:46:26,567.567] INFO [13044] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:46:26,567.567] INFO [13044] - model_dict
+[2021-12-11 21:46:26,567.567] INFO [13044] - {}
+[2021-12-11 21:46:26,567.567] INFO [13044] - --------------------------------------------------
+[2021-12-11 21:46:26,568.568] INFO [11616] - 127.0.0.1:53312 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:48:13,699.699] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:48:14,107.107] WARNING [5516] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:48:14,827.827] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:48:15,281.281] WARNING [8236] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:48:18,168.168] INFO [8236] - Started server process [12972]
+[2021-12-11 21:48:18,168.168] INFO [8236] - Waiting for application startup.
+[2021-12-11 21:48:18,168.168] INFO [8236] - Application startup complete.
+[2021-12-11 21:48:21,962.962] INFO [8236] - 127.0.0.1:53337 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:48:21,963.963] ERROR [8236] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 216, in predict
+    logger.info("predict(experiment_id=" + experiment_id + ")")
+TypeError: can only concatenate str (not "int") to str
+[2021-12-11 21:49:15,268.268] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:49:16,494.494] WARNING [3348] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:49:20,629.629] INFO [3348] - Started server process [7384]
+[2021-12-11 21:49:20,629.629] INFO [3348] - Waiting for application startup.
+[2021-12-11 21:49:20,630.630] INFO [3348] - Application startup complete.
+[2021-12-11 21:49:21,366.366] INFO [6212] - predict(experiment_id=1)
+[2021-12-11 21:49:21,366.366] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:21,366.366] INFO [6212] - experiment
+[2021-12-11 21:49:21,366.366] INFO [6212] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {}}
+[2021-12-11 21:49:21,366.366] INFO [6212] - model_dict
+[2021-12-11 21:49:21,366.366] INFO [6212] - {}
+[2021-12-11 21:49:21,366.366] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:21,367.367] INFO [3348] - 127.0.0.1:53372 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:49:44,612.612] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:44,612.612] INFO [6212] - model_dict
+[2021-12-11 21:49:44,612.612] INFO [6212] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:49:44,616.616] INFO [6212] - experiment
+[2021-12-11 21:49:44,617.617] INFO [6212] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}}
+[2021-12-11 21:49:44,617.617] INFO [6212] - model_dict
+[2021-12-11 21:49:44,618.618] INFO [6212] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:49:44,618.618] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:44,619.619] INFO [6212] - logging from the root logger
+[2021-12-11 21:49:44,619.619] INFO [3348] - 127.0.0.1:53378 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:49:48,614.614] INFO [6212] - predict(experiment_id=1)
+[2021-12-11 21:49:48,614.614] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:48,614.614] INFO [6212] - experiment
+[2021-12-11 21:49:48,615.615] INFO [6212] - {'id': 1, 'name': 'experiment-1', 'created_date': '2021-06-11 12:00', 'description': 'experiment 1 desc', 'fileUrl': 'iris.csv', 'algorithms': ['LogisticRegression', 'LinearDiscriminantAnalysis', 'KNeighborsClassifier', 'DecisionTreeClassifier', 'GaussianNB', 'SVC'], 'accuracy': {}, 'model_dict': {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}}
+[2021-12-11 21:49:48,617.617] INFO [6212] - model_dict
+[2021-12-11 21:49:48,617.617] INFO [6212] - {'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:49:48,619.619] INFO [6212] - --------------------------------------------------
+[2021-12-11 21:49:48,621.621] INFO [3348] - 127.0.0.1:53378 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:49:48,622.622] ERROR [3348] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 234, in app
+    response_data = await serialize_response(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 148, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 145, in jsonable_encoder
+    return jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 11; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+[2021-12-11 21:51:11,079.079] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:51:11,625.625] WARNING [5988] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:51:14,979.979] INFO [5988] - Started server process [3080]
+[2021-12-11 21:51:14,980.980] INFO [5988] - Waiting for application startup.
+[2021-12-11 21:51:14,980.980] INFO [5988] - Application startup complete.
+[2021-12-11 21:51:14,989.989] INFO [8568] - predict(experiment_id=1)
+[2021-12-11 21:51:14,990.990] INFO [5988] - 127.0.0.1:53394 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:51:18,782.782] INFO [5988] - 127.0.0.1:53394 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:51:21,720.720] INFO [8568] - predict(experiment_id=1)
+[2021-12-11 21:51:21,721.721] INFO [5988] - 127.0.0.1:53397 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:51:32,220.220] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:51:32,651.651] WARNING [7728] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:51:36,181.181] INFO [7728] - Started server process [620]
+[2021-12-11 21:51:36,181.181] INFO [7728] - Waiting for application startup.
+[2021-12-11 21:51:36,182.182] INFO [7728] - Application startup complete.
+[2021-12-11 21:51:37,504.504] INFO [7728] - 127.0.0.1:53403 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:51:40,448.448] INFO [5792] - predict(experiment_id=1)
+[2021-12-11 21:51:40,449.449] INFO [7728] - 127.0.0.1:53405 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:51:51,202.202] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:51:51,748.748] WARNING [12588] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:51:55,217.217] INFO [12588] - Started server process [11632]
+[2021-12-11 21:51:55,217.217] INFO [12588] - Waiting for application startup.
+[2021-12-11 21:51:55,217.217] INFO [12588] - Application startup complete.
+[2021-12-11 21:51:57,156.156] INFO [12588] - 127.0.0.1:53411 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:51:59,845.845] INFO [12296] - predict(experiment_id=1)
+[2021-12-11 21:51:59,846.846] INFO [12588] - 127.0.0.1:53411 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:53:16,946.946] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:53:18,617.617] WARNING [5592] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:53:24,085.085] INFO [5592] - Started server process [4436]
+[2021-12-11 21:53:24,086.086] INFO [5592] - Waiting for application startup.
+[2021-12-11 21:53:24,086.086] INFO [5592] - Application startup complete.
+[2021-12-11 21:53:24,257.257] INFO [5592] - 127.0.0.1:53600 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:53:26,239.239] INFO [2052] - predict(experiment_id=1)
+[2021-12-11 21:53:26,240.240] INFO [5592] - 127.0.0.1:53600 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:53:58,426.426] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:53:59,151.151] WARNING [11848] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:54:02,807.807] INFO [11848] - Started server process [1352]
+[2021-12-11 21:54:02,807.807] INFO [11848] - Waiting for application startup.
+[2021-12-11 21:54:02,808.808] INFO [11848] - Application startup complete.
+[2021-12-11 21:54:02,968.968] INFO [11848] - 127.0.0.1:53614 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:54:05,847.847] INFO [9888] - predict(experiment_id=1)
+[2021-12-11 21:54:05,848.848] INFO [11848] - 127.0.0.1:53614 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:54:42,944.944] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:54:43,473.473] WARNING [1304] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:54:46,562.562] INFO [1304] - Started server process [2700]
+[2021-12-11 21:54:46,562.562] INFO [1304] - Waiting for application startup.
+[2021-12-11 21:54:46,562.562] INFO [1304] - Application startup complete.
+[2021-12-11 21:54:54,574.574] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:54:55,150.150] WARNING [4312] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:54:58,410.410] INFO [4312] - Started server process [5988]
+[2021-12-11 21:54:58,410.410] INFO [4312] - Waiting for application startup.
+[2021-12-11 21:54:58,410.410] INFO [4312] - Application startup complete.
+[2021-12-11 21:55:06,616.616] INFO [4312] - 127.0.0.1:53660 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:55:09,360.360] INFO [11580] - predict(experiment_id=1)
+[2021-12-11 21:55:09,361.361] INFO [4312] - 127.0.0.1:53660 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:55:09,361.361] ERROR [4312] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 209, in predict
+    logger.info("model_dict=" + model_dict)
+TypeError: can only concatenate str (not "dict") to str
+[2021-12-11 21:55:46,192.192] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:55:46,496.496] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:55:47,009.009] WARNING [6424] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:55:50,450.450] INFO [6424] - Started server process [9528]
+[2021-12-11 21:55:50,451.451] INFO [6424] - Waiting for application startup.
+[2021-12-11 21:55:50,451.451] INFO [6424] - Application startup complete.
+[2021-12-11 21:55:50,738.738] INFO [6424] - 127.0.0.1:53676 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:55:52,997.997] INFO [10960] - predict(experiment_id=1)
+[2021-12-11 21:55:52,998.998] INFO [6424] - 127.0.0.1:53678 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:55:52,998.998] ERROR [6424] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 209, in predict
+    logger.info("model_dict=" + STR(model_dict))
+NameError: name 'STR' is not defined
+[2021-12-11 21:56:10,986.986] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:56:11,508.508] WARNING [5228] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:56:15,016.016] INFO [5228] - Started server process [1124]
+[2021-12-11 21:56:15,017.017] INFO [5228] - Waiting for application startup.
+[2021-12-11 21:56:15,017.017] INFO [5228] - Application startup complete.
+[2021-12-11 21:56:15,514.514] INFO [5228] - 127.0.0.1:53699 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:56:17,892.892] INFO [11400] - predict(experiment_id=1)
+[2021-12-11 21:56:17,892.892] INFO [11400] - model_dict={}
+[2021-12-11 21:56:17,893.893] INFO [5228] - 127.0.0.1:53699 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:56:39,095.095] INFO [5228] - 127.0.0.1:53715 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:56:40,242.242] INFO [5228] - 127.0.0.1:53715 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:56:43,281.281] INFO [11400] - predict(experiment_id=1)
+[2021-12-11 21:56:43,281.281] INFO [11400] - model_dict={}
+[2021-12-11 21:56:43,281.281] INFO [5228] - 127.0.0.1:53717 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 21:58:41,723.723] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:58:42,130.130] WARNING [2528] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:58:45,664.664] INFO [2528] - Started server process [10260]
+[2021-12-11 21:58:45,664.664] INFO [2528] - Waiting for application startup.
+[2021-12-11 21:58:45,665.665] INFO [2528] - Application startup complete.
+[2021-12-11 21:58:46,557.557] INFO [2528] - 127.0.0.1:53786 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 21:58:49,753.753] INFO [10932] - predict(experiment_id=1)
+[2021-12-11 21:58:49,757.757] INFO [10932] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 21:58:49,757.757] INFO [10932] - name=LogisticRegression
+[2021-12-11 21:58:49,758.758] INFO [2528] - 127.0.0.1:53786 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 21:58:49,759.759] ERROR [2528] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 216, in predict
+    predictDict.update(name, 1)
+TypeError: update expected at most 1 argument, got 2
+[2021-12-11 21:59:54,297.297] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 21:59:54,696.696] WARNING [8644] - The --reload flag should not be used in production on Windows.
+[2021-12-11 21:59:57,471.471] INFO [8644] - Started server process [11592]
+[2021-12-11 21:59:57,471.471] INFO [8644] - Waiting for application startup.
+[2021-12-11 21:59:57,471.471] INFO [8644] - Application startup complete.
+[2021-12-11 22:00:01,287.287] INFO [8644] - 127.0.0.1:53802 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:00:04,207.207] INFO [12572] - predict(experiment_id=1)
+[2021-12-11 22:00:04,211.211] INFO [12572] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:00:04,211.211] INFO [12572] - name=LogisticRegression
+[2021-12-11 22:00:04,213.213] INFO [8644] - 127.0.0.1:53803 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:00:04,213.213] ERROR [8644] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 216, in predict
+    predictDict.update({name, 1})
+ValueError: dictionary update sequence element #0 has length 18; 2 is required
+[2021-12-11 22:00:41,294.294] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:00:41,711.711] WARNING [5116] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:00:45,100.100] INFO [5116] - Started server process [11684]
+[2021-12-11 22:00:45,101.101] INFO [5116] - Waiting for application startup.
+[2021-12-11 22:00:45,101.101] INFO [5116] - Application startup complete.
+[2021-12-11 22:00:48,096.096] INFO [5116] - 127.0.0.1:53821 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:00:50,798.798] INFO [6976] - predict(experiment_id=1)
+[2021-12-11 22:00:50,805.805] INFO [6976] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:00:50,805.805] INFO [6976] - name=LogisticRegression
+[2021-12-11 22:00:50,806.806] INFO [6976] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:00:50,806.806] INFO [6976] - name=KNeighborsClassifier
+[2021-12-11 22:00:50,806.806] INFO [6976] - name=DecisionTreeClassifier
+[2021-12-11 22:00:50,806.806] INFO [6976] - name=GaussianNB
+[2021-12-11 22:00:50,806.806] INFO [6976] - name=SVC
+[2021-12-11 22:00:50,807.807] INFO [5116] - 127.0.0.1:53821 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:01:06,054.054] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:01:06,430.430] WARNING [5380] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:01:09,361.361] INFO [5380] - Started server process [1300]
+[2021-12-11 22:01:09,361.361] INFO [5380] - Waiting for application startup.
+[2021-12-11 22:01:09,361.361] INFO [5380] - Application startup complete.
+[2021-12-11 22:01:09,561.561] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:01:10,003.003] WARNING [9076] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:01:13,657.657] INFO [9076] - Started server process [5932]
+[2021-12-11 22:01:13,658.658] INFO [9076] - Waiting for application startup.
+[2021-12-11 22:01:13,658.658] INFO [9076] - Application startup complete.
+[2021-12-11 22:01:13,946.946] INFO [9076] - 127.0.0.1:53834 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:01:17,034.034] INFO [2748] - predict(experiment_id=1)
+[2021-12-11 22:01:17,037.037] INFO [2748] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:01:17,037.037] INFO [2748] - name=LogisticRegression
+[2021-12-11 22:01:17,043.043] INFO [9076] - 127.0.0.1:53834 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:01:17,043.043] ERROR [9076] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 215, in predict
+    predictDict[name] = model_dict[name].predict(d)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\linear_model\_base.py", line 425, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\linear_model\_base.py", line 407, in decision_function
+    X = self._validate_data(X, accept_sparse="csr", reset=False)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\base.py", line 561, in _validate_data
+    X = check_array(X, **check_params)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\utils\validation.py", line 781, in check_array
+    raise ValueError(
+ValueError: Unable to convert array of bytes/strings into decimal numbers with dtype='numeric'
+[2021-12-11 22:02:30,949.949] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:02:31,332.332] WARNING [8188] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:02:34,717.717] INFO [8188] - Started server process [3468]
+[2021-12-11 22:02:34,717.717] INFO [8188] - Waiting for application startup.
+[2021-12-11 22:02:34,717.717] INFO [8188] - Application startup complete.
+[2021-12-11 22:02:37,919.919] INFO [8188] - 127.0.0.1:53864 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:02:41,269.269] INFO [4512] - predict(experiment_id=1)
+[2021-12-11 22:02:41,272.272] INFO [4512] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:02:41,272.272] INFO [4512] - name=LogisticRegression
+[2021-12-11 22:02:41,272.272] INFO [4512] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:02:41,273.273] INFO [4512] - name=KNeighborsClassifier
+[2021-12-11 22:02:41,275.275] INFO [4512] - name=DecisionTreeClassifier
+[2021-12-11 22:02:41,275.275] INFO [4512] - name=GaussianNB
+[2021-12-11 22:02:41,276.276] INFO [4512] - name=SVC
+[2021-12-11 22:02:41,277.277] INFO [8188] - 127.0.0.1:53864 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:03:10,313.313] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:03:10,697.697] WARNING [10932] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:03:14,353.353] INFO [10932] - Started server process [2528]
+[2021-12-11 22:03:14,354.354] INFO [10932] - Waiting for application startup.
+[2021-12-11 22:03:14,354.354] INFO [10932] - Application startup complete.
+[2021-12-11 22:03:14,575.575] INFO [10932] - 127.0.0.1:53871 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:03:16,681.681] INFO [1516] - predict(experiment_id=1)
+[2021-12-11 22:03:16,684.684] INFO [1516] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:03:16,685.685] INFO [1516] - name=LogisticRegression
+[2021-12-11 22:03:16,685.685] INFO [1516] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:03:16,686.686] INFO [1516] - name=KNeighborsClassifier
+[2021-12-11 22:03:16,687.687] INFO [1516] - name=DecisionTreeClassifier
+[2021-12-11 22:03:16,688.688] INFO [1516] - name=GaussianNB
+[2021-12-11 22:03:16,688.688] INFO [1516] - name=SVC
+[2021-12-11 22:03:16,689.689] INFO [10932] - 127.0.0.1:53871 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:03:16,690.690] ERROR [10932] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 234, in app
+    response_data = await serialize_response(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 148, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 15; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+[2021-12-11 22:04:49,127.127] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:04:49,600.600] WARNING [9852] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:04:52,424.424] INFO [9852] - Started server process [7628]
+[2021-12-11 22:04:52,424.424] INFO [9852] - Waiting for application startup.
+[2021-12-11 22:04:52,424.424] INFO [9852] - Application startup complete.
+[2021-12-11 22:04:53,793.793] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:04:54,190.190] WARNING [5592] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:04:57,661.661] INFO [5592] - Started server process [8388]
+[2021-12-11 22:04:57,661.661] INFO [5592] - Waiting for application startup.
+[2021-12-11 22:04:57,662.662] INFO [5592] - Application startup complete.
+[2021-12-11 22:04:59,251.251] INFO [5592] - 127.0.0.1:53892 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:05:00,500.500] INFO [5592] - 127.0.0.1:53892 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:05:02,970.970] INFO [8744] - predict(experiment_id=1)
+[2021-12-11 22:05:02,973.973] INFO [8744] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:05:02,973.973] INFO [8744] - name=LogisticRegression
+[2021-12-11 22:05:02,975.975] INFO [8744] - ['name=LogisticRegression=Iris-versicolor']
+[2021-12-11 22:05:02,975.975] INFO [8744] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:05:02,976.976] INFO [5592] - 127.0.0.1:53892 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:05:02,977.977] ERROR [5592] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 216, in predict
+    logger.info("name=" + name + "=" +  model_dict[name].predict(d))
+numpy.core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U15')) -> None
+[2021-12-11 22:05:31,900.900] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:05:32,481.481] WARNING [13088] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:05:35,998.998] INFO [13088] - Started server process [5196]
+[2021-12-11 22:05:35,998.998] INFO [13088] - Waiting for application startup.
+[2021-12-11 22:05:35,998.998] INFO [13088] - Application startup complete.
+[2021-12-11 22:05:36,151.151] INFO [13088] - 127.0.0.1:53901 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:05:38,496.496] INFO [8232] - predict(experiment_id=1)
+[2021-12-11 22:05:38,498.498] INFO [8232] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:05:38,499.499] INFO [8232] - name=LogisticRegression
+[2021-12-11 22:05:38,499.499] INFO [8232] - name=LogisticRegression=['Iris-versicolor']
+[2021-12-11 22:05:38,500.500] INFO [8232] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:05:38,501.501] INFO [8232] - name=LinearDiscriminantAnalysis=['Iris-versicolor']
+[2021-12-11 22:05:38,501.501] INFO [8232] - name=KNeighborsClassifier
+[2021-12-11 22:05:38,503.503] INFO [8232] - name=KNeighborsClassifier=['Iris-versicolor']
+[2021-12-11 22:05:38,504.504] INFO [8232] - name=DecisionTreeClassifier
+[2021-12-11 22:05:38,505.505] INFO [8232] - name=DecisionTreeClassifier=['Iris-versicolor']
+[2021-12-11 22:05:38,505.505] INFO [8232] - name=GaussianNB
+[2021-12-11 22:05:38,508.508] INFO [8232] - name=GaussianNB=['Iris-versicolor']
+[2021-12-11 22:05:38,509.509] INFO [8232] - name=SVC
+[2021-12-11 22:05:38,509.509] INFO [8232] - name=SVC=['Iris-versicolor']
+[2021-12-11 22:05:38,510.510] INFO [13088] - 127.0.0.1:53901 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:05:38,512.512] ERROR [13088] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 234, in app
+    response_data = await serialize_response(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 148, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 93, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 15; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+[2021-12-11 22:06:41,584.584] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:06:42,038.038] WARNING [436] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:06:45,542.542] INFO [436] - Started server process [12720]
+[2021-12-11 22:06:45,542.542] INFO [436] - Waiting for application startup.
+[2021-12-11 22:06:45,542.542] INFO [436] - Application startup complete.
+[2021-12-11 22:06:45,768.768] INFO [436] - 127.0.0.1:53913 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:06:48,488.488] INFO [8400] - predict(experiment_id=1)
+[2021-12-11 22:06:48,491.491] INFO [8400] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:06:48,491.491] INFO [8400] - name=LogisticRegression
+[2021-12-11 22:06:48,492.492] INFO [8400] - name=LogisticRegression=['Iris-versicolor']
+[2021-12-11 22:06:48,492.492] INFO [8400] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:06:48,493.493] INFO [8400] - name=LinearDiscriminantAnalysis=['Iris-versicolor']
+[2021-12-11 22:06:48,493.493] INFO [8400] - name=KNeighborsClassifier
+[2021-12-11 22:06:48,495.495] INFO [8400] - name=KNeighborsClassifier=['Iris-versicolor']
+[2021-12-11 22:06:48,497.497] INFO [8400] - name=DecisionTreeClassifier
+[2021-12-11 22:06:48,498.498] INFO [8400] - name=DecisionTreeClassifier=['Iris-versicolor']
+[2021-12-11 22:06:48,498.498] INFO [8400] - name=GaussianNB
+[2021-12-11 22:06:48,500.500] INFO [8400] - name=GaussianNB=['Iris-versicolor']
+[2021-12-11 22:06:48,500.500] INFO [8400] - name=SVC
+[2021-12-11 22:06:48,503.503] INFO [8400] - name=SVC=['Iris-versicolor']
+[2021-12-11 22:06:48,504.504] INFO [436] - 127.0.0.1:53913 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:07:20,057.057] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:07:20,428.428] WARNING [8912] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:07:23,818.818] INFO [8912] - Started server process [2432]
+[2021-12-11 22:07:23,818.818] INFO [8912] - Waiting for application startup.
+[2021-12-11 22:07:23,818.818] INFO [8912] - Application startup complete.
+[2021-12-11 22:07:51,355.355] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:07:51,750.750] WARNING [5436] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:07:54,530.530] INFO [5436] - Started server process [8720]
+[2021-12-11 22:07:54,530.530] INFO [5436] - Waiting for application startup.
+[2021-12-11 22:07:54,530.530] INFO [5436] - Application startup complete.
+[2021-12-11 22:08:18,664.664] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:08:19,342.342] WARNING [2000] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:08:22,727.727] INFO [2000] - Started server process [5196]
+[2021-12-11 22:08:22,728.728] INFO [2000] - Waiting for application startup.
+[2021-12-11 22:08:22,728.728] INFO [2000] - Application startup complete.
+[2021-12-11 22:08:22,880.880] INFO [2000] - 127.0.0.1:53947 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:08:26,189.189] INFO [620] - predict(experiment_id=1)
+[2021-12-11 22:08:26,193.193] INFO [620] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:08:26,193.193] INFO [620] - name=LogisticRegression
+[2021-12-11 22:08:26,194.194] INFO [2000] - 127.0.0.1:53949 - "POST /experiments/predict/1 HTTP/1.1" 500
+[2021-12-11 22:08:26,195.195] ERROR [2000] - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\nevil\AppData\Local\Programs\Python\Python39\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\nevil\PycharmProjects\fast1\.\main.py", line 216, in predict
+    logger.info("name=" + name + "=" +  str(model_dict[name].predict(d)))
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\linear_model\_base.py", line 425, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\linear_model\_base.py", line 407, in decision_function
+    X = self._validate_data(X, accept_sparse="csr", reset=False)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\base.py", line 561, in _validate_data
+    X = check_array(X, **check_params)
+  File "C:\Users\nevil\AppData\Roaming\Python\Python39\site-packages\sklearn\utils\validation.py", line 786, in check_array
+    raise ValueError(
+ValueError: Found array with dim 3. Estimator expected <= 2.
+[2021-12-11 22:09:10,604.604] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:09:11,001.001] WARNING [4020] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:09:14,571.571] INFO [4020] - Started server process [8744]
+[2021-12-11 22:09:14,571.571] INFO [4020] - Waiting for application startup.
+[2021-12-11 22:09:14,571.571] INFO [4020] - Application startup complete.
+[2021-12-11 22:09:15,954.954] INFO [4020] - 127.0.0.1:53964 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:09:18,937.937] INFO [4504] - predict(experiment_id=1)
+[2021-12-11 22:09:18,940.940] INFO [4504] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:09:18,941.941] INFO [4504] - name=LogisticRegression
+[2021-12-11 22:09:18,941.941] INFO [4504] - name=LogisticRegression=['Iris-versicolor']
+[2021-12-11 22:09:18,942.942] INFO [4504] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:09:18,943.943] INFO [4504] - name=LinearDiscriminantAnalysis=['Iris-versicolor']
+[2021-12-11 22:09:18,943.943] INFO [4504] - name=KNeighborsClassifier
+[2021-12-11 22:09:18,945.945] INFO [4504] - name=KNeighborsClassifier=['Iris-versicolor']
+[2021-12-11 22:09:18,951.951] INFO [4504] - name=DecisionTreeClassifier
+[2021-12-11 22:09:18,952.952] INFO [4504] - name=DecisionTreeClassifier=['Iris-versicolor']
+[2021-12-11 22:09:18,952.952] INFO [4504] - name=GaussianNB
+[2021-12-11 22:09:18,953.953] INFO [4504] - name=GaussianNB=['Iris-versicolor']
+[2021-12-11 22:09:18,954.954] INFO [4504] - name=SVC
+[2021-12-11 22:09:18,954.954] INFO [4504] - name=SVC=['Iris-versicolor']
+[2021-12-11 22:09:18,956.956] INFO [4020] - 127.0.0.1:53966 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:09:22,431.431] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:09:22,817.817] WARNING [8636] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:09:25,948.948] INFO [8636] - Started server process [11192]
+[2021-12-11 22:09:25,948.948] INFO [8636] - Waiting for application startup.
+[2021-12-11 22:09:25,949.949] INFO [8636] - Application startup complete.
+[2021-12-11 22:09:57,815.815] INFO [3228] - predict(experiment_id=1)
+[2021-12-11 22:09:57,815.815] INFO [3228] - model_dict={}
+[2021-12-11 22:09:57,816.816] INFO [8636] - 127.0.0.1:53984 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:10:04,987.987] INFO [3228] - predict(experiment_id=1)
+[2021-12-11 22:10:04,987.987] INFO [3228] - model_dict={}
+[2021-12-11 22:10:04,987.987] INFO [8636] - 127.0.0.1:53987 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:10:13,690.690] INFO [3228] - predict(experiment_id=1)
+[2021-12-11 22:10:13,691.691] INFO [3228] - model_dict={}
+[2021-12-11 22:10:13,691.691] INFO [8636] - 127.0.0.1:53988 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:10:19,019.019] INFO [8636] - 127.0.0.1:53990 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:10:21,743.743] INFO [3228] - predict(experiment_id=1)
+[2021-12-11 22:10:21,748.748] INFO [3228] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:10:21,748.748] INFO [3228] - name=LogisticRegression
+[2021-12-11 22:10:21,749.749] INFO [3228] - name=LogisticRegression=['Iris-versicolor']
+[2021-12-11 22:10:21,750.750] INFO [3228] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:10:21,751.751] INFO [3228] - name=LinearDiscriminantAnalysis=['Iris-versicolor']
+[2021-12-11 22:10:21,751.751] INFO [3228] - name=KNeighborsClassifier
+[2021-12-11 22:10:21,753.753] INFO [3228] - name=KNeighborsClassifier=['Iris-versicolor']
+[2021-12-11 22:10:21,757.757] INFO [3228] - name=DecisionTreeClassifier
+[2021-12-11 22:10:21,758.758] INFO [3228] - name=DecisionTreeClassifier=['Iris-versicolor']
+[2021-12-11 22:10:21,758.758] INFO [3228] - name=GaussianNB
+[2021-12-11 22:10:21,758.758] INFO [3228] - name=GaussianNB=['Iris-versicolor']
+[2021-12-11 22:10:21,758.758] INFO [3228] - name=SVC
+[2021-12-11 22:10:21,759.759] INFO [3228] - name=SVC=['Iris-versicolor']
+[2021-12-11 22:10:21,762.762] INFO [8636] - 127.0.0.1:53990 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:10:28,970.970] INFO [3228] - predict(experiment_id=1)
+[2021-12-11 22:10:28,971.971] INFO [3228] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:10:28,971.971] INFO [3228] - name=LogisticRegression
+[2021-12-11 22:10:28,972.972] INFO [3228] - name=LogisticRegression=['Iris-virginica']
+[2021-12-11 22:10:28,972.972] INFO [3228] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:10:28,972.972] INFO [3228] - name=LinearDiscriminantAnalysis=['Iris-virginica']
+[2021-12-11 22:10:28,972.972] INFO [3228] - name=KNeighborsClassifier
+[2021-12-11 22:10:28,974.974] INFO [3228] - name=KNeighborsClassifier=['Iris-virginica']
+[2021-12-11 22:10:28,976.976] INFO [3228] - name=DecisionTreeClassifier
+[2021-12-11 22:10:28,977.977] INFO [3228] - name=DecisionTreeClassifier=['Iris-virginica']
+[2021-12-11 22:10:28,978.978] INFO [3228] - name=GaussianNB
+[2021-12-11 22:10:28,978.978] INFO [3228] - name=GaussianNB=['Iris-virginica']
+[2021-12-11 22:10:28,979.979] INFO [3228] - name=SVC
+[2021-12-11 22:10:28,980.980] INFO [3228] - name=SVC=['Iris-virginica']
+[2021-12-11 22:10:28,981.981] INFO [8636] - 127.0.0.1:53992 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:10:44,244.244] WARNING [9416] - WatchGodReload detected file change in '['C:\\Users\\nevil\\PycharmProjects\\fast1\\main.py']'. Reloading...
+[2021-12-11 22:10:44,786.786] WARNING [6548] - The --reload flag should not be used in production on Windows.
+[2021-12-11 22:10:47,681.681] INFO [6548] - Started server process [10728]
+[2021-12-11 22:10:47,681.681] INFO [6548] - Waiting for application startup.
+[2021-12-11 22:10:47,681.681] INFO [6548] - Application startup complete.
+[2021-12-11 22:12:42,814.814] INFO [13280] - predict(experiment_id=1)
+[2021-12-11 22:12:42,814.814] INFO [13280] - model_dict={}
+[2021-12-11 22:12:42,816.816] INFO [6548] - 127.0.0.1:54014 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:12:48,368.368] INFO [6548] - 127.0.0.1:54016 - "GET /experiments/loadFile?experiment_id=1 HTTP/1.1" 200
+[2021-12-11 22:12:51,602.602] INFO [13280] - predict(experiment_id=1)
+[2021-12-11 22:12:51,605.605] INFO [13280] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:12:51,605.605] INFO [13280] - name=LogisticRegression
+[2021-12-11 22:12:51,606.606] INFO [13280] - name=LogisticRegression=['Iris-virginica']
+[2021-12-11 22:12:51,606.606] INFO [13280] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:12:51,606.606] INFO [13280] - name=LinearDiscriminantAnalysis=['Iris-virginica']
+[2021-12-11 22:12:51,607.607] INFO [13280] - name=KNeighborsClassifier
+[2021-12-11 22:12:51,609.609] INFO [13280] - name=KNeighborsClassifier=['Iris-virginica']
+[2021-12-11 22:12:51,612.612] INFO [13280] - name=DecisionTreeClassifier
+[2021-12-11 22:12:51,612.612] INFO [13280] - name=DecisionTreeClassifier=['Iris-virginica']
+[2021-12-11 22:12:51,613.613] INFO [13280] - name=GaussianNB
+[2021-12-11 22:12:51,614.614] INFO [13280] - name=GaussianNB=['Iris-virginica']
+[2021-12-11 22:12:51,615.615] INFO [13280] - name=SVC
+[2021-12-11 22:12:51,616.616] INFO [13280] - name=SVC=['Iris-virginica']
+[2021-12-11 22:12:51,620.620] INFO [6548] - 127.0.0.1:54016 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:13:03,842.842] INFO [13280] - predict(experiment_id=1)
+[2021-12-11 22:13:03,843.843] INFO [13280] - model_dict={'LogisticRegression': LogisticRegression(multi_class='ovr', solver='liblinear'), 'LinearDiscriminantAnalysis': LinearDiscriminantAnalysis(), 'KNeighborsClassifier': KNeighborsClassifier(), 'DecisionTreeClassifier': DecisionTreeClassifier(), 'GaussianNB': GaussianNB(), 'SVC': SVC(gamma='auto')}
+[2021-12-11 22:13:03,844.844] INFO [13280] - name=LogisticRegression
+[2021-12-11 22:13:03,844.844] INFO [13280] - name=LogisticRegression=['Iris-virginica']
+[2021-12-11 22:13:03,845.845] INFO [13280] - name=LinearDiscriminantAnalysis
+[2021-12-11 22:13:03,845.845] INFO [13280] - name=LinearDiscriminantAnalysis=['Iris-versicolor']
+[2021-12-11 22:13:03,845.845] INFO [13280] - name=KNeighborsClassifier
+[2021-12-11 22:13:03,849.849] INFO [13280] - name=KNeighborsClassifier=['Iris-setosa']
+[2021-12-11 22:13:03,850.850] INFO [13280] - name=DecisionTreeClassifier
+[2021-12-11 22:13:03,851.851] INFO [13280] - name=DecisionTreeClassifier=['Iris-versicolor']
+[2021-12-11 22:13:03,851.851] INFO [13280] - name=GaussianNB
+[2021-12-11 22:13:03,852.852] INFO [13280] - name=GaussianNB=['Iris-versicolor']
+[2021-12-11 22:13:03,853.853] INFO [13280] - name=SVC
+[2021-12-11 22:13:03,853.853] INFO [13280] - name=SVC=['Iris-virginica']
+[2021-12-11 22:13:03,855.855] INFO [6548] - 127.0.0.1:54021 - "POST /experiments/predict/1 HTTP/1.1" 200
+[2021-12-11 22:15:36,228.228] INFO [6548] - 127.0.0.1:54055 - "GET /projects HTTP/1.1" 200
+[2021-12-11 22:15:36,232.232] INFO [6548] - 127.0.0.1:54055 - "GET /projects HTTP/1.1" 200
+[2021-12-11 22:22:56,279.279] INFO [6548] - 127.0.0.1:50514 - "GET /projects HTTP/1.1" 200
+[2021-12-11 22:22:56,311.311] INFO [6548] - 127.0.0.1:50514 - "GET /projects HTTP/1.1" 200
+[2021-12-11 22:23:14,274.274] INFO [6548] - 127.0.0.1:50521 - "OPTIONS /projects/1 HTTP/1.1" 200
+[2021-12-11 22:23:14,320.320] INFO [6548] - 127.0.0.1:50521 - "DELETE /projects/1 HTTP/1.1" 200
+[2021-12-11 22:23:14,334.334] INFO [6548] - 127.0.0.1:50521 - "GET /projects HTTP/1.1" 200
+[2021-12-12 14:27:37,016.016] INFO [9416] - Stopping reloader process [12320]
