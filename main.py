@@ -1,12 +1,15 @@
 from typing import Optional
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+
+from fastapi.encoders import jsonable_encoder
 
 from datetime import datetime
 from typing import List, Optional
 from pydantic import BaseModel
+from enum import Enum
 
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse
@@ -14,6 +17,8 @@ from starlette.routing import Route
 
 from pandas import read_csv
 from matplotlib import pyplot
+
+import json
 
 import logging
 import logging.config
@@ -63,97 +68,157 @@ models = [
     ]
 
 
-class Project(BaseModel):
-    id: int
-    name: str    
-    created_date: datetime
-    description: Optional[str]
-    experiments: Optional[List[int]] = None
-
-
-class Experiment(BaseModel):
-    id: int
-    name: str    
-    created_date: datetime
-    description: Optional[str]
-    fileUrl: str
-    features: List[int]
-    label: str
-
-experiment = {   
-        "id": 1, 
-        "name": "experiment-1", 
-        "created_date":"2021-06-11 12:00", 
-        "description":"experiment 1 desc", 
-        "fileUrl": "iris.csv",
-        "algorithms" : ["LogisticRegression", "LinearDiscriminantAnalysis", "KNeighborsClassifier", "DecisionTreeClassifier", "GaussianNB", "SVC"],
-        "accuracy" :  {},
-        "model_dict": {}
-    }
-
-
-project_list =[
-        #{ Project(1, "projet-1", "desc 1",  11) }, 
-        #{ Project(id=2, name="projet-2", description="desc 2", experienceId=22)},
-        {   "id": 1, 
-            "name": "projet-1", 
-            "created_date":"2021-06-11 12:00", 
-            "description":"desc 1", 
-            "experienceId": 11,
-            "experiments" : [11, 12, 13]
-        },
-        {   "id": 2, 
-            "name": "projet-2", 
-            "created_date":"2021-06-11 12:00", 
-            "description":"desc 2", 
-            "experienceId": 22,
-            "experiments" : [21, 22, 23]
-        },
-        {   "id": 3, 
-            "name": "projet-3", 
-            "created_date":"2021-06-11 12:00", 
-            "description":"desc 3", 
-            "experienceId": 33,
-            "experiments" : [31, 32, 33]
-        }
+algorithms = [
+    { 
+     "name": "Logistic Regression", 
+     "label": "LogisticRegression" 
+     },
+    { 
+     "name": "Linear Discriminant Analysis", 
+     "label": "LinearDiscriminantAnalysis" 
+     },
+    { 
+     "name": "KNeighbors Classifier", 
+     "label": "KNeighborsClassifier" 
+     },
+    { 
+     "name": "Decision Tree Classifier", 
+     "label": "DecisionTreeClassifier" 
+     },
+    { 
+     "name": "Gaussian NB", 
+     "label": "GaussianNB" 
+     },
+    { 
+     "name": "SVC", 
+     "label": "SVC" 
+     }
 ]
 
-@app.get("/")
-def read_root():
-    return FileResponse("index.html")
 
-@app.get("/test")
-def get_test():
-    return {"message": "Hello World"}
+#class Model(Enum):
+#    SUPERVISED = 'Supervised'
+#    UNSUPERVISED = 'Unsupervised'
+
+class Project(BaseModel):
+    id: int = 0
+    name: str = ""  
+    created_date: Optional[datetime] 
+    description: Optional[str] = ""
+    data_file: Optional[str] = ""
+    createdBy: str = ""
+    model: str = "Supervised"
+    algorithms: List[str] = []
+    features: List[str] = []
+    label: List[str] = []
+
+project_data = {
+    "id": 1,
+    "name": "diagnostic1",
+    "created_date": "2021-12-21 00:00",
+    "description": "1aim is to diagnose for abc",
+    "data_file": "1abc.xlsx",
+    "createdBy": "nevilgultekin",
+    "model": "Supervised",
+    "algorithms": [ "LogisticRegression" ],
+    "features": [ "age", "gender", "test2", "test3"],
+    "label": [ "diagnose"]
+}
+
+#project = Project(**project_data)
 
 
-@app.get("/projects")
+
+
+#@app.get("/")
+#def read_root():
+#    return FileResponse("index.html")
+
+#@app.get("/test")
+#def get_test():
+#    return {"message": "Hello World"}
+
+app.project_list =[]
+
+
+# get project list
+@app.get("/projects", response_model=List[Project])
 def get_project_list():
-    return project_list
+    logger.info("1-get_project_list", app.project_list)
+    
+    readProjectList()
+    
+    logger.info("2-get_project_list=", app.project_list)
+    return app.project_list
 
-
-@app.get("/projects/{project_id}")
+# get project 
+@app.get("/projects/{project_id}", response_model=Project)
 def get_project(project_id: int):
-    for project in project_list:
+    logger.info("get_project")
+    return get_project_by_id(project_id)
+
+def get_project_by_id(project_id: int):
+    logger.info("get_project_by_id")
+    readProjectList()
+    for project in app.project_list:
         if project.get("id") == project_id:
             return project
+        
+    raise NotFoundException("Project with id , project_id,  not found")
 
+# create project 
 @app.post("/projects")
 async def create_project(project: Project):
-    logger.info("logging from the root logger")
-    project_list.append(project)
+    logger.info("create_project=", project)
+
+    readProjectList()
+
+    exists = False
+    for p in app.project_list:
+        if p["id"] == project.id:
+            exists = True
+    if exists == False:
+        project_json = jsonable_encoder(project)
+        app.project_list.append(project_json)
+    logger.info("create_project appended=", app.project_list)
+        
+    storeProjectList()
+    readProjectList()
+
     return project
 
+# update project 
 @app.put("/projects/{project_id}")
 async def update_project(project_id: int, project: Project):
-    project_list.update(project)
+    logger.info("update_project")
+    p = get_project_by_id(project.id)
+    p["name"] = project.name
+    p["created_date"] = project.created_date
+    p["description"] = project.description
+    p["data_file"] = project.data_file
+    p["createdBy"] = project.createdBy
+    p["model"] = project.model
+    p["algorithms"] = project.algorithms
+    p["features"] = project.features
+    p["label"] = project.label
+
+    storeProjectList()
+    readProjectList()
+
     return project
 
 @app.delete("/projects/{project_id}")
 async def delete_project(project_id: int):
-    for project in project_list:
+
+    readProjectList()
+
+    for project in app.project_list:
         if project.get("id") == project_id:
-            project_list.remove(project)
+            app.project_list.remove(project)
+            
+    storeProjectList()
+    readProjectList()
+            
 
 @app.get("/experiments/loadFile")
 def load_file(experiment_id: int):
@@ -254,3 +319,29 @@ def ml():
 	pyplot.title('Algorithm Comparison')
 	pyplot.show()
 
+# Store and Read Project List 
+def storeProjectList():
+    logger.info("***storeProjectList=",app.project_list)
+    with open('project_list.json', 'w') as f:
+        json.dump(app.project_list, f, ensure_ascii=False, indent=4)
+    f.close()
+
+def readProjectList():
+    f = open('project_list.json')
+    app.project_list = json.load(f)
+    logger.info("readProjectList")
+    logger.info(app.project_list)
+    f.close()
+
+# Exceptions % Exception Handlers
+class NotFoundException(Exception):
+    def __init__(self, message):
+        self.message = message
+        
+        
+@app.exception_handler(NotFoundException)
+async def NotFoundException_exception_handler(request: Request, exc: NotFoundException):
+    return JSONResponse(
+        status_code=401,
+        content={"message": f"Oops! {exc.message} did something. There goes a rainbow..."},
+    )        

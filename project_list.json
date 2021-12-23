@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "diagnostic1",
+        "created_date": "2021-12-21 00:00",
+        "description": "1aim is to diagnose for abc",
+        "data_file": "1abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "diagnostic2",
+        "created_date": "2021-12-21 00:00",
+        "description": "2aim is to diagnose for abc",
+        "data_file": "2abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Unsupervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "diagnostic3",
+        "created_date": "2021-12-21 00:00",
+        "description": "3aim is to diagnose for abc",
+        "data_file": "3abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "44444diagnostic3",
+        "created_date": "2021-12-21T00:00:00",
+        "description": "3aim is to diagnose for abc",
+        "data_file": "3abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ]
+    }
+]
