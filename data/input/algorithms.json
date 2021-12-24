@@ -1,0 +1,26 @@
+[
+    { 
+    "name": "Logistic Regression", 
+    "label": "LogisticRegression" 
+    },
+   { 
+    "name": "Linear Discriminant Analysis", 
+    "label": "LinearDiscriminantAnalysis" 
+    },
+   { 
+    "name": "KNeighbors Classifier", 
+    "label": "KNeighborsClassifier" 
+    },
+   { 
+    "name": "Decision Tree Classifier", 
+    "label": "DecisionTreeClassifier" 
+    },
+   { 
+    "name": "Gaussian NB", 
+    "label": "GaussianNB" 
+    },
+   { 
+    "name": "SVC", 
+    "label": "SVC" 
+    }
+]

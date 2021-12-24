@@ -1,6 +1,9 @@
 from typing import Optional
+import typing
+import os
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, File, status
+from fastapi import File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
@@ -38,6 +41,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+import pickle
+
+import aiofiles
+
 
 app = FastAPI()
 
@@ -57,6 +64,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Constants
+ROOT_FOLDER = "data/"
+PROJECT_LIST = ROOT_FOLDER + "project_list.json"
+INPUT_FOLDER = ROOT_FOLDER + "input/"
+ALGORITHM_LIST = INPUT_FOLDER + "algorithms.json"
+PROJECT_FILE_FOLDER = ROOT_FOLDER + "project/"
+
+
+# Global Variables
+app.project_list = []
+app.algorithms = []
+
+
 models = [ 
         ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')), 
         ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')),
@@ -68,110 +88,85 @@ models = [
     ]
 
 
-algorithms = [
-    { 
-     "name": "Logistic Regression", 
-     "label": "LogisticRegression" 
-     },
-    { 
-     "name": "Linear Discriminant Analysis", 
-     "label": "LinearDiscriminantAnalysis" 
-     },
-    { 
-     "name": "KNeighbors Classifier", 
-     "label": "KNeighborsClassifier" 
-     },
-    { 
-     "name": "Decision Tree Classifier", 
-     "label": "DecisionTreeClassifier" 
-     },
-    { 
-     "name": "Gaussian NB", 
-     "label": "GaussianNB" 
-     },
-    { 
-     "name": "SVC", 
-     "label": "SVC" 
-     }
-]
-
-
-#class Model(Enum):
-#    SUPERVISED = 'Supervised'
-#    UNSUPERVISED = 'Unsupervised'
-
+# BaseModel definitions
 class Project(BaseModel):
     id: int = 0
     name: str = ""  
     created_date: Optional[datetime] 
     description: Optional[str] = ""
     data_file: Optional[str] = ""
-    createdBy: str = ""
+    createdBy: str = "" 
     model: str = "Supervised"
     algorithms: List[str] = []
     features: List[str] = []
     label: List[str] = []
-
-project_data = {
-    "id": 1,
-    "name": "diagnostic1",
-    "created_date": "2021-12-21 00:00",
-    "description": "1aim is to diagnose for abc",
-    "data_file": "1abc.xlsx",
-    "createdBy": "nevilgultekin",
-    "model": "Supervised",
-    "algorithms": [ "LogisticRegression" ],
-    "features": [ "age", "gender", "test2", "test3"],
-    "label": [ "diagnose"]
-}
-
-#project = Project(**project_data)
+    accuracy: typing.Dict[str,List[float]] = {}
 
 
+#
+# on fastapi startup
+#
 
+@app.on_event("startup")
+async def startup_event():
+    logger.info('Starting up fastapi server...')
+    read_project_list()
+    read_algorithms()
+    logger.info('Started up fastapi server')
 
-#@app.get("/")
-#def read_root():
-#    return FileResponse("index.html")
+#
+# /project
+#
 
-#@app.get("/test")
-#def get_test():
-#    return {"message": "Hello World"}
+# upload file
+@app.post("/projects/uploadfile/")
+async def upload_file(project_id: int, file: UploadFile = File(...)):
+    logger.info("upload_file file=" + file.filename)
+    
+    path = PROJECT_FILE_FOLDER + str(project_id) 
+    os.mkdir(path)
+    storeFile = PROJECT_FILE_FOLDER + str(project_id) + '/' + file.filename
+   
+    logger.info("upload_file storeFile=" + storeFile)
+    
+    try:
+        async with aiofiles.open(storeFile, 'wb') as out_file:
+            content = await file.read()  # async read
+            await out_file.write(content)  # async write
 
-app.project_list =[]
+        load_file(project_id, storeFile)
 
+    except Exception as e:
+        return JSONResponse(
+            status_code = status.HTTP_400_BAD_REQUEST,
+            content = { 'message' : str(e) }
+            )
+    else:
+        return JSONResponse(
+            status_code = status.HTTP_200_OK,
+            content = {"result":'result'}
+            )    
+        
+        
 
 # get project list
 @app.get("/projects", response_model=List[Project])
 def get_project_list():
-    logger.info("1-get_project_list", app.project_list)
-    
-    readProjectList()
-    
-    logger.info("2-get_project_list=", app.project_list)
+    logger.info("get_project_list", app.project_list)
     return app.project_list
+
 
 # get project 
 @app.get("/projects/{project_id}", response_model=Project)
 def get_project(project_id: int):
-    logger.info("get_project")
+    logger.info("get_project project_id=", project_id)
     return get_project_by_id(project_id)
 
-def get_project_by_id(project_id: int):
-    logger.info("get_project_by_id")
-    readProjectList()
-    for project in app.project_list:
-        if project.get("id") == project_id:
-            return project
-        
-    raise NotFoundException("Project with id , project_id,  not found")
 
 # create project 
 @app.post("/projects")
 async def create_project(project: Project):
-    logger.info("create_project=", project)
-
-    readProjectList()
+    logger.info("create_project project=", project)
 
     exists = False
     for p in app.project_list:
@@ -182,15 +177,14 @@ async def create_project(project: Project):
         app.project_list.append(project_json)
     logger.info("create_project appended=", app.project_list)
         
-    storeProjectList()
-    readProjectList()
+    store_project_list()
 
     return project
 
 # update project 
 @app.put("/projects/{project_id}")
 async def update_project(project_id: int, project: Project):
-    logger.info("update_project")
+    logger.info("update_project projectId=", project_id)
     p = get_project_by_id(project.id)
     p["name"] = project.name
     p["created_date"] = project.created_date
@@ -201,30 +195,95 @@ async def update_project(project_id: int, project: Project):
     p["algorithms"] = project.algorithms
     p["features"] = project.features
     p["label"] = project.label
+    p["accuracy"] = project.accuracy
 
-    storeProjectList()
-    readProjectList()
+    store_project_list()
 
     return project
 
+# delete
 @app.delete("/projects/{project_id}")
 async def delete_project(project_id: int):
-
-    readProjectList()
-
+    logger.info("delete_project projectId=", project_id)
     for project in app.project_list:
         if project.get("id") == project_id:
             app.project_list.remove(project)
             
-    storeProjectList()
-    readProjectList()
-            
+    store_project_list()
 
-@app.get("/experiments/loadFile")
-def load_file(experiment_id: int):
+
+@app.post("/projects/predict/{project_id}")
+def predict(project_id: int, data: list ):
+    logger.info("predict(project_id=" + str(project_id) + ")")
+    predictDict = {}
+    project = get_project_by_id(project_id)
+
+    for algorithm in app.algorithms:
+        algorithm_label = algorithm["label"]
+        logger.info("label=")
+        logger.info(algorithm_label)
+        model = load_model(project_id, algorithm_label)
+        d = data 
+        #d = [[6.1,2.9,4.7,1.4]]
+        logger.info(model.predict(d))
+        predictDict[algorithm_label] = str(model.predict(d))
+        #predictDict.update({name: model_dict[name].predict(d)})
+
+    return {"predictDict": predictDict }
+
+
+
+            
+#
+# Algortihms
+#
+            
+# get algorithms
+@app.get("/algorithms")
+def get_algorithms():
+    logger.info("get_algorithms")
+    return app.algorithms
+ 
+#
+# Private Methods
+#    
+
+# get project by project id
+def get_project_by_id(project_id: int):
+    logger.info("get_project_by_id")
+    for project in app.project_list:
+        if project.get("id") == project_id:
+            return project
+        
+    raise NotFoundException("Project with id , project_id,  not found")
+ 
+
+def update_project_list(project):
+    logger.info("update_project_list")
+    for p in app.project_list:
+        if  p["id"] == project["id"]:
+            p["name"] = project["name"]
+            p["created_date"] = project["created_date"]
+            p["description"] = project["description"]
+            p["data_file"] = project["data_file"]
+            p["createdBy"] = project["createdBy"]
+            p["model"] = project["model"]
+            p["algorithms"] = project["algorithms"]
+            p["features"] = project["features"]
+            p["label"] = project["label"]
+            p["accuracy"] = project["accuracy"]
+    store_project_list() 
+        
+
+# Machine Learning Methods
+
+def load_file(project_id: int, data_file_name: str):
+    logger.info("load_file project_id=" + str(project_id) + " data_file_name=" + data_file_name)
+    
+    project = get_project_by_id(project_id)
+    
     # read file - filename provided from the API
-    # set the filename in the experiment
-    dataset = read_csv(experiment.get('fileUrl'))
+    dataset = read_csv(data_file_name)
 
     # set supervised/unsupervised - get supervise / unsupervised from the API
     #se the supervised flag to TRUE in the experiment
@@ -236,6 +295,12 @@ def load_file(experiment_id: int):
     labels = []
     labels = names[len(names)-1: len(names)]
     label = labels[0]
+    
+    #set project features and labels
+    project["features"] = features
+    project["label"] = []
+    project["label"].append(labels[0])
+    store_project_list()
 
     #train on a single model
     # Split-out validation dataset
@@ -248,6 +313,7 @@ def load_file(experiment_id: int):
     # evaluate each model in turn
     results = []
     xnames = []
+    accuracy = []
     accuracyDict = {}
     model_dict = {}
     for name, model in models:
@@ -255,34 +321,25 @@ def load_file(experiment_id: int):
         cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
         results.append(cv_results)
         xnames.append(name)
-        #accuracy['LogisticRegression'] = [cv_results.mean(), cv_results.std()]
-        accuracyDict[name] =  cv_results.mean()
+        accuracy = [cv_results.mean(), cv_results.std()]
+        accuracyDict[name] =  accuracy
 
         # create model
         m = model.fit(X_train,Y_train)
+        
+        store_model(project_id, name, m)
+        
         model_dict[name] = m
         model_dict[name].predict([[5.1, 3.5, 1.4, 0.2]])
         #print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))    
 
-    experiment["model_dict"] = model_dict
+    # experiment["model_dict"] = model_dict
+    project["accuracy"] = {}
+    project["accuracy"] = accuracyDict
+    update_project_list(project)
+    store_project_list()
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', {"features": features},{"label": label}, {"accuracy": accuracyDict})
     return {"features": features},{"label": label}, {"accuracy": accuracyDict}
-
-@app.post("/experiments/predict/{experiment_id}")
-def predict(experiment_id: int, data: list ):
-    logger.info("predict(experiment_id=" + str(experiment_id) + ")")
-    predictDict = {}
-    model_dict = experiment["model_dict"] 
-    logger.info("model_dict=" + str(model_dict))
-
-    for name in model_dict:
-        logger.info("name=" + name)
-        d = data 
-        #d = [[6.1,2.9,4.7,1.4]]
-        logger.info("name=" + name + "=" +  str(model_dict[name].predict(d)))
-        predictDict[name] = str(model_dict[name].predict(d))
-        #predictDict.update({name: model_dict[name].predict(d)})
-
-    return {"predictDict": predictDict }
 
 
 
@@ -319,19 +376,52 @@ def ml():
 	pyplot.title('Algorithm Comparison')
 	pyplot.show()
 
+
+#
+# Read and Store files
+#
+
 # Store and Read Project List 
-def storeProjectList():
-    logger.info("***storeProjectList=",app.project_list)
-    with open('project_list.json', 'w') as f:
+def store_project_list():
+    logger.info("store_project_list=",app.project_list)
+    with open(PROJECT_LIST, 'w') as f:
         json.dump(app.project_list, f, ensure_ascii=False, indent=4)
     f.close()
+    read_project_list()
 
-def readProjectList():
-    f = open('project_list.json')
+
+def read_project_list():
+    logger.info("Starting read_project_list...")
+    f = open(PROJECT_LIST)
     app.project_list = json.load(f)
-    logger.info("readProjectList")
-    logger.info(app.project_list)
+    logger.info("read_project_list=", app.project_list)
     f.close()
+
+# Store Model
+def store_model(project_id: int, algorithm_name: str, model):
+    logger.info("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
+
+    filename = PROJECT_FILE_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
+    pickle.dump(model, open(filename, 'wb'))
+
+# Load Model
+def load_model(project_id: int, algorithm_name: str):
+    logger.info("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
+
+    filename = PROJECT_FILE_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
+    return pickle.load(open(filename, 'rb'))
+
+
+def read_algorithms():
+    logger.info("Starting read_algorithms...")
+    f = open(ALGORITHM_LIST)
+    app.algorithms = json.load(f)
+    logger.info("read_algorithms=", app.algorithms)
+    f.close()
+
+#
+# Exceptions
+#
 
 # Exceptions % Exception Handlers
 class NotFoundException(Exception):
