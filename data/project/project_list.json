@@ -5,7 +5,7 @@
         "created_date": "2021-12-21 00:00",
         "description": "1aim is to diagnose for abc",
         "data_file": "iris.csv",
-        "created_by": "nevilgultekin",
+        "created_by": "ng",
         "model": "supervised",
         "algorithms": [
             "LogisticRegression"
@@ -51,7 +51,7 @@
         "created_date": "2021-12-21 00:00",
         "description": "2aim is to diagnose for abc",
         "data_file": "2abc.xlsx",
-        "created_by": "nevilgultekin",
+        "created_by": "ng",
         "model": "unsupervised",
         "algorithms": [
             "LogisticRegression"
@@ -73,7 +73,7 @@
         "created_date": "2021-12-21 00:00",
         "description": "3aim is to diagnose for abc",
         "data_file": "3abc.xlsx",
-        "created_by": "nevilgultekin",
+        "created_by": "ng",
         "model": "supervised",
         "algorithms": [
             "LogisticRegression"
@@ -120,7 +120,7 @@
         "created_date": "2021-12-21T00:00:00",
         "description": "3aim is to diagnose for abc",
         "data_file": "3abc.xlsx",
-        "created_by": "nevilgultekin",
+        "created_by": "ng",
         "model": "supervised",
         "algorithms": [
             "LogisticRegression"
@@ -142,7 +142,7 @@
         "created_date": "2021-12-21T00:00:00",
         "description": "53aim is to diagnose for abc",
         "data_file": "53abc.xlsx",
-        "created_by": "nevilgultekin",
+        "created_by": "ng",
         "model": "supervised",
         "algorithms": [
             "LogisticRegression"
