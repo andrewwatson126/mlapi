@@ -19,6 +19,10 @@ from starlette.responses import JSONResponse
 from starlette.routing import Route
 
 from pandas import read_csv
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from matplotlib import pyplot
 
 import json
@@ -66,10 +70,10 @@ app.add_middleware(
 
 # Constants
 ROOT_FOLDER = "data/"
-PROJECT_LIST = ROOT_FOLDER + "project_list.json"
 INPUT_FOLDER = ROOT_FOLDER + "input/"
 ALGORITHM_LIST = INPUT_FOLDER + "algorithms.json"
-PROJECT_FILE_FOLDER = ROOT_FOLDER + "project/"
+PROJECT_FOLDER = ROOT_FOLDER + "project/"
+PROJECT_LIST = PROJECT_FOLDER + "project_list.json"
 
 
 # Global Variables
@@ -95,7 +99,7 @@ class Project(BaseModel):
     created_date: Optional[datetime] 
     description: Optional[str] = ""
     data_file: Optional[str] = ""
-    createdBy: str = "" 
+    created_by: str = "" 
     model: str = "Supervised"
     algorithms: List[str] = []
     features: List[str] = []
@@ -119,13 +123,17 @@ async def startup_event():
 #
 
 # upload file
-@app.post("/projects/uploadfile/")
+@app.post("/projects/uploadfile")
 async def upload_file(project_id: int, file: UploadFile = File(...)):
     logger.info("upload_file file=" + file.filename)
     
-    path = PROJECT_FILE_FOLDER + str(project_id) 
-    os.mkdir(path)
-    storeFile = PROJECT_FILE_FOLDER + str(project_id) + '/' + file.filename
+    path = PROJECT_FOLDER + str(project_id) 
+    try:
+        os.mkdir(path)
+    except Exception as err:
+        logging.warn("failed to cereate folder=",path, err)
+        
+    storeFile = PROJECT_FOLDER + str(project_id) + '/' + file.filename
    
     logger.info("upload_file storeFile=" + storeFile)
     
@@ -133,10 +141,14 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         async with aiofiles.open(storeFile, 'wb') as out_file:
             content = await file.read()  # async read
             await out_file.write(content)  # async write
-
+       
         load_file(project_id, storeFile)
+        project = get_project_by_id(project_id)
+        project["data_file"] = file.filename
+        modify_project(project)
 
     except Exception as e:
+        logger.error("upload_file()", str(e))
         return JSONResponse(
             status_code = status.HTTP_400_BAD_REQUEST,
             content = { 'message' : str(e) }
@@ -146,7 +158,6 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
             status_code = status.HTTP_200_OK,
             content = {"result":'result'}
             )    
-        
         
 
 # get project list
@@ -182,20 +193,20 @@ async def create_project(project: Project):
     return project
 
 # update project 
-@app.put("/projects/{project_id}")
-async def update_project(project_id: int, project: Project):
-    logger.info("update_project projectId=", project_id)
+@app.put("/projects")
+async def update_project(project: Project):
+    logger.info("update_project project=", str(project))
     p = get_project_by_id(project.id)
-    p["name"] = project.name
-    p["created_date"] = project.created_date
-    p["description"] = project.description
-    p["data_file"] = project.data_file
-    p["createdBy"] = project.createdBy
+    # p["name"] = project.name
+    # p["created_date"] = project.created_date
+    # p["description"] = project.description
+    # p["data_file"] = project.data_file
+    # p["created_by"] = project.created_by
     p["model"] = project.model
     p["algorithms"] = project.algorithms
     p["features"] = project.features
     p["label"] = project.label
-    p["accuracy"] = project.accuracy
+    # p["accuracy"] = project.accuracy
 
     store_project_list()
 
@@ -212,7 +223,7 @@ async def delete_project(project_id: int):
     store_project_list()
 
 
-@app.post("/projects/predict/{project_id}")
+@app.post("/projects/predict")
 def predict(project_id: int, data: list ):
     logger.info("predict(project_id=" + str(project_id) + ")")
     predictDict = {}
@@ -232,7 +243,41 @@ def predict(project_id: int, data: list ):
     return {"predictDict": predictDict }
 
 
+# get correlation
+@app.get("/projects/correlation/{project_id}", response_class=FileResponse)
+def correlation(project_id: int):
+    logger.info("correlation project_id=", str(project_id))
+    project = get_project_by_id(project_id)
+    
+    local_data_file = PROJECT_FOLDER + str(project_id) + '/' + project["data_file"]
+    df = pd.read_csv(local_data_file)
 
+    # run correlation matrix and plot
+    f, ax = plt.subplots(figsize=(10, 8))
+    corr = df.corr()
+    sns_plot = sns.heatmap(corr, mask=np.zeros_like(corr, dtype=np.bool),
+            cmap=sns.diverging_palette(220, 10, as_cmap=True),
+            square=True, ax=ax)
+
+    fig = sns_plot.get_figure()
+    local_correlation_file = PROJECT_FOLDER + str(project_id) + '/' + "correlation.png"
+    fig.savefig(local_correlation_file)    
+    return local_correlation_file
+
+
+# get features and labels
+@app.get("/projects/features_labels/{project_id}")
+def get_features_and_labels(project_id: int):
+    logger.info("get_features_and_labels project_id=", str(project_id))
+    project = get_project_by_id(project_id)
+    
+    fl = []
+    for feature in project["features"]:
+        fl.append({ "label": feature.replace(' ','') , "name": feature.replace(' ','')})
+    for label in project["label"]:
+        fl.append({ "label": label.replace(' ','') , "name": label.replace(' ','')})
+    
+    return fl
             
 #
 # Algortihms
@@ -266,7 +311,7 @@ def update_project_list(project):
             p["created_date"] = project["created_date"]
             p["description"] = project["description"]
             p["data_file"] = project["data_file"]
-            p["createdBy"] = project["createdBy"]
+            p["created_by"] = project["created_by"]
             p["model"] = project["model"]
             p["algorithms"] = project["algorithms"]
             p["features"] = project["features"]
@@ -376,6 +421,28 @@ def ml():
 	pyplot.title('Algorithm Comparison')
 	pyplot.show()
 
+#
+# Utils
+#
+def modify_project(project: Project):
+    logger.info("modify_project projectId=", project)
+    p = get_project_by_id(project["id"])
+    p["name"] = project["name"]
+    p["created_date"] = project["created_date"]
+    p["description"] = project["description"]
+    p["data_file"] = project["data_file"]
+    p["created_by"] = project["created_by"]
+    p["model"] = project["model"]
+    p["algorithms"] = project["algorithms"]
+    p["features"] = project["features"]
+    p["label"] = project["label"]
+    p["accuracy"] = project["accuracy"]
+
+    store_project_list()
+
+    return project
+
+
 
 #
 # Read and Store files
@@ -401,14 +468,14 @@ def read_project_list():
 def store_model(project_id: int, algorithm_name: str, model):
     logger.info("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
-    filename = PROJECT_FILE_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
+    filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
     pickle.dump(model, open(filename, 'wb'))
 
 # Load Model
 def load_model(project_id: int, algorithm_name: str):
     logger.info("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
-    filename = PROJECT_FILE_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
+    filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
     return pickle.load(open(filename, 'rb'))
 
 
