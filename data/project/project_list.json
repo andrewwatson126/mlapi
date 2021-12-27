@@ -4,19 +4,21 @@
         "name": "diagnostic1",
         "created_date": "2021-12-21 00:00",
         "description": "1aim is to diagnose for abc",
-        "data_file": "iris.csv",
+        "data_file": "iris3.csv",
         "created_by": "ng",
         "model": "supervised",
         "algorithms": [
             "LogisticRegression"
         ],
         "features": [
-            "petal-length",
-            "petal-width"
+            "Id",
+            "SepalLengthCm",
+            "SepalWidthCm",
+            "PetalLengthCm",
+            "PetalWidthCm"
         ],
         "label": [
-            "class",
-            "petal-width"
+            "Species"
         ],
         "accuracy": {
             "LogisticRegression": [
@@ -32,8 +34,8 @@
                 0.05590169943749474
             ],
             "DecisionTreeClassifier": [
-                0.949242424242424,
-                0.0557783640430302
+                0.9325757575757574,
+                0.07285736470863122
             ],
             "GaussianNB": [
                 0.9583333333333333,

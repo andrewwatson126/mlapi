@@ -158,7 +158,7 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
             status_code = status.HTTP_200_OK,
             content = {"result":'result'}
             )    
-        
+
 
 # get project list
 @app.get("/projects", response_model=List[Project])
@@ -345,13 +345,16 @@ def load_file(project_id: int, data_file_name: str):
     project["features"] = features
     project["label"] = []
     project["label"].append(labels[0])
+    print(">>>>>>>>>>>>>>>>>>>>>>>" + str(project))
     store_project_list()
 
     #train on a single model
     # Split-out validation dataset
     array = dataset.values
-    X = array[1:,0:4]
-    y = array[1:,4]
+    X = array[1:,1:5]
+    y = array[1:,5]
+    print(">>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
+    print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
     X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
 
     # check algorithms
