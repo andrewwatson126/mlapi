@@ -1,6 +1,7 @@
 from typing import Optional
 import typing
 import os
+import base64
 
 from fastapi import FastAPI, Request, UploadFile, File, status
 from fastapi import File, UploadFile
@@ -100,11 +101,11 @@ class Project(BaseModel):
     description: Optional[str] = ""
     data_file: Optional[str] = ""
     created_by: str = "" 
-    model: str = "Supervised"
-    algorithms: List[str] = []
-    features: List[str] = []
-    label: List[str] = []
-    accuracy: typing.Dict[str,List[float]] = {}
+    model: Optional[str] = "Supervised"
+    algorithms: Optional[List[str]] = []
+    features: Optional[List[str]] = []
+    label: Optional[List[str]] = []
+    accuracy: Optional[typing.Dict[str,List[float]]] = {}
 
 
 #
@@ -179,13 +180,11 @@ def get_project(project_id: int):
 async def create_project(project: Project):
     logger.info("create_project project=", project)
 
-    exists = False
-    for p in app.project_list:
-        if p["id"] == project.id:
-            exists = True
-    if exists == False:
-        project_json = jsonable_encoder(project)
-        app.project_list.append(project_json)
+    max = get_max_project_id()
+    project.id = max +1
+
+    project_json = jsonable_encoder(project)
+    app.project_list.append(project_json)
     logger.info("create_project appended=", app.project_list)
         
     store_project_list()
@@ -262,7 +261,22 @@ def correlation(project_id: int):
     fig = sns_plot.get_figure()
     local_correlation_file = PROJECT_FOLDER + str(project_id) + '/' + "correlation.png"
     fig.savefig(local_correlation_file)    
-    return local_correlation_file
+
+    encoded_string = ""
+    image_file = open(local_correlation_file, "rb")
+    encoded_bytes = base64.b64encode(image_file.read() )
+    encoded_string = encoded_bytes.decode("ascii")
+    logger.info("***************************************" + str(encoded_string))
+    print("************************************" + str(encoded_string))
+    image_file.close()
+
+    local_correlation_base64_file = PROJECT_FOLDER + str(project_id) + '/' + "correlation.txt"
+    base64_file = open(local_correlation_base64_file, "w")
+    base64_file.write(str(encoded_string))
+    base64_file.close()
+    
+
+    return local_correlation_base64_file
 
 
 # get features and labels
@@ -292,6 +306,17 @@ def get_algorithms():
 #
 # Private Methods
 #    
+
+#get max project id
+def get_max_project_id():
+    logger.debug("get_max_project_id()")
+    max = 0
+    for p in app.project_list:
+        if p["id"] > max:
+            max = p["id"]
+    logger.debug("get_max_project_id() max=", max)
+    return max
+
 
 # get project by project id
 def get_project_by_id(project_id: int):
