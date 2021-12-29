@@ -265,7 +265,7 @@ def correlation(project_id: int):
     encoded_string = ""
     image_file = open(local_correlation_file, "rb")
     encoded_bytes = base64.b64encode(image_file.read() )
-    encoded_string = encoded_bytes.decode("ascii")
+    encoded_string = encoded_bytes.decode("utf-8")
     logger.info("***************************************" + str(encoded_string))
     print("************************************" + str(encoded_string))
     image_file.close()
@@ -275,7 +275,7 @@ def correlation(project_id: int):
     base64_file.write(str(encoded_string))
     base64_file.close()
     
-
+    
     return local_correlation_base64_file
 
 
