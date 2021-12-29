@@ -413,7 +413,7 @@ def load_file(project_id: int, data_file_name: str):
         
         model_dict[name] = m
         model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
-        print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))    
+        print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))          
 
     # experiment["model_dict"] = model_dict
     project["accuracy"] = {}
