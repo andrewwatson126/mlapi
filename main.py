@@ -132,33 +132,38 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
     try:
         os.mkdir(path)
     except Exception as err:
-        logging.warn("failed to cereate folder=",path, err)
+        logging.warn("failed to cereate folder, already exists folder=",path, err)
         
     storeFile = PROJECT_FOLDER + str(project_id) + '/' + file.filename
    
     logger.info("upload_file storeFile=" + storeFile)
     
-    try:
-        async with aiofiles.open(storeFile, 'wb') as out_file:
-            content = await file.read()  # async read
-            await out_file.write(content)  # async write
-       
-        load_file(project_id, storeFile)
-        project = get_project_by_id(project_id)
-        project["data_file"] = file.filename
-        modify_project(project)
+    # delete file if it exists
+    #if not os.path.exists(storeFile):
+    #    os.remove(storeFile)
 
-    except Exception as e:
-        logger.error("upload_file()", str(e))
-        return JSONResponse(
-            status_code = status.HTTP_400_BAD_REQUEST,
-            content = { 'message' : str(e) }
-            )
-    else:
-        return JSONResponse(
-            status_code = status.HTTP_200_OK,
-            content = {"result":'result'}
-            )    
+    
+    #try:
+    async with aiofiles.open(storeFile, 'wb') as out_file:
+        content = await file.read()  # async read
+        await out_file.write(content)  # async write
+    
+    load_file(project_id, storeFile)
+    project = get_project_by_id(project_id)
+    project["data_file"] = file.filename
+    modify_project(project)
+
+    #except Exception as e:
+    #    logger.error("upload_file()", str(e))
+    #    return JSONResponse(
+    #        status_code = status.HTTP_400_BAD_REQUEST,
+    #        content = { 'message' : str(e) }
+    #        )
+    #else:
+    #    return JSONResponse(
+    #        status_code = status.HTTP_200_OK,
+    #        content = {"result":'result'}
+    #        )    
 
 
 # get project list
@@ -265,7 +270,8 @@ def correlation(project_id: int):
     encoded_string = ""
     image_file = open(local_correlation_file, "rb")
     encoded_bytes = base64.b64encode(image_file.read() )
-    encoded_string = encoded_bytes.decode("ascii")
+    #encoded_string = encoded_bytes.decode("ascii")  
+    encoded_string = encoded_bytes.decode("utf-8")  
     logger.info("***************************************" + str(encoded_string))
     print("************************************" + str(encoded_string))
     image_file.close()
@@ -365,6 +371,9 @@ def load_file(project_id: int, data_file_name: str):
     labels = []
     labels = names[len(names)-1: len(names)]
     label = labels[0]
+    print(">>>>>>>>>>>>>>>>>>>>>>> features " + str(features))
+    print(">>>>>>>>>>>>>>>>>>>>>>> len(features) " + str(len(features)))
+    print(">>>>>>>>>>>>>>>>>>>>>>> label " + str(label))
     
     #set project features and labels
     project["features"] = features
@@ -376,8 +385,8 @@ def load_file(project_id: int, data_file_name: str):
     #train on a single model
     # Split-out validation dataset
     array = dataset.values
-    X = array[1:,1:5]
-    y = array[1:,5]
+    X = array[0:,0:len(features)]
+    y = array[0:,len(features)]
     print(">>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
     print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
     X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
@@ -390,7 +399,7 @@ def load_file(project_id: int, data_file_name: str):
     accuracyDict = {}
     model_dict = {}
     for name, model in models:
-        kfold = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+        kfold = StratifiedKFold(n_splits=5, random_state=1, shuffle=True)
         cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
         results.append(cv_results)
         xnames.append(name)
@@ -403,8 +412,8 @@ def load_file(project_id: int, data_file_name: str):
         store_model(project_id, name, m)
         
         model_dict[name] = m
-        model_dict[name].predict([[5.1, 3.5, 1.4, 0.2]])
-        #print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))    
+        model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
+        print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))    
 
     # experiment["model_dict"] = model_dict
     project["accuracy"] = {}
