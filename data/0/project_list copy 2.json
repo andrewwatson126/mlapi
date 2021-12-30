@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "diagnostic1",
+        "created_date": "2021-12-21 00:00",
+        "description": "1aim is to diagnose for abc",
+        "data_file": "1abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "sepal-length'",
+            "sepal-width",
+            "petal-length",
+            "petal-width"
+        ],
+        "label": [
+            "class"
+        ],
+        "accuracy": {  }
+    }
+]

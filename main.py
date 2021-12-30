@@ -114,10 +114,10 @@ class Project(BaseModel):
 
 @app.on_event("startup")
 async def startup_event():
-    logger.info('Starting up fastapi server...')
+    print('Starting up fastapi server...')
     read_project_list()
     read_algorithms()
-    logger.info('Started up fastapi server')
+    print('Started up fastapi server')
 
 #
 # /project
@@ -126,7 +126,7 @@ async def startup_event():
 # upload file
 @app.post("/projects/uploadfile")
 async def upload_file(project_id: int, file: UploadFile = File(...)):
-    logger.info("upload_file file=" + file.filename)
+    print("upload_file file=" + file.filename)
     
     path = PROJECT_FOLDER + str(project_id) 
     try:
@@ -136,7 +136,7 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         
     storeFile = PROJECT_FOLDER + str(project_id) + '/' + file.filename
    
-    logger.info("upload_file storeFile=" + storeFile)
+    print("upload_file storeFile=" + storeFile)
     
     # delete file if it exists
     #if not os.path.exists(storeFile):
@@ -148,49 +148,50 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         content = await file.read()  # async read
         await out_file.write(content)  # async write
     
-    load_file(project_id, storeFile)
-    project = get_project_by_id(project_id)
-    project["data_file"] = file.filename
-    modify_project(project)
+    try: 
+        load_file(project_id, storeFile)
+        project = get_project_by_id(project_id)
+        project["data_file"] = file.filename
+        modify_project(project)
 
-    #except Exception as e:
-    #    logger.error("upload_file()", str(e))
-    #    return JSONResponse(
-    #        status_code = status.HTTP_400_BAD_REQUEST,
-    #        content = { 'message' : str(e) }
-    #        )
-    #else:
-    #    return JSONResponse(
-    #        status_code = status.HTTP_200_OK,
-    #        content = {"result":'result'}
-    #        )    
+    except Exception as e:
+        logger.error("upload_file()", str(e))
+        return JSONResponse(
+            status_code = status.HTTP_400_BAD_REQUEST,
+            content = { 'message' : str(e) }
+            )
+    else:
+        return JSONResponse(
+            status_code = status.HTTP_200_OK,
+            content = {"result":'result'}
+            )    
 
 
 # get project list
 @app.get("/projects", response_model=List[Project])
 def get_project_list():
-    logger.info("get_project_list", app.project_list)
+    print("get_project_list", app.project_list)
     return app.project_list
 
 
 # get project 
 @app.get("/projects/{project_id}", response_model=Project)
 def get_project(project_id: int):
-    logger.info("get_project project_id=", project_id)
+    print("get_project project_id=", project_id)
     return get_project_by_id(project_id)
 
 
 # create project 
 @app.post("/projects")
 async def create_project(project: Project):
-    logger.info("create_project project=", project)
+    print("create_project project=", project)
 
     max = get_max_project_id()
     project.id = max +1
 
     project_json = jsonable_encoder(project)
     app.project_list.append(project_json)
-    logger.info("create_project appended=", app.project_list)
+    print("create_project appended=", app.project_list)
         
     store_project_list()
 
@@ -199,7 +200,7 @@ async def create_project(project: Project):
 # update project 
 @app.put("/projects")
 async def update_project(project: Project):
-    logger.info("update_project project=", str(project))
+    print("update_project project=", str(project))
     p = get_project_by_id(project.id)
     # p["name"] = project.name
     # p["created_date"] = project.created_date
@@ -219,7 +220,7 @@ async def update_project(project: Project):
 # delete
 @app.delete("/projects/{project_id}")
 async def delete_project(project_id: int):
-    logger.info("delete_project projectId=", project_id)
+    print("delete_project projectId=", project_id)
     for project in app.project_list:
         if project.get("id") == project_id:
             app.project_list.remove(project)
@@ -229,18 +230,18 @@ async def delete_project(project_id: int):
 
 @app.post("/projects/predict")
 def predict(project_id: int, data: list ):
-    logger.info("predict(project_id=" + str(project_id) + ")")
+    print("predict(project_id=" + str(project_id) + ")")
     predictDict = {}
     project = get_project_by_id(project_id)
 
     for algorithm in app.algorithms:
         algorithm_label = algorithm["label"]
-        logger.info("label=")
-        logger.info(algorithm_label)
+        print("label=")
+        print(algorithm_label)
         model = load_model(project_id, algorithm_label)
         d = data 
         #d = [[6.1,2.9,4.7,1.4]]
-        logger.info(model.predict(d))
+        print(model.predict(d))
         predictDict[algorithm_label] = str(model.predict(d))
         #predictDict.update({name: model_dict[name].predict(d)})
 
@@ -250,7 +251,7 @@ def predict(project_id: int, data: list ):
 # get correlation
 @app.get("/projects/correlation/{project_id}", response_class=FileResponse)
 def correlation(project_id: int):
-    logger.info("correlation project_id=", str(project_id))
+    print("correlation project_id=", str(project_id))
     project = get_project_by_id(project_id)
     
     local_data_file = PROJECT_FOLDER + str(project_id) + '/' + project["data_file"]
@@ -272,7 +273,7 @@ def correlation(project_id: int):
     encoded_bytes = base64.b64encode(image_file.read() )
     #encoded_string = encoded_bytes.decode("ascii")  
     encoded_string = encoded_bytes.decode("utf-8")  
-    logger.info("***************************************" + str(encoded_string))
+    print("***************************************" + str(encoded_string))
     print("************************************" + str(encoded_string))
     image_file.close()
 
@@ -288,7 +289,7 @@ def correlation(project_id: int):
 # get features and labels
 @app.get("/projects/features_labels/{project_id}")
 def get_features_and_labels(project_id: int):
-    logger.info("get_features_and_labels project_id=", str(project_id))
+    print("get_features_and_labels project_id=", str(project_id))
     project = get_project_by_id(project_id)
     
     fl = []
@@ -306,7 +307,7 @@ def get_features_and_labels(project_id: int):
 # get algorithms
 @app.get("/algorithms")
 def get_algorithms():
-    logger.info("get_algorithms")
+    print("get_algorithms")
     return app.algorithms
  
 #
@@ -326,16 +327,16 @@ def get_max_project_id():
 
 # get project by project id
 def get_project_by_id(project_id: int):
-    logger.info("get_project_by_id")
+    print("get_project_by_id" + str(project_id))
     for project in app.project_list:
         if project.get("id") == project_id:
             return project
         
-    raise NotFoundException("Project with id , project_id,  not found")
+    raise NotFoundException("Project with id=" + str(project_id) +  " not found")
  
 
 def update_project_list(project):
-    logger.info("update_project_list")
+    print("update_project_list")
     for p in app.project_list:
         if  p["id"] == project["id"]:
             p["name"] = project["name"]
@@ -354,7 +355,7 @@ def update_project_list(project):
 # Machine Learning Methods
 
 def load_file(project_id: int, data_file_name: str):
-    logger.info("load_file project_id=" + str(project_id) + " data_file_name=" + data_file_name)
+    print("load_file project_id=" + str(project_id) + " data_file_name=" + data_file_name)
     
     project = get_project_by_id(project_id)
     
@@ -412,8 +413,8 @@ def load_file(project_id: int, data_file_name: str):
         store_model(project_id, name, m)
         
         model_dict[name] = m
-        model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
-        print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))          
+        #model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
+        #print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))          
 
     # experiment["model_dict"] = model_dict
     project["accuracy"] = {}
@@ -462,7 +463,7 @@ def ml():
 # Utils
 #
 def modify_project(project: Project):
-    logger.info("modify_project projectId=", project)
+    print("modify_project projectId=", project)
     p = get_project_by_id(project["id"])
     p["name"] = project["name"]
     p["created_date"] = project["created_date"]
@@ -487,7 +488,7 @@ def modify_project(project: Project):
 
 # Store and Read Project List 
 def store_project_list():
-    logger.info("store_project_list=",app.project_list)
+    print("store_project_list=",app.project_list)
     with open(PROJECT_LIST, 'w') as f:
         json.dump(app.project_list, f, ensure_ascii=False, indent=4)
     f.close()
@@ -495,32 +496,32 @@ def store_project_list():
 
 
 def read_project_list():
-    logger.info("Starting read_project_list...")
+    print("Starting read_project_list...")
     f = open(PROJECT_LIST)
     app.project_list = json.load(f)
-    logger.info("read_project_list=", app.project_list)
+    print("read_project_list=", app.project_list)
     f.close()
 
 # Store Model
 def store_model(project_id: int, algorithm_name: str, model):
-    logger.info("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
+    print("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
     filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
     pickle.dump(model, open(filename, 'wb'))
 
 # Load Model
 def load_model(project_id: int, algorithm_name: str):
-    logger.info("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
+    print("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
     filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
     return pickle.load(open(filename, 'rb'))
 
 
 def read_algorithms():
-    logger.info("Starting read_algorithms...")
+    print("Starting read_algorithms...")
     f = open(ALGORITHM_LIST)
     app.algorithms = json.load(f)
-    logger.info("read_algorithms=", app.algorithms)
+    print("read_algorithms=", app.algorithms)
     f.close()
 
 #
