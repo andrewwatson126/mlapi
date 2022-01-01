@@ -298,7 +298,47 @@ def get_features_and_labels(project_id: int):
         fl.append({ "label": label.replace(' ','') , "name": label.replace(' ','')})
     
     return fl
-            
+        
+# plot model
+@app.get("/projects/plot/{project_id}")
+def plot_data(project_id: int, algorithm: str):
+    logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
+    project = get_project_by_id(project_id)
+    project_path = get_project_path(project)
+    ds = load_data_set(project_id)
+
+    fs = project["features"].copy()
+    plot_files = []
+    
+    count = 5
+
+    for f1 in project["features"]:
+        fs.remove(f1)
+        print('>>>' + str(fs))
+        for f2 in fs:
+            count = count - 1
+            if count <= 0:
+                break
+            print(f1 + '-' + f2)
+            g = sns.FacetGrid(ds, hue ="diagnostic",
+                height = 6)
+            g.map(plt.scatter,f1,f2)
+            g.add_legend()
+            plot_file_name =  f1 +'-'+f2+'.png'
+            g.savefig(project_path + plot_file_name)
+            plot_files.append(plot_file_name)
+
+    return plot_files
+
+@app.get("/projects/plot_file/{project_id}", response_class=FileResponse)
+def get_plot_file(project_id: int, plot_file_name: str):
+    logger.info("get_plot_file project_id=", str(project_id), " plot_file_name=", plot_file_name)
+    project = get_project_by_id(project_id)
+    project_path = get_project_path(project)
+
+    plot_file_path = project_path + plot_file_name
+    return plot_file_path
+    
 #
 # Algortihms
 #
@@ -423,8 +463,19 @@ def load_file(project_id: int, data_file_name: str):
     print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', {"features": features},{"label": label}, {"accuracy": accuracyDict})
     return {"features": features},{"label": label}, {"accuracy": accuracyDict}
 
+def load_data_set(project_id: int):
+    logger.info("load_data_set project_id=" + str(project_id))
+    
+    project = get_project_by_id(project_id)
+    data_file_path = get_data_file_path(project)
+    return pd.read_csv(data_file_path)
 
 
+def get_data_file_path(project):
+    return  PROJECT_FOLDER + str(project['id']) + '/' + project['data_file']
+
+def get_project_path(project):
+    return  PROJECT_FOLDER + str(project['id']) + '/' 
 
 def ml():
 	# Load dataset
