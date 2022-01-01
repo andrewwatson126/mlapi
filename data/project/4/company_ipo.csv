@@ -1,0 +1,1766 @@
+ID,IPO Date,Symbol,Company Name,IPO Price,Current,Return
+1,"Dec 21, 2021",NVAC,NorthView Acquisition,$10.00,$10.03,0.30%
+2,"Dec 21, 2021",LSPR,Larkspur Health Acquisition,$10.00,$9.98,-0.20%
+3,"Dec 21, 2021",SAGA,Sagaliam Acquisition,$10.00,$9.97,-0.30%
+4,"Dec 17, 2021",RCAC,Revelstone Capital Acquisition,$10.00,$9.90,-1.00%
+5,"Dec 17, 2021",APCA,AP Acquisition,$10.00,$10.11,1.10%
+6,"Dec 16, 2021",ADRT,Ault Disruptive Technologies,$10.00,$10.02,0.15%
+7,"Dec 16, 2021",SANG,Sangoma Technologies,$22.68,$16.69,-26.41%
+8,"Dec 16, 2021",SHAP,Spree Acquisition 1,$10.00,$9.98,-0.20%
+9,"Dec 16, 2021",IMMX,Immix Biopharma,$5.00,$3.48,-30.40%
+10,"Dec 16, 2021",EMLD,FTAC Emerald Acquisition,$10.00,$10.00,0.00%
+11,"Dec 16, 2021",CFFS,CF Acquisition VII,$10.00,$10.02,0.20%
+12,"Dec 16, 2021",BNOX,Bionomics,$15.45,$12.75,-17.48%
+13,"Dec 15, 2021",GNTA,Genenta Science S.p.A.,$11.50,$11.23,-2.35%
+14,"Dec 15, 2021",PRLH,Pearl Holdings Acquisition,$10.00,$9.99,-0.15%
+15,"Dec 15, 2021",AHRN,Ahren Acquisition,$10.00,$10.01,0.10%
+16,"Dec 15, 2021",BFAC,Battery Future Acquisition,$10.00,$10.03,0.30%
+17,"Dec 15, 2021",IOT,Samsara,$23.00,$25.36,10.26%
+18,"Dec 15, 2021",EVE,EVe Mobility Acquisition,$10.00,$10.00,0.00%
+19,"Dec 15, 2021",IVCP,Swiftmerge Acquisition,$10.00,$9.89,-1.10%
+20,"Dec 15, 2021",IVCB,Investcorp Europe Acquisition Corp I,$10.00,$10.05,0.50%
+21,"Dec 14, 2021",VINE,Fresh Vine Wine,$10.00,$5.45,-45.50%
+22,"Dec 14, 2021",KACL,Kairous Acquisition,$10.00,$10.15,1.50%
+23,"Dec 14, 2021",SIDU,Sidus Space,$5.00,$9.35,87.00%
+24,"Dec 13, 2021",BRKH,BurTech Acquisition,$10.00,$10.00,0.00%
+25,"Dec 13, 2021",ALSA,Alpha Star Acquisition,$10.00,$10.23,2.30%
+26,"Dec 10, 2021",PORT,Southport Acquisition,$10.00,$10.01,0.10%
+27,"Dec 10, 2021",ATEK,Athena Technology Acquisition II,$10.00,$9.96,-0.40%
+28,"Dec 10, 2021",FRBN,Forbion European Acquisition,$10.00,$9.99,-0.10%
+29,"Dec 10, 2021",FXCO,Financial Strategies Acquisition,$10.00,$10.27,2.70%
+30,"Dec 10, 2021",XPDB,Power & Digital Infrastructure Acquisition II,$10.00,$10.10,1.00%
+31,"Dec 10, 2021",GFGD,Growth For Good Acquisition,$10.00,$9.99,-0.14%
+32,"Dec 10, 2021",HAIA,Healthcare AI Acquisition,$10.00,$10.01,0.10%
+33,"Dec 10, 2021",TCOA,Trajectory Alpha Acquisition,$10.00,$9.93,-0.67%
+34,"Dec 9, 2021",WEL,Integrated Wellness Acquisition,$10.00,$10.07,0.72%
+35,"Dec 9, 2021",GGAA,Genesis Growth Tech Acquisition,$10.00,$10.03,0.30%
+36,"Dec 9, 2021",RJAC,Jackson Acquisition Company,$10.00,$9.96,-0.40%
+37,"Dec 9, 2021",NU,Nu Holdings,$9.00,$9.23,2.56%
+38,"Dec 9, 2021",HORI,Emerging Markets Horizon,$10.00,$10.04,0.40%
+39,"Dec 9, 2021",IGTA,Inception Growth Acquisition,$10.00,$10.05,0.50%
+40,"Dec 9, 2021",NRSN,NeuroSense Therapeutics,$6.00,$3.14,-47.67%
+41,"Dec 9, 2021",HCP,HashiCorp,$80.00,$84.97,6.21%
+42,"Dec 9, 2021",SCUA,Sculptor Acquisition I,$10.00,$10.05,0.48%
+43,"Dec 9, 2021",TGAA,Target Global Acquisition I,$10.00,$9.94,-0.60%
+44,"Dec 8, 2021",CING,Cingulate,$6.00,$2.75,-54.10%
+45,"Dec 8, 2021",REFI,Chicago Atlantic Real Estate Finance,$16.00,$16.02,0.12%
+46,"Dec 7, 2021",APXI,APx Acquisition I,$10.00,$10.05,0.50%
+47,"Dec 7, 2021",JWAC,Jupiter Wellness Acquisition,$10.00,$10.04,0.40%
+48,"Dec 7, 2021",MTVC,Motive Capital Corp II,$10.00,$10.00,0.00%
+49,"Dec 7, 2021",DAOO,Crypto 1 Acquisition,$10.00,$10.08,0.80%
+50,"Dec 7, 2021",GLLI,Globalink Investment,$10.00,$10.18,1.80%
+51,"Dec 3, 2021",BIOS,BioPlus Acquisition,$10.00,$10.01,0.10%
+52,"Dec 3, 2021",BOCN,Blue Ocean Acquisition,$10.00,$10.02,0.20%
+53,"Dec 3, 2021",STET,ST Energy Transition I,$10.00,$9.98,-0.20%
+54,"Dec 3, 2021",BPAC,Bullpen Parlay Acquisition Company,$10.00,$10.05,0.50%
+55,"Dec 2, 2021",ROC,ROC Energy Acquisition,$10.00,$10.05,0.50%
+56,"Dec 2, 2021",UTAA,UTA Acquisition,$10.00,$10.02,0.20%
+57,"Dec 2, 2021",GEEX,Games & Esports Experience Acquisition,$10.00,$10.14,1.40%
+58,"Dec 1, 2021",CMCA,Capitalworks Emerging Markets Acquisition,$10.00,$10.11,1.05%
+59,"Dec 1, 2021",ROCL,Roth CH Acquisition V Co.,$10.00,$9.99,-0.15%
+60,"Dec 1, 2021",PACI,PROOF Acquisition I,$10.00,$10.02,0.20%
+61,"Dec 1, 2021",TLGY,TLGY Acquisition,$10.00,$10.09,0.90%
+62,"Nov 30, 2021",CNGL,Canna-Global Acquisition,$10.00,$10.11,1.10%
+63,"Nov 24, 2021",MNTN,Everest Consolidator Acquisition,$10.00,$10.07,0.65%
+64,"Nov 24, 2021",BRD,Beard Energy Transition Acquisition,$10.00,$10.07,0.70%
+65,"Nov 24, 2021",AERC,AeroClean Technologies,$10.00,$11.89,18.90%
+66,"Nov 23, 2021",VHNA,Vahanna Tech Edge Acquisition I,$10.00,$10.07,0.70%
+67,"Nov 23, 2021",MAAQ,Mana Capital Acquisition,$10.00,$10.25,2.50%
+68,"Nov 22, 2021",LGTO,Legato Merger II,$10.00,$10.01,0.10%
+69,"Nov 22, 2021",LAX,8i Acquisition 2,$10.00,$10.37,3.65%
+70,"Nov 19, 2021",AHI,Advanced Human Imaging,$10.50,$5.03,-52.10%
+71,"Nov 19, 2021",NFNT,Infinite Acquisition,$10.00,$10.04,0.40%
+72,"Nov 19, 2021",ALOR,ALSP Orchid Acquisition I,$10.00,$10.04,0.37%
+73,"Nov 19, 2021",LITM,Snow Lake Resources,$7.50,$4.86,-35.20%
+74,"Nov 19, 2021",IFIN,InFinT Acquisition,$10.00,$10.06,0.60%
+75,"Nov 19, 2021",ZING,FTAC Zeus Acquisition,$10.00,$10.04,0.40%
+76,"Nov 19, 2021",CREC,Crescera Capital Acquisition,$10.00,$10.02,0.20%
+77,"Nov 19, 2021",FINW,FinWise Bancorp,$10.50,$13.43,27.90%
+78,"Nov 18, 2021",ARIZ,Arisz Acquisition,$10.00,$10.08,0.80%
+79,"Nov 18, 2021",SG,Sweetgreen,$28.00,$28.80,2.86%
+80,"Nov 18, 2021",BLEU,bleuacacia ltd.,$10.00,$10.04,0.40%
+81,"Nov 17, 2021",USER,UserTesting,$14.00,$8.22,-41.29%
+82,"Nov 17, 2021",IREN,Iris Energy,$28.00,$17.97,-35.82%
+83,"Nov 17, 2021",SEV,Sono Group,$15.00,$10.42,-30.53%
+84,"Nov 17, 2021",LFAC,LF Capital Acquisition II,$10.00,$10.10,1.00%
+85,"Nov 17, 2021",SGII,Seaport Global Acquisition II,$10.00,$10.04,0.40%
+86,"Nov 17, 2021",SUAC,ShoulderUp Technology Acquisition,$10.00,$10.03,0.25%
+87,"Nov 17, 2021",BRZE,Braze,$65.00,$75.95,16.85%
+88,"Nov 17, 2021",NETC,Nabors Energy Transition,$10.00,$10.14,1.40%
+89,"Nov 16, 2021",ENCP,Energem,$10.00,$10.15,1.50%
+90,"Nov 15, 2021",ONL,Orion Office REIT,$0.00,$18.96,0.00%
+91,"Nov 12, 2021",DERM,Journey Medical,$10.00,$6.74,-32.60%
+92,"Nov 12, 2021",MCAG,Mountain Crest Acquisition V,$10.00,$10.12,1.20%
+93,"Nov 12, 2021",BTBD,BT Brands,$5.00,$3.58,-28.40%
+94,"Nov 12, 2021",MYNA,Mynaric AG,$17.48,$13.71,-21.57%
+95,"Nov 12, 2021",IRRX,Integrated Rail & Resources Acquisition,$10.00,$9.99,-0.10%
+96,"Nov 11, 2021",VAXX,Vaxxinity,$13.00,$6.69,-48.54%
+97,"Nov 11, 2021",LGVC,LAMF Global Ventures I,$10.00,$10.00,0.00%
+98,"Nov 11, 2021",LVLU,Lulu's Fashion Lounge Holdings,$16.00,$10.83,-32.31%
+99,"Nov 11, 2021",VMGA,VMG Consumer Acquisition,$10.00,$10.07,0.70%
+100,"Nov 11, 2021",TIVC,Tivic Health Systems,$5.00,$4.26,-14.80%
+101,"Nov 11, 2021",PIK,Kidpik,$8.50,$7.21,-15.13%
+102,"Nov 11, 2021",WEAV,Weave Communications,$24.00,$14.67,-38.88%
+103,"Nov 11, 2021",WBEV,"Winc, Inc.",$13.00,$5.29,-59.31%
+104,"Nov 11, 2021",BEAT,HeartBeam,$6.00,$3.60,-40.00%
+105,"Nov 11, 2021",BLZE,Backblaze,$16.00,$18.57,16.06%
+106,"Nov 10, 2021",BCSA,Blockchain Coinvestors Acquisition I,$10.00,$10.14,1.40%
+107,"Nov 10, 2021",CBRG,Chain Bridge I,$10.00,$10.09,0.85%
+108,"Nov 10, 2021",BJDX,Bluejay Diagnostics,$10.00,$3.26,-67.40%
+109,"Nov 10, 2021",CINT,CI&T Inc.,$15.00,$12.69,-15.40%
+110,"Nov 10, 2021",EXFY,Expensify,$27.00,$35.36,30.96%
+111,"Nov 10, 2021",RIVN,Rivian Automotive,$78.00,$96.82,24.13%
+112,"Nov 10, 2021",RCFA,RCF Acquisition,$10.00,$10.02,0.20%
+113,"Nov 10, 2021",AFAC,Arena Fortify Acquisition,$10.00,$10.14,1.40%
+114,"Nov 10, 2021",ACDI,Ascendant Digital Acquisition III,$10.00,$10.07,0.65%
+115,"Nov 9, 2021",TCBX,Third Coast Bancshares,$25.00,$26.33,5.32%
+116,"Nov 9, 2021",STRN,Stran & Company,$4.15,$5.90,42.17%
+117,"Nov 9, 2021",SOPA,Society Pass,$9.00,$10.63,18.11%
+118,"Nov 9, 2021",HTAQ,Hunt Companies Acquisition I,$10.00,$10.12,1.20%
+119,"Nov 9, 2021",GVCI,Green Visor Financial Technology Acquisition I,$10.00,$10.06,0.57%
+120,"Nov 9, 2021",DPCS,DP Cap Acquisition I,$10.00,$10.03,0.30%
+121,"Nov 9, 2021",OLIT,OmniLit Acquisition,$10.00,$10.06,0.60%
+122,"Nov 9, 2021",PRM,Perimeter Solutions,$0.00,$12.84,0.00%
+123,"Nov 9, 2021",APN,Apeiron Capital Investment,$10.00,$10.06,0.55%
+124,"Nov 8, 2021",LYLT,Loyalty Ventures,$0.00,$30.03,0.00%
+125,"Nov 5, 2021",CIAN,Cian PLC,$16.00,$12.26,-23.38%
+126,"Nov 5, 2021",NPAB,New Providence Acquisition II,$10.00,$10.12,1.20%
+127,"Nov 5, 2021",RRAC,Rigel Resource Acquisition,$10.00,$10.04,0.40%
+128,"Nov 5, 2021",MYNZ,Mainz Biomed B.V.,$5.00,$9.21,84.20%
+129,"Nov 5, 2021",TSVT,2seventy bio,$0.00,$30.04,0.00%
+130,"Nov 5, 2021",IQMD,Intelligent Medicine Acquisition,$10.00,$10.18,1.80%
+131,"Nov 5, 2021",SVNA,7 Acquisition,$10.00,$10.03,0.30%
+132,"Nov 5, 2021",RGF,Real Good Food Company,$12.00,$5.73,-52.25%
+133,"Nov 5, 2021",MCAA,Mountain & Co. I Acquisition,$10.00,$10.14,1.40%
+134,"Nov 5, 2021",IOBT,IO Biotech,$14.00,$8.26,-41.00%
+135,"Nov 4, 2021",MDXH,MDxHealth,$13.46,$9.47,-29.64%
+136,"Nov 4, 2021",LION,Lionheart III,$10.00,$9.99,-0.10%
+137,"Nov 4, 2021",JUN,Juniper II,$10.00,$10.08,0.80%
+138,"Nov 4, 2021",SHCA,Spindletop Health Acquisition,$10.00,$10.05,0.50%
+139,"Nov 4, 2021",FNVT,Finnovate Acquisition,$10.00,$10.10,1.00%
+140,"Nov 4, 2021",TOAC,Talon 1 Acquisition,$10.00,$10.15,1.50%
+141,"Nov 4, 2021",MPRA,Mercato Partners Acquisition,$10.00,$10.07,0.70%
+142,"Nov 4, 2021",DHAC,Digital Health Acquisition,$10.00,$10.18,1.80%
+143,"Nov 4, 2021",CDRE,Cadre Holdings,$13.00,$20.67,59.00%
+144,"Nov 4, 2021",KD,Kyndryl Holdings,$0.00,$18.02,0.00%
+145,"Nov 4, 2021",NRDS,NerdWallet,$18.00,$14.96,-16.89%
+146,"Nov 4, 2021",EVO,Evotec SE,$26.16,$22.40,-14.37%
+147,"Nov 4, 2021",SZZL,Sizzle Acquisition,$10.00,$10.04,0.40%
+148,"Nov 4, 2021",CNDB,Concord Acquisition III,$10.00,$10.22,2.20%
+149,"Nov 4, 2021",LGST,Semper Paratus Acquisition,$10.00,$10.09,0.90%
+150,"Nov 4, 2021",ARHS,Arhaus,$13.00,$10.99,-15.46%
+151,"Nov 3, 2021",INTE,Integral Acquisition 1,$10.00,$9.96,-0.40%
+152,"Nov 3, 2021",FRLA,Fortune Rise Acquisition,$10.00,$10.07,0.70%
+153,"Nov 3, 2021",TRAQ,Trine II Acquisition,$10.00,$10.04,0.35%
+154,"Nov 3, 2021",MLAI,McLaren Technology Acquisition,$10.00,$10.07,0.65%
+155,"Nov 3, 2021",CMTG,Claros Mortgage Trust,$18.65,$16.10,-13.67%
+156,"Nov 3, 2021",BIRD,Allbirds,$15.00,$14.45,-3.67%
+157,"Nov 3, 2021",ONYX,Onyx Acquisition Co. I,$10.00,$10.13,1.30%
+158,"Nov 3, 2021",TGVC,TG Venture Acquisition,$10.00,$10.24,2.40%
+159,"Nov 1, 2021",VSAC,Vision Sensing Acquisition,$10.00,$10.08,0.80%
+160,"Nov 1, 2021",LIAN,LianBio,$16.00,$7.47,-53.31%
+161,"Nov 1, 2021",LIBY,Liberty Resources Acquisition,$10.00,$10.17,1.70%
+162,"Oct 29, 2021",CCTS,Cactus Acquisition 1,$10.00,$10.04,0.40%
+163,"Oct 29, 2021",PEGR,Project Energy Reimagined Acquisition,$10.00,$9.93,-0.70%
+164,"Oct 29, 2021",HRT,HireRight Holdings,$19.00,$13.46,-29.16%
+165,"Oct 29, 2021",SEDA,SDCL EDGE Acquisition,$10.00,$9.90,-1.00%
+166,"Oct 29, 2021",BFRI,Biofrontera,$5.00,$11.03,120.60%
+167,"Oct 29, 2021",AIRS,AirSculpt Technologies,$11.00,$13.74,24.91%
+168,"Oct 29, 2021",TRDA,Entrada Therapeutics,$20.00,$14.78,-26.10%
+169,"Oct 29, 2021",SONX,Sonendo,$12.00,$6.75,-43.75%
+170,"Oct 29, 2021",AEAE,AltEnergy Acquisition,$10.00,$10.12,1.20%
+171,"Oct 29, 2021",AURA,Aura Biosciences,$14.00,$15.01,7.21%
+172,"Oct 29, 2021",ARCK,Arbor Rapha Capital Bioholdings I,$10.00,$10.10,1.00%
+173,"Oct 29, 2021",UDMY,Udemy,$29.00,$17.20,-40.69%
+174,"Oct 28, 2021",ADAL,Anthemis Digital Acquisitions I,$10.00,$10.14,1.40%
+175,"Oct 28, 2021",PCCT,Perception Capital II,$10.00,$10.13,1.30%
+176,"Oct 28, 2021",DTC,Solo Brands,$17.00,$14.20,-16.47%
+177,"Oct 28, 2021",FLNC,Fluence Energy,$28.00,$31.92,14.00%
+178,"Oct 28, 2021",GFS,GlobalFoundries,$47.00,$62.24,32.43%
+179,"Oct 28, 2021",SCMA,Seaport Calibre Materials Acquisition,$10.00,$10.03,0.30%
+180,"Oct 28, 2021",FIAC,Focus Impact Acquisition,$10.00,$10.06,0.60%
+181,"Oct 27, 2021",PHYT,Pyrophyte Acquisition,$10.00,$10.15,1.50%
+182,"Oct 27, 2021",INFA,Informatica,$29.00,$35.48,22.34%
+183,"Oct 27, 2021",RENT,Rent The Runway,$21.00,$8.86,-57.81%
+184,"Oct 27, 2021",USCT,TKB Critical Technologies 1,$10.00,$10.05,0.50%
+185,"Oct 27, 2021",DMAQ,Deep Medicine Acquisition,$10.00,$9.86,-1.40%
+186,"Oct 27, 2021",IOAC,Innovative International Acquisition,$10.00,$10.12,1.20%
+187,"Oct 27, 2021",MRAI,Marpai,$4.00,$4.30,7.50%
+188,"Oct 27, 2021",AIP,Arteris,$14.00,$19.68,40.57%
+189,"Oct 27, 2021",OHAA,OPY Acquisition I,$10.00,$9.99,-0.10%
+190,"Oct 27, 2021",LVAC,LAVA Medtech Acquisition,$10.00,$10.20,2.00%
+191,"Oct 22, 2021",PGSS,Pegasus Digital Mobility Acquisition,$10.00,$10.07,0.70%
+192,"Oct 22, 2021",ICNC,Iconic Sports Acquisition,$10.00,$9.90,-1.00%
+193,"Oct 22, 2021",ARIS,Aris Water Solutions,$13.00,$10.94,-15.85%
+194,"Oct 22, 2021",UTRS,Minerva Surgical,$12.00,$4.58,-61.83%
+195,"Oct 22, 2021",GET,Getnet Adquirencia E Servicos Para Meios De Pagamento,$0.00,$1.17,0.00%
+196,"Oct 22, 2021",XLO,Xilio Therapeutics,$16.00,$11.61,-27.44%
+197,"Oct 22, 2021",MBSC,M3-Brigade Acquisition III,$10.00,$10.00,0.00%
+198,"Oct 21, 2021",RWAY,Runway Growth Finance,$14.60,$13.18,-9.73%
+199,"Oct 21, 2021",NHIC,NewHold Investment II,$10.00,$9.99,-0.10%
+200,"Oct 21, 2021",GTAC,Global Technology Acquisition I,$10.00,$9.83,-1.70%
+201,"Oct 21, 2021",PX,"P10, Inc.",$12.00,$12.30,2.50%
+202,"Oct 21, 2021",COCO,The Vita Coco Company,$15.00,$10.90,-27.33%
+203,"Oct 21, 2021",ENFN,Enfusion,$17.00,$18.57,9.24%
+204,"Oct 21, 2021",GOGN,GoGreen Investments,$10.00,$10.15,1.50%
+205,"Oct 21, 2021",XFIN,ExcelFin Acquisition,$10.00,$10.03,0.30%
+206,"Oct 21, 2021",VTYX,Ventyx Biosciences,$16.00,$15.14,-5.38%
+207,"Oct 21, 2021",THAC,Thrive Acquisition,$10.00,$9.89,-1.10%
+208,"Oct 21, 2021",PTLO,Portillo's,$20.00,$33.88,69.40%
+209,"Oct 21, 2021",ENER,Accretion Acquisition,$10.00,$9.75,-2.50%
+210,"Oct 20, 2021",WWAC,Worldwide Webb Acquisition,$10.00,$9.95,-0.50%
+211,"Oct 20, 2021",CNTX,Context Therapeutics,$5.00,$3.12,-37.60%
+212,"Oct 20, 2021",NCAC,Newcourt Acquisition,$10.00,$9.89,-1.10%
+213,"Oct 20, 2021",ESAC,ESGEN Acquisition,$10.00,$10.15,1.50%
+214,"Oct 20, 2021",SDIG,Stronghold Digital Mining,$19.00,$11.04,-41.89%
+215,"Oct 20, 2021",AXH,Industrial Human Capital,$10.00,$9.90,-1.00%
+216,"Oct 20, 2021",CYN,Cyngn,$7.50,$4.84,-35.47%
+217,"Oct 20, 2021",ACAQ,Athena Consumer Acquisition,$10.00,$10.14,1.40%
+218,"Oct 19, 2021",SMAP,SportsMap Tech Acquisition,$10.00,$9.81,-1.90%
+219,"Oct 19, 2021",ENTF,Enterprise 4.0 Technology Acquisition,$10.00,$10.10,0.98%
+220,"Oct 19, 2021",FEXD,Fintech Ecosystem Development,$10.00,$10.22,2.20%
+221,"Oct 19, 2021",BMAQ,Blockchain Moon Acquisition,$10.00,$9.75,-2.50%
+222,"Oct 18, 2021",OZ,"Belpointe PREP, LLC",$0.00,$100.04,0.00%
+223,"Oct 15, 2021",SANB,Sanaby Health Acquisition I,$10.00,$9.91,-0.90%
+224,"Oct 15, 2021",AVHI,Achari Ventures Holdings I,$10.00,$9.86,-1.40%
+225,"Oct 15, 2021",INKT,MiNK Therapeutics,$12.00,$4.45,-62.92%
+226,"Oct 15, 2021",CDAQ,Compass Digital Acquisition,$10.00,$9.67,-3.30%
+227,"Oct 15, 2021",PEPL,PepperLime Health Acquisition,$10.00,$9.75,-2.50%
+228,"Oct 15, 2021",FNA,Paragon 28,$16.00,$13.96,-12.75%
+229,"Oct 15, 2021",FOUN,Founder SPAC,$10.00,$9.94,-0.60%
+230,"Oct 14, 2021",BMAC,Black Mountain Acquisition,$10.00,$9.86,-1.40%
+231,"Oct 14, 2021",TRIS,Tristar Acquisition I,$10.00,$9.73,-2.70%
+232,"Oct 14, 2021",LUCD,Lucid Diagnostics,$14.00,$5.00,-64.29%
+233,"Oct 14, 2021",GTLB,GitLab,$77.00,$94.84,23.17%
+234,"Oct 14, 2021",IHS,IHS Holding,$21.00,$13.14,-37.43%
+235,"Oct 14, 2021",ROSE,Rose Hill Acquisition,$10.00,$9.93,-0.70%
+236,"Oct 13, 2021",FATP,Fat Projects Acquisition,$10.00,$9.74,-2.60%
+237,"Oct 13, 2021",HCTI,Healthcare Triangle,$4.00,$1.68,-58.00%
+238,"Oct 13, 2021",CLST,Catalyst Bancorp,$0.00,$14.05,0.00%
+239,"Oct 13, 2021",AVDX,AvidXchange Holdings,$25.00,$15.41,-38.36%
+240,"Oct 12, 2021",GIAC,Gesher I Acquisition,$10.00,$9.78,-2.20%
+241,"Oct 8, 2021",SAMA,Schultze Special Purpose Acquisition II,$10.00,$9.88,-1.20%
+242,"Oct 8, 2021",CGTX,Cognition Therapeutics,$12.00,$5.47,-54.42%
+243,"Oct 8, 2021",ISO,IsoPlexis,$15.00,$6.90,-54.00%
+244,"Oct 8, 2021",HWKZ,Hawks Acquisition,$10.00,$9.70,-3.00%
+245,"Oct 8, 2021",JMAC,Jade Mountain Acquisition,$10.00,$9.92,-0.80%
+246,"Oct 8, 2021",CCSI,Consensus Cloud Solutions,$0.00,$57.05,0.00%
+247,"Oct 8, 2021",LCW,Learn CW Investment,$10.00,$10.01,0.10%
+248,"Oct 7, 2021",LTH,Life Time Group Holdings,$18.00,$17.03,-5.39%
+249,"Oct 7, 2021",TCN,Tricon Residential,$12.40,$14.37,15.89%
+250,"Oct 7, 2021",THRX,Theseus Pharmaceuticals,$16.00,$9.50,-40.63%
+251,"Oct 7, 2021",IXAQ,IX Acquisition,$10.00,$9.70,-3.00%
+252,"Oct 6, 2021",PCX,Parsec Capital Acquisitions,$10.00,$10.18,1.80%
+253,"Oct 6, 2021",NFYS,Enphys Acquisition,$10.00,$9.66,-3.40%
+254,"Oct 6, 2021",PBAX,Phoenix Biotech Acquisition,$10.00,$9.90,-1.00%
+255,"Oct 6, 2021",VLCN,Volcon,$5.50,$9.08,65.09%
+256,"Oct 6, 2021",NVEI,Nuvei,$123.14,$60.35,-50.99%
+257,"Oct 6, 2021",AVAC,Avalon Acquisition,$10.00,$9.87,-1.30%
+258,"Oct 5, 2021",CION,CĪON Investment,$0.00,$12.51,0.00%
+259,"Oct 5, 2021",RNER,Mount Rainier Acquisition,$10.00,$10.15,1.50%
+260,"Oct 5, 2021",BHAC,Crixus BH3 Acquisition,$10.00,$9.75,-2.50%
+261,"Oct 1, 2021",DMYS,"dMY Technology Group, Inc. VI",$10.00,$9.83,-1.70%
+262,"Oct 1, 2021",MTRY,Monterey Bio Acquisition,$10.00,$9.87,-1.30%
+263,"Oct 1, 2021",GATE,Marblegate Acquisition,$10.00,$9.77,-2.30%
+264,"Oct 1, 2021",TDCX,"TDCX, Inc.",$18.00,$16.99,-5.61%
+265,"Oct 1, 2021",FWRG,First Watch Restaurant Group,$18.00,$15.35,-14.72%
+266,"Oct 1, 2021",EXAI,Exscientia,$22.00,$19.15,-12.95%
+267,"Oct 1, 2021",SLVM,Sylvamo,$0.00,$27.37,0.00%
+268,"Oct 1, 2021",PYXS,Pyxis Oncology,$16.00,$8.59,-46.31%
+269,"Sep 30, 2021",OLPX,Olaplex Holdings,$21.00,$24.90,18.57%
+270,"Sep 30, 2021",ARTE,Artemis Strategic Investment,$10.00,$9.92,-0.80%
+271,"Sep 30, 2021",HPLT,Home Plate Acquisition,$10.00,$9.73,-2.70%
+272,"Sep 29, 2021",WRBY,Warby Parker,$40.00,$48.34,20.85%
+273,"Sep 29, 2021",HCVI,Hennessy Capital Investment VI,$10.00,$9.66,-3.40%
+274,"Sep 29, 2021",MEKA,MELI Kaszek Pioneer,$10.00,$11.35,13.50%
+275,"Sep 28, 2021",PRBM,Parabellum Acquisition,$10.00,$9.76,-2.45%
+276,"Sep 28, 2021",AMPL,Amplitude,$35.00,$54.08,54.51%
+277,"Sep 28, 2021",BACA,Berenson Acquisition I,$10.00,$9.72,-2.80%
+278,"Sep 24, 2021",GIA,GigCapital5,$10.00,$9.87,-1.30%
+279,"Sep 24, 2021",DSAQ,Direct Selling Acquisition,$10.00,$9.92,-0.82%
+280,"Sep 24, 2021",HLTH,Cue Health,$16.00,$11.75,-26.56%
+281,"Sep 24, 2021",CWAN,Clearwater Analytics Holdings,$18.00,$20.46,13.67%
+282,"Sep 23, 2021",SOVO,Sovos Brands,$12.00,$14.06,17.17%
+283,"Sep 23, 2021",ARBK,Argo Blockchain,$15.00,$12.35,-17.67%
+284,"Sep 23, 2021",STER,Sterling Check,$23.00,$19.75,-14.13%
+285,"Sep 23, 2021",RELY,Remitly Global,$43.00,$19.70,-54.19%
+286,"Sep 23, 2021",ESMT,EngageSmart,$26.00,$23.10,-11.15%
+287,"Sep 23, 2021",THRN,Thorne HealthTech,$10.00,$5.26,-47.40%
+288,"Sep 23, 2021",LOCC,Live Oak Crestview Climate Acquisition,$10.00,$9.65,-3.50%
+289,"Sep 23, 2021",BRLT,Brilliant Earth Group,$12.00,$14.94,24.50%
+290,"Sep 22, 2021",IPAX,Inflection Point Acquisition,$10.00,$9.69,-3.10%
+291,"Sep 22, 2021",TOST,Toast,$40.00,$37.64,-5.90%
+292,"Sep 22, 2021",ARGU,Argus Capital,$10.00,$9.90,-1.00%
+293,"Sep 22, 2021",VBNK,VersaBank,$10.00,$11.53,15.30%
+294,"Sep 22, 2021",FRSH,Freshworks,$36.00,$29.45,-18.19%
+295,"Sep 22, 2021",AKA,a.k.a. Brands Holding,$11.00,$8.67,-21.18%
+296,"Sep 21, 2021",HHGC,HHG Capital,$10.00,$9.87,-1.30%
+297,"Sep 16, 2021",ACT,Enact Holdings,$19.00,$19.60,3.16%
+298,"Sep 16, 2021",FLYA,Soar Technology Acquisition,$10.00,$10.04,0.40%
+299,"Sep 16, 2021",FORG,ForgeRock,$25.00,$22.58,-9.68%
+300,"Sep 15, 2021",BROS,Dutch Bros,$23.00,$49.14,113.65%
+301,"Sep 15, 2021",KTTA,Pasithea Therapeutics,$5.00,$1.58,-68.40%
+302,"Sep 15, 2021",PRCT,PROCEPT BioRobotics,$25.00,$26.62,6.48%
+303,"Sep 15, 2021",TWKS,Thoughtworks Holding,$21.00,$25.30,20.48%
+304,"Sep 15, 2021",EDNC,Endurance Acquisition,$10.00,$9.85,-1.50%
+305,"Sep 15, 2021",DH,Definitive Healthcare,$27.00,$28.01,3.74%
+306,"Sep 15, 2021",WINV,WinVest Acquisition,$10.00,$9.82,-1.80%
+307,"Sep 15, 2021",EZFL,EzFill Holdings,$4.00,$1.67,-58.25%
+308,"Sep 15, 2021",CIIG,CIIG Capital Partners II,$10.00,$9.88,-1.20%
+309,"Sep 15, 2021",SIER,Sierra Lake Acquisition,$10.00,$9.78,-2.20%
+310,"Sep 15, 2021",DICE,DICE Therapeutics,$17.00,$23.42,37.76%
+311,"Sep 15, 2021",AEHA,Aesther Healthcare Acquisition,$10.00,$9.98,-0.20%
+312,"Sep 15, 2021",TYRA,Tyra Biosciences,$16.00,$12.43,-22.31%
+313,"Sep 15, 2021",ONON,On Holding AG,$24.00,$37.58,56.58%
+314,"Sep 14, 2021",SRAD,Sportradar Group AG,$27.00,$18.88,-30.07%
+315,"Sep 14, 2021",PAFO,Pacifico Acquisition,$10.00,$9.92,-0.80%
+316,"Sep 13, 2021",SGML,Sigma Lithium,$0.00,$9.80,0.00%
+317,"Sep 10, 2021",FLAG,First Light Acquisition Group,$10.00,$9.81,-1.90%
+318,"Sep 10, 2021",FHLT,Future Health ESG,$10.00,$9.79,-2.10%
+319,"Sep 10, 2021",BNIX,Bannix Acquisition,$10.00,$9.81,-1.90%
+320,"Sep 10, 2021",SLVR,SilverSPAC,$10.00,$9.66,-3.40%
+321,"Sep 8, 2021",BNNR,Banner Acquisition,$10.00,$9.77,-2.30%
+322,"Sep 3, 2021",OXUS,Oxus Acquisition,$10.00,$9.88,-1.20%
+323,"Sep 3, 2021",DWAC,Digital World Acquisition,$10.00,$50.63,406.30%
+324,"Sep 2, 2021",INAQ,Insight Acquisition,$10.00,$9.78,-2.16%
+325,"Sep 2, 2021",GIPR,Generation Income Properties,$10.00,$6.00,-40.00%
+326,"Sep 2, 2021",DTRT,DTRT Health Acquisition,$10.00,$9.91,-0.90%
+327,"Sep 1, 2021",CNDA,Concord Acquisition II,$10.00,$9.80,-2.00%
+328,"Aug 31, 2021",CHWA,CHW Acquisition,$10.00,$9.74,-2.59%
+329,"Aug 31, 2021",DDI,DoubleDown Interactive Co.,$18.00,$14.50,-19.44%
+330,"Aug 31, 2021",REVE,Alpine Acquisition,$10.00,$10.00,0.00%
+331,"Aug 27, 2021",SQL,SeqLL,$4.75,$1.98,-58.32%
+332,"Aug 26, 2021",ICCM,IceCure Medical,$0.00,$2.85,0.00%
+333,"Aug 26, 2021",SWSS,Springwater Special Situations,$10.00,$9.78,-2.20%
+334,"Aug 26, 2021",CCAI,Cascadia Acquisition,$10.00,$9.70,-3.00%
+335,"Aug 26, 2021",RNXT,RenovoRx,$9.00,$5.06,-43.78%
+336,"Aug 26, 2021",MEOA,Minority Equality Opportunities Acquisition,$10.00,$9.94,-0.60%
+337,"Aug 20, 2021",WAVC,Waverley Capital Acquisition 1,$10.00,$9.71,-2.90%
+338,"Aug 13, 2021",DRMA,Dermata Therapeutics,$7.00,$2.18,-68.86%
+339,"Aug 13, 2021",CENQ,CENAQ Energy,$10.00,$9.91,-0.90%
+340,"Aug 13, 2021",KCGI,Kensington Capital Acquisition V,$10.00,$9.82,-1.80%
+341,"Aug 13, 2021",AACI,Armada Acquisition I,$10.00,$9.82,-1.85%
+342,"Aug 13, 2021",DATS,DatChat,$4.15,$3.18,-23.37%
+343,"Aug 13, 2021",APMI,AxonPrime Infrastructure Acquisition,$10.00,$9.74,-2.60%
+344,"Aug 13, 2021",JAQC,Jupiter Acquisition,$10.00,$9.63,-3.70%
+345,"Aug 12, 2021",SSBK,Southern States Bancshares,$19.00,$20.00,5.26%
+346,"Aug 12, 2021",OXAC,Oxbridge Acquisition,$10.00,$9.91,-0.90%
+347,"Aug 12, 2021",PPHP,PHP Ventures Acquisition,$10.00,$9.86,-1.40%
+348,"Aug 12, 2021",AFTR,AfterNext HealthTech Acquisition,$10.00,$9.67,-3.35%
+349,"Aug 11, 2021",WQGA,World Quantum Growth Acquisition,$10.00,$9.81,-1.90%
+350,"Aug 11, 2021",VCXA,10x Capital Venture Acquisition II,$10.00,$9.82,-1.80%
+351,"Aug 11, 2021",PONO,Pono Capital,$10.00,$9.95,-0.50%
+352,"Aug 11, 2021",CNTQ,Chardan NexTech Acquisition 2,$10.00,$9.98,-0.20%
+353,"Aug 11, 2021",TPBA,TPB Acquisition I,$10.00,$9.70,-3.00%
+354,"Aug 11, 2021",DCRD,Decarbonization Plus Acquisition IV,$10.00,$9.84,-1.56%
+355,"Aug 10, 2021",AHPA,Avista Public Acquisition II,$10.00,$9.98,-0.20%
+356,"Aug 10, 2021",CPAA,Conyers Park III Acquisition,$10.00,$9.72,-2.80%
+357,"Aug 10, 2021",ELYM,Eliem Therapeutics,$12.50,$10.24,-18.08%
+358,"Aug 10, 2021",ASPA,Abri SPAC I,$10.00,$9.80,-2.00%
+359,"Aug 6, 2021",ROCG,Roth CH Acquisition IV Co.,$10.00,$10.02,0.20%
+360,"Aug 6, 2021",RVAC,Riverview Acquisition,$10.00,$9.73,-2.70%
+361,"Aug 6, 2021",ADGI,Adagio Therapeutics,$17.00,$10.29,-39.47%
+362,"Aug 6, 2021",NOVV,Nova Vision Acquisition,$10.00,$9.91,-0.90%
+363,"Aug 5, 2021",WEBR,Weber,$14.00,$11.68,-16.57%
+364,"Aug 5, 2021",GLEE,Gladstone Acquisition,$10.00,$9.96,-0.40%
+365,"Aug 5, 2021",EWCZ,European Wax Center,$17.00,$27.17,59.82%
+366,"Aug 4, 2021",BWC,Blue Whale Acquisition I,$10.00,$9.69,-3.10%
+367,"Aug 4, 2021",AMCI,AMCI Acquisition II,$10.00,$9.68,-3.20%
+368,"Aug 3, 2021",VSCO,Victoria's Secret & Co.,$0.00,$47.57,0.00%
+369,"Aug 3, 2021",HWEL,Healthwell Acquisition I,$10.00,$9.65,-3.50%
+370,"Aug 3, 2021",ABVC,ABVC BioPharma,$0.00,$3.92,0.00%
+371,"Jul 30, 2021",RANI,Rani Therapeutics Holdings,$11.00,$17.07,55.18%
+372,"Jul 30, 2021",RXST,RxSight,$16.00,$9.96,-37.75%
+373,"Jul 30, 2021",DOLE,Dole plc,$16.00,$13.11,-18.06%
+374,"Jul 30, 2021",OMGA,Omega Therapeutics,$17.00,$13.27,-21.94%
+375,"Jul 30, 2021",XPAX,XPAC Acquisition,$10.00,$9.65,-3.50%
+376,"Jul 30, 2021",MXCT,MaxCyte,$13.00,$9.86,-24.15%
+377,"Jul 30, 2021",TNYA,Tenaya Therapeutics,$15.00,$19.26,28.40%
+378,"Jul 30, 2021",IMRX,Immuneering,$15.00,$22.49,49.93%
+379,"Jul 30, 2021",INAB,IN8bio,$10.00,$6.54,-34.60%
+380,"Jul 29, 2021",RLYB,Rallybio,$13.00,$10.76,-17.23%
+381,"Jul 29, 2021",HOOD,Robinhood Markets,$38.00,$18.93,-50.18%
+382,"Jul 29, 2021",SWAG,"Software Acquisition Group, Inc. III",$10.00,$9.87,-1.30%
+383,"Jul 29, 2021",NUVL,Nuvalent,$17.00,$20.67,21.59%
+384,"Jul 29, 2021",MTAL,Metals Acquisition,$10.00,$9.68,-3.20%
+385,"Jul 29, 2021",ICVX,Icosavax,$15.00,$22.84,52.27%
+386,"Jul 29, 2021",COOK,Traeger,$18.00,$12.35,-31.39%
+387,"Jul 29, 2021",RSKD,Riskified,$21.00,$7.86,-62.57%
+388,"Jul 29, 2021",IMAQ,International Media Acquisition,$10.00,$9.81,-1.90%
+389,"Jul 28, 2021",PWSC,PowerSchool Holdings,$18.00,$17.16,-4.67%
+390,"Jul 28, 2021",MEAC,Mercury Ecommerce Acquisition,$10.00,$9.80,-2.00%
+391,"Jul 28, 2021",DALS,DA32 Life Science Tech Acquisition,$10.00,$9.72,-2.80%
+392,"Jul 28, 2021",DUOL,Duolingo,$102.00,$106.20,4.12%
+393,"Jul 28, 2021",TBLD,Thornburg Income Builder Opportunities Trust,$0.00,$18.43,0.00%
+394,"Jul 28, 2021",MLNK,MeridianLink,$26.00,$21.54,-17.15%
+395,"Jul 28, 2021",APTM,Alpha Partners Technology Merger,$10.00,$9.73,-2.70%
+396,"Jul 28, 2021",SNPO,Snap One Holdings,$18.00,$19.74,9.67%
+397,"Jul 27, 2021",CADL,Candel Therapeutics,$8.00,$7.00,-12.50%
+398,"Jul 27, 2021",WRAC,Williams Rowland Acquisition,$10.00,$9.89,-1.10%
+399,"Jul 27, 2021",ALPA,Alpha Healthcare Acquisition III,$10.00,$9.75,-2.50%
+400,"Jul 23, 2021",CTKB,Cytek Biosciences,$17.00,$16.66,-2.00%
+401,"Jul 23, 2021",GAMB,Gambling.com Group,$8.00,$10.22,27.75%
+402,"Jul 23, 2021",USCB,U.S. Century Bank,$0.00,$13.88,0.00%
+403,"Jul 23, 2021",XPOF,Xponential Fitness,$12.00,$19.20,60.00%
+404,"Jul 23, 2021",OB,Outbrain,$20.00,$13.88,-30.60%
+405,"Jul 23, 2021",CNM,Core & Main,$20.00,$27.04,35.20%
+406,"Jul 23, 2021",SOPH,SOPHiA GENETICS,$18.00,$12.61,-29.94%
+407,"Jul 23, 2021",BLNG,Belong Acquisition,$10.00,$9.73,-2.70%
+408,"Jul 23, 2021",CRBU,Caribou Biosciences,$16.00,$15.81,-1.19%
+409,"Jul 22, 2021",ZVIA,Zevia PBC,$14.00,$7.27,-48.07%
+410,"Jul 22, 2021",BASE,Couchbase,$24.00,$23.19,-3.37%
+411,"Jul 22, 2021",ABSI,Absci,$16.00,$9.06,-43.38%
+412,"Jul 22, 2021",ZENV,Zenvia,$13.00,$7.19,-44.69%
+413,"Jul 22, 2021",INST,Instructure Holdings,$20.00,$23.26,16.30%
+414,"Jul 22, 2021",RYAN,Ryan Specialty Group Holdings,$23.50,$38.56,64.09%
+415,"Jul 21, 2021",PYCR,Paycor HCM,$23.00,$28.94,25.83%
+416,"Jul 21, 2021",VTEX,VTEX,$19.00,$11.87,-37.53%
+417,"Jul 21, 2021",VEEE,"Twin Vee PowerCats, Co.",$6.00,$3.25,-45.83%
+418,"Jul 21, 2021",PFTA,Portage Fintech Acquisition,$10.00,$9.68,-3.20%
+419,"Jul 21, 2021",KLTR,Kaltura,$10.00,$3.87,-61.30%
+420,"Jul 21, 2021",TCBC,TC Bancshares,$0.00,$13.39,0.00%
+421,"Jul 21, 2021",LAW,CS Disco,$32.00,$35.75,11.72%
+422,"Jul 20, 2021",HCWB,HCW Biologics,$8.00,$2.47,-69.13%
+423,"Jul 20, 2021",CLAY,Chavant Capital Acquisition,$10.00,$9.85,-1.50%
+424,"Jul 20, 2021",CLOE,Clover Leaf Capital,$10.00,$9.97,-0.30%
+425,"Jul 20, 2021",TRTL,TortoiseEcofin Acquisition III,$10.00,$9.70,-3.00%
+426,"Jul 16, 2021",TCRX,TScan Therapeutics,$15.00,$4.86,-67.60%
+427,"Jul 16, 2021",BLND,Blend Labs,$18.00,$7.61,-57.72%
+428,"Jul 16, 2021",IMGO,Imago BioSciences,$16.00,$23.15,44.69%
+429,"Jul 16, 2021",TWCB,Bilander Acquisition,$10.00,$9.74,-2.60%
+430,"Jul 16, 2021",APAC,Stonebridge Acquisition,$10.00,$9.88,-1.20%
+431,"Jul 16, 2021",ERAS,Erasca,$16.00,$12.98,-18.88%
+432,"Jul 16, 2021",STVN,Stevanato Group S.p.A.,$21.00,$23.41,11.48%
+433,"Jul 16, 2021",BLFY,Blue Foundry Bancorp,$0.00,$14.72,0.00%
+434,"Jul 16, 2021",RGC,Regencell Bioscience Holdings,$9.50,$28.45,199.47%
+435,"Jul 16, 2021",BRDG,Bridge Investment Group Holdings,$16.00,$21.43,33.94%
+436,"Jul 16, 2021",BSAQ,Black Spade Acquisition Co.,$10.00,$9.70,-3.00%
+437,"Jul 15, 2021",SERA,Sera Prognostics,$16.00,$7.97,-50.19%
+438,"Jul 15, 2021",CLAQ,CleanTech Acquisition,$10.00,$9.94,-0.60%
+439,"Jul 15, 2021",MCG,Membership Collective Group,$14.00,$11.71,-16.36%
+440,"Jul 15, 2021",SGHT,Sight Sciences,$24.00,$18.77,-21.79%
+441,"Jul 15, 2021",RPID,Rapid Micro Biosystems,$20.00,$10.54,-47.30%
+442,"Jul 15, 2021",PBBK,PB Bankshares,$0.00,$13.94,0.00%
+443,"Jul 15, 2021",FXLV,F45 Training Holdings,$16.00,$11.03,-31.06%
+444,"Jul 15, 2021",UPTD,TradeUP Acquisition,$10.00,$9.88,-1.20%
+445,"Jul 15, 2021",TCBS,Texas Community Bancshares,$0.00,$15.50,0.00%
+446,"Jul 15, 2021",PECO,Phillips Edison & Company,$28.00,$31.34,11.93%
+447,"Jul 14, 2021",IINN,Inspira Technologies Oxy B.H.N.,$5.51,$3.38,-38.66%
+448,"Jul 14, 2021",JATT,JATT Acquisition,$10.00,$9.86,-1.40%
+449,"Jul 13, 2021",UNCY,Unicycive Therapeutics,$0.00,$2.10,0.00%
+450,"Jul 13, 2021",ARYE,Arya Sciences Acquisition V,$10.00,$9.70,-3.00%
+451,"Jul 12, 2021",GWII,Good Works II Acquisition,$10.00,$9.79,-2.10%
+452,"Jul 9, 2021",RNAZ,TransCode Therapeutics,$4.00,$2.49,-37.75%
+453,"Jul 9, 2021",SNTG,Sentage Holdings,$5.00,$1.45,-71.00%
+454,"Jul 9, 2021",ACRO,Acropolis Infrastructure Acquisition,$10.00,$9.72,-2.80%
+455,"Jul 9, 2021",GLTA,Galata Acquisition,$10.00,$9.89,-1.10%
+456,"Jul 8, 2021",MITQ,Moving iMage Technologies,$3.00,$2.24,-25.33%
+457,"Jul 8, 2021",RICO,Agrico Acquisition,$10.00,$10.02,0.20%
+458,"Jul 8, 2021",AGRI,AgriFORCE Growing Systems,$5.00,$2.11,-57.80%
+459,"Jul 8, 2021",ALCC,AltC Acquisition,$10.00,$9.81,-1.90%
+460,"Jul 2, 2021",NYXH,Nyxoah,$30.00,$20.00,-33.33%
+461,"Jul 1, 2021",WAVE,Eco Wave Power Global AB (publ),$8.00,$5.01,-37.38%
+462,"Jul 1, 2021",CURV,Torrid Holdings,$21.00,$10.13,-51.76%
+463,"Jul 1, 2021",FICV,Frontier Investment,$10.00,$9.69,-3.10%
+464,"Jul 1, 2021",GGGV,G3 VRM Acquisition,$10.00,$9.98,-0.20%
+465,"Jul 1, 2021",VRAR,The Glimpse Group,$0.00,$10.96,0.00%
+466,"Jul 1, 2021",DRAY,Macondray Capital Acquisition I,$10.00,$9.83,-1.70%
+467,"Jul 1, 2021",CORS,Corsair Partnering,$10.00,$9.79,-2.10%
+468,"Jul 1, 2021",HEPS,D-MARKET Electronic Services & Trading,$0.00,$1.90,0.00%
+469,"Jul 1, 2021",ABOS,Acumen Pharmaceuticals,$16.00,$7.07,-55.81%
+470,"Jul 1, 2021",EVCM,EverCommerce,$17.00,$16.08,-5.41%
+471,"Jul 1, 2021",DNUT,Krispy Kreme,$17.00,$15.85,-6.76%
+472,"Jun 30, 2021",S,SentinelOne,$35.00,$50.30,43.71%
+473,"Jun 30, 2021",XMTR,Xometry,$44.00,$46.86,6.50%
+474,"Jun 30, 2021",CPOP,Pop Culture Group,$6.00,$1.61,-73.17%
+475,"Jun 30, 2021",THCP,Thunder Bridge Capital Partners IV,$10.00,$9.71,-2.90%
+476,"Jun 30, 2021",DIDI,DiDi Global,$14.00,$6.04,-56.86%
+477,"Jun 30, 2021",LZ,LegalZoom.com,$28.00,$16.11,-42.46%
+478,"Jun 30, 2021",YOU,Clear Secure,$31.00,$27.30,-11.94%
+479,"Jun 30, 2021",INTA,Intapp,$26.00,$24.57,-5.50%
+480,"Jun 30, 2021",SHQA,Shelter Acquisition I,$10.00,$9.76,-2.40%
+481,"Jun 30, 2021",MCAF,Mountain Crest Acquisition IV,$10.00,$9.82,-1.80%
+482,"Jun 30, 2021",IAS,Integral Ad Science Holding,$18.00,$21.68,20.44%
+483,"Jun 30, 2021",DNAA,Social Capital Suvretta Holdings I,$10.00,$9.86,-1.40%
+484,"Jun 30, 2021",CVRX,"CVRx, Inc.",$18.00,$11.38,-36.78%
+485,"Jun 30, 2021",DNAC,Social Capital Suvretta Holdings III,$10.00,$9.89,-1.09%
+486,"Jun 30, 2021",AVTE,Aerovate Therapeutics,$14.00,$9.50,-32.14%
+487,"Jun 30, 2021",DNAD,Social Capital Suvretta Holdings IV,$10.00,$9.82,-1.80%
+488,"Jun 30, 2021",DNAB,Social Capital Suvretta Holdings II,$10.00,$9.90,-1.00%
+489,"Jun 29, 2021",EOCW,Elliott Opportunity II,$10.00,$9.77,-2.30%
+490,"Jun 29, 2021",DDL,Dingdong (Cayman),$23.50,$14.07,-40.13%
+491,"Jun 29, 2021",GOBI,Gobi Acquisition,$10.00,$9.73,-2.70%
+492,"Jun 25, 2021",MF,Missfresh,$13.00,$4.21,-67.62%
+493,"Jun 25, 2021",GRPH,Graphite Bio,$17.00,$10.96,-35.53%
+494,"Jun 25, 2021",TKNO,Alpha Teknova,$16.00,$18.29,14.31%
+495,"Jun 25, 2021",ELEV,Elevation Oncology,$16.00,$4.51,-71.81%
+496,"Jun 25, 2021",GHRS,GH Research,$16.00,$24.64,54.00%
+497,"Jun 25, 2021",ACXP,Acurx Pharmaceuticals,$6.00,$4.50,-25.00%
+498,"Jun 25, 2021",MCW,Mister Car Wash,$15.00,$17.86,19.07%
+499,"Jun 25, 2021",GMVD,G Medical Innovations Holdings,$5.00,$1.86,-62.80%
+500,"Jun 24, 2021",BHG,Bright Health Group,$18.00,$3.67,-79.61%
+501,"Jun 24, 2021",CFLT,Confluent,$36.00,$68.95,91.53%
+502,"Jun 24, 2021",GRVI,Grove,$0.00,$4.18,0.00%
+503,"Jun 24, 2021",GLUE,Monte Rosa Therapeutics,$19.00,$18.88,-0.63%
+504,"Jun 24, 2021",FTVI,FinTech Acquisition VI,$10.00,$9.75,-2.50%
+505,"Jun 24, 2021",BON,Bon Natural Life,$5.00,$4.64,-7.12%
+506,"Jun 24, 2021",NLIT,Northern Lights Acquisition,$10.00,$10.04,0.35%
+507,"Jun 24, 2021",MIRO,Miromatrix Medical,$9.00,$4.70,-47.78%
+508,"Jun 24, 2021",DOCS,Doximity,$26.00,$48.76,87.54%
+509,"Jun 23, 2021",CXM,Sprinklr,$16.00,$15.05,-5.94%
+510,"Jun 23, 2021",FA,First Advantage,$15.00,$17.52,16.80%
+511,"Jun 23, 2021",MITA,Coliseum Acquisition,$10.00,$9.72,-2.80%
+512,"Jun 22, 2021",GPCO,Golden Path Acquisition,$10.00,$9.95,-0.50%
+513,"Jun 22, 2021",YMM,Full Truck Alliance Co.,$19.00,$9.22,-51.47%
+514,"Jun 18, 2021",RERE,AiHuiShou International Co.,$14.00,$5.49,-60.79%
+515,"Jun 18, 2021",DNAY,Codex DNA,$16.00,$6.67,-58.31%
+516,"Jun 18, 2021",JUGG,JAWS Juggernaut Acquisition,$10.00,$9.81,-1.90%
+517,"Jun 18, 2021",CYT,Cyteir Therapeutics,$18.00,$10.91,-39.39%
+518,"Jun 18, 2021",TRMR,Tremor International,$19.00,$14.58,-23.26%
+519,"Jun 18, 2021",FEMY,Femasys,$13.00,$4.17,-67.92%
+520,"Jun 18, 2021",ATAI,ATAI Life Sciences,$15.00,$8.34,-44.40%
+521,"Jun 18, 2021",AMAM,Ambrx Biopharma,$18.00,$10.00,-44.44%
+522,"Jun 18, 2021",IPSC,Century Therapeutics,$20.00,$16.41,-17.95%
+523,"Jun 17, 2021",VERV,Verve Therapeutics,$19.00,$40.43,112.79%
+524,"Jun 17, 2021",TRON,Corner Growth Acquisition 2,$10.00,$9.86,-1.40%
+525,"Jun 17, 2021",AOMR,Angel Oak Mortgage,$19.00,$16.56,-12.84%
+526,"Jun 17, 2021",LYEL,Lyell Immunopharma,$17.00,$7.40,-56.47%
+527,"Jun 17, 2021",ISPC,iSpecimen,$8.00,$14.29,78.63%
+528,"Jun 16, 2021",RONI,Rice Acquisition II,$10.00,$10.05,0.50%
+529,"Jun 16, 2021",MOLN,Molecular Partners AG,$21.25,$19.62,-7.67%
+530,"Jun 16, 2021",ZT,Zimmer Energy Transition Acquisition,$10.00,$9.69,-3.10%
+531,"Jun 16, 2021",WKME,WalkMe,$31.00,$19.58,-36.84%
+532,"Jun 16, 2021",CNVY,Convey Holding Parent,$14.00,$7.48,-46.57%
+533,"Jun 15, 2021",ALZN,Alzamend Neuro,$5.00,$2.18,-56.40%
+534,"Jun 15, 2021",DILA,DILA Capital Acquisition,$10.00,$9.76,-2.45%
+535,"Jun 15, 2021",GSQB,G Squared Ascend II,$10.00,$9.80,-2.00%
+536,"Jun 11, 2021",LITT,Logistics Innovation Technologies,$10.00,$9.69,-3.10%
+537,"Jun 11, 2021",JANX,Janux Therapeutics,$17.00,$18.98,11.65%
+538,"Jun 11, 2021",HCNE,JAWS Hurricane Acquisition,$10.00,$9.91,-0.90%
+539,"Jun 11, 2021",LAAA,Lakeshore Acquisition I,$10.00,$9.87,-1.30%
+540,"Jun 11, 2021",BZ,Kanzhun,$19.00,$34.79,83.11%
+541,"Jun 11, 2021",TASK,TaskUs,$23.00,$49.54,115.39%
+542,"Jun 10, 2021",LFST,Lifestance Health Group,$18.00,$9.88,-45.11%
+543,"Jun 10, 2021",ZETA,Zeta Global Holdings,$10.00,$8.36,-16.40%
+544,"Jun 10, 2021",MNDY,monday.com,$155.00,$311.55,101.00%
+545,"Jun 10, 2021",BSGA,Blue Safari Group Acquisition,$10.00,$9.97,-0.30%
+546,"Jun 10, 2021",DIBS,1stdibs.com,$20.00,$12.54,-37.30%
+547,"Jun 9, 2021",MQ,Marqeta,$27.00,$17.52,-35.11%
+548,"Jun 9, 2021",SMIH,Summit Healthcare Acquisition,$10.00,$9.72,-2.80%
+549,"Jun 9, 2021",GACQ,Global Consumer Acquisition,$10.00,$9.88,-1.20%
+550,"Jun 9, 2021",CLBR,Colombier Acquisition,$10.00,$9.66,-3.40%
+551,"Jun 9, 2021",ISAA,Iron Spark I,$10.00,$10.04,0.40%
+552,"Jun 8, 2021",ZME,Zhangmen Education,$11.50,$1.06,-90.78%
+553,"Jun 8, 2021",SPK,SPK Acquisition,$10.00,$9.95,-0.50%
+554,"Jun 3, 2021",DLO,DLocal,$21.00,$34.16,62.67%
+555,"May 28, 2021",CNTA,Centessa Pharmaceuticals,$20.00,$12.47,-37.65%
+556,"May 28, 2021",OTEC,OceanTech Acquisitions I,$10.00,$9.99,-0.10%
+557,"May 27, 2021",OMIC,Singular Genomics Systems,$22.00,$10.81,-50.86%
+558,"May 27, 2021",DAWN,Day One Biopharmaceuticals,$16.00,$17.29,8.06%
+559,"May 27, 2021",FIGS,"FIGS, Inc.",$22.00,$25.25,14.77%
+560,"May 26, 2021",FLYW,Flywire,$24.00,$35.16,46.50%
+561,"May 26, 2021",PSPC,Post Holdings Partnering,$10.00,$9.69,-3.10%
+562,"May 26, 2021",ZIP,ZipRecruiter,$18.00,$24.21,34.50%
+563,"May 26, 2021",EGGF,EG Acquisition,$10.00,$9.73,-2.70%
+564,"May 26, 2021",PAY,Paymentus Holdings,$21.00,$28.59,36.14%
+565,"May 26, 2021",DYNS,Dynamics Special Purpose,$10.00,$9.90,-1.00%
+566,"May 25, 2021",FWAC,Fifth Wall Acquisition III,$10.00,$9.90,-1.00%
+567,"May 21, 2021",GFOR,Graf Acquisition IV,$10.00,$9.78,-2.20%
+568,"May 20, 2021",PCOR,Procore Technologies,$67.00,$79.27,18.31%
+569,"May 20, 2021",OTLY,Oatly Group AB,$17.00,$7.88,-53.65%
+570,"May 19, 2021",SQSP,Squarespace,$50.00,$30.38,-39.24%
+571,"May 19, 2021",SKYA,Skydeck Acquisition,$10.00,$9.79,-2.10%
+572,"May 19, 2021",GIW,GigInternational1,$10.00,$9.92,-0.80%
+573,"May 19, 2021",RAM,Aries I Acquisition,$10.00,$9.99,-0.10%
+574,"May 18, 2021",CPAR,Catalyst Partners Acquisition,$10.00,$9.71,-2.90%
+575,"May 18, 2021",POND,Angel Pond Holdings,$10.00,$9.74,-2.62%
+576,"May 18, 2021",MCAE,Mountain Crest Acquisition III,$10.00,$9.92,-0.80%
+577,"May 18, 2021",JZXN,Jiuzi Holdings,$5.00,$1.53,-69.40%
+578,"May 14, 2021",VERA,Vera Therapeutics,$11.00,$20.30,84.55%
+579,"May 14, 2021",DBGI,Digital Brands Group,$4.15,$2.47,-40.48%
+580,"May 14, 2021",ARTA,Artisan Acquisition,$10.00,$9.90,-1.00%
+581,"May 14, 2021",OSI,Osiris Acquisition,$10.00,$9.71,-2.90%
+582,"May 14, 2021",EJH,E-Home Household Service Holdings,$0.00,$1.66,0.00%
+583,"May 13, 2021",ORIA,Orion Biotech Opportunities,$10.00,$9.68,-3.20%
+584,"May 12, 2021",GLBE,Global-E Online,$25.00,$59.87,139.48%
+585,"May 12, 2021",SMWB,Similarweb,$22.00,$17.58,-20.09%
+586,"May 12, 2021",IPW,iPower,$5.00,$2.27,-54.60%
+587,"May 11, 2021",FLGC,Flora Growth,$5.00,$1.92,-61.60%
+588,"May 7, 2021",OG,Onion Global,$7.25,$2.38,-67.17%
+589,"May 7, 2021",TALS,Talaris Therapeutics,$17.00,$14.72,-13.41%
+590,"May 7, 2021",ANEB,Anebulo Pharmaceuticals,$7.00,$6.51,-7.00%
+591,"May 7, 2021",BRIV,B. Riley Principal 250 Merger,$10.00,$9.73,-2.70%
+592,"May 7, 2021",DKDCA,Data Knights Acquisition,$10.00,$10.09,0.90%
+593,"May 7, 2021",WDH,Waterdrop,$12.00,$1.42,-88.17%
+594,"May 7, 2021",BWMN,Bowman Consulting Group,$14.00,$20.83,48.79%
+595,"May 6, 2021",VALN,Valneva SE,$26.41,$57.34,117.11%
+596,"May 5, 2021",HNST,The Honest Company,$16.00,$8.02,-49.88%
+597,"May 5, 2021",FSBC,Five Star Bancorp,$20.00,$28.59,42.95%
+598,"May 5, 2021",MAQC,Maquia Capital Acquisition,$10.00,$10.06,0.60%
+599,"May 4, 2021",VLAT,Valor Latitude Acquisition,$10.00,$9.70,-3.00%
+600,"May 4, 2021",ALF,"ALFI, Inc.",$4.15,$2.36,-43.13%
+601,"Apr 30, 2021",VACC,Vaccitech,$17.00,$9.70,-42.94%
+602,"Apr 30, 2021",IACC,ION Acquisition 3,$10.00,$9.76,-2.40%
+603,"Apr 30, 2021",HOWL,Werewolf Therapeutics,$16.00,$11.48,-28.25%
+604,"Apr 29, 2021",AVAH,Aveanna Healthcare Holdings,$12.00,$6.84,-43.00%
+605,"Apr 29, 2021",EDR,Endeavor Group Holdings,$24.00,$30.93,28.88%
+606,"Apr 29, 2021",TUGC,TradeUP Global,$10.00,$9.77,-2.30%
+607,"Apr 29, 2021",BSKY,Big Sky Growth Partners,$10.00,$9.71,-2.90%
+608,"Apr 29, 2021",PRVA,Privia Health Group,$23.00,$24.78,7.74%
+609,"Apr 28, 2021",FTCI,FTC Solar,$13.00,$7.56,-41.85%
+610,"Apr 23, 2021",AGTI,Agiliti,$14.00,$20.71,47.93%
+611,"Apr 23, 2021",SWIM,Latham Group,$19.00,$22.52,18.53%
+612,"Apr 23, 2021",RAIN,Rain Therapeutics,$17.00,$12.75,-25.00%
+613,"Apr 23, 2021",IMPL,Impel NeuroPharma,$15.00,$9.56,-36.27%
+614,"Apr 23, 2021",TMCI,Treace Medical Concepts,$17.00,$16.01,-5.82%
+615,"Apr 22, 2021",ZY,Zymergen,$31.00,$7.41,-76.10%
+616,"Apr 22, 2021",NPCE,NeuroPace,$17.00,$9.81,-42.29%
+617,"Apr 22, 2021",KNBE,KnowBe4,$16.00,$23.00,43.75%
+618,"Apr 21, 2021",SKYT,SkyWater Technology,$14.00,$15.17,8.36%
+619,"Apr 21, 2021",PATH,UiPath,$56.00,$43.43,-22.45%
+620,"Apr 21, 2021",DV,DoubleVerify Holdings,$27.00,$30.98,14.74%
+621,"Apr 20, 2021",TRKA,Troika Media Group,$4.50,$1.27,-71.78%
+622,"Apr 20, 2021",IFBD,Infobird,$4.00,$1.14,-71.50%
+623,"Apr 16, 2021",RXRX,Recursion Pharmaceuticals,$18.00,$18.91,5.06%
+624,"Apr 16, 2021",AKYA,Akoya Biosciences,$20.00,$12.97,-35.15%
+625,"Apr 16, 2021",BMEA,Biomea Fusion,$17.00,$7.85,-53.82%
+626,"Apr 15, 2021",EBET,Esports Technologies,$6.00,$18.04,200.67%
+627,"Apr 15, 2021",AGL,agilon health,$23.00,$25.81,12.22%
+628,"Apr 15, 2021",APP,AppLovin,$80.00,$91.15,13.94%
+629,"Apr 15, 2021",KRT,Karat Packaging,$16.00,$19.62,22.63%
+630,"Apr 15, 2021",TSP,TuSimple Holdings,$40.00,$34.25,-14.38%
+631,"Apr 14, 2021",COIN,Coinbase Global,$250.00,$247.69,-0.92%
+632,"Apr 14, 2021",YTPG,TPG Pace Beneficial II,$10.00,$9.79,-2.10%
+633,"Apr 14, 2021",ALKT,Alkami Technology,$30.00,$19.95,-33.50%
+634,"Apr 14, 2021",TCVA,TCV Acquisition,$10.00,$9.88,-1.20%
+635,"Apr 9, 2021",TPGS,TPG Pace Solutions,$10.00,$9.97,-0.30%
+636,"Apr 9, 2021",ADF,Aldel Financial,$10.00,$10.66,6.60%
+637,"Apr 9, 2021",VECT,VectivBio Holding AG,$17.00,$4.51,-73.47%
+638,"Apr 9, 2021",RPHM,Reneo Pharmaceuticals,$15.00,$6.87,-54.20%
+639,"Apr 9, 2021",GLSPT,Global SPAC Partners Co.,$10.00,$9.99,-0.10%
+640,"Apr 8, 2021",MPAC,Model Performance Acquisition,$10.00,$9.98,-0.20%
+641,"Apr 8, 2021",TIOA,Tio Tech A,$10.00,$9.68,-3.20%
+642,"Apr 7, 2021",CMLT,CM Life Sciences III,$10.00,$8.69,-13.10%
+643,"Apr 7, 2021",PANA,Panacea Acquisition II,$10.00,$9.76,-2.40%
+644,"Apr 6, 2021",UTME,UTime,$4.00,$2.70,-32.50%
+645,"Apr 6, 2021",ACBA,Ace Global Business Acquisition,$10.00,$10.07,0.70%
+646,"Apr 1, 2021",EM,Smart Share Global,$8.50,$1.25,-85.29%
+647,"Apr 1, 2021",KARO,Karooooo,$47.52,$34.21,-28.01%
+648,"Apr 1, 2021",COMP,Compass,$18.00,$9.65,-46.39%
+649,"Apr 1, 2021",ULCC,Frontier Group Holdings,$19.00,$14.09,-25.84%
+650,"Mar 31, 2021",ACHL,Achilles Therapeutics,$18.00,$4.97,-72.39%
+651,"Mar 31, 2021",COUR,Coursera,$33.00,$24.21,-26.64%
+652,"Mar 31, 2021",MBTC,Nocturne Acquisition,$10.00,$9.99,-0.10%
+653,"Mar 30, 2021",TWOA,two,$10.00,$9.73,-2.70%
+654,"Mar 26, 2021",EWTX,Edgewise Therapeutics,$16.00,$15.41,-3.69%
+655,"Mar 26, 2021",IKNA,Ikena Oncology,$16.00,$14.92,-6.75%
+656,"Mar 26, 2021",ZH,Zhihu,$9.50,$5.35,-43.68%
+657,"Mar 26, 2021",DSGN,Design Therapeutics,$20.00,$17.10,-14.50%
+658,"Mar 26, 2021",ALHC,Alignment Healthcare,$18.00,$13.08,-27.33%
+659,"Mar 26, 2021",TDUP,ThredUp,$14.00,$13.28,-5.14%
+660,"Mar 26, 2021",HYW,Hywin Holdings,$10.00,$5.61,-43.90%
+661,"Mar 25, 2021",DSEY,Diversey Holdings,$15.00,$12.63,-15.80%
+662,"Mar 25, 2021",LCA,Landcadia Holdings IV,$10.00,$9.74,-2.58%
+663,"Mar 25, 2021",OLK,Olink Holding AB (publ),$20.00,$19.55,-2.25%
+664,"Mar 25, 2021",EEIQ,Elite Education Group International,$8.00,$3.16,-60.50%
+665,"Mar 25, 2021",MSDA,MSD Acquisition,$10.00,$9.87,-1.30%
+666,"Mar 25, 2021",CRCT,Cricut,$20.00,$22.60,13.00%
+667,"Mar 25, 2021",VZIO,VIZIO Holding,$21.00,$18.66,-11.14%
+668,"Mar 25, 2021",SEMR,SEMrush Holdings,$14.00,$19.91,42.21%
+669,"Mar 25, 2021",LVTX,LAVA Therapeutics,$15.00,$5.26,-64.93%
+670,"Mar 24, 2021",KVSB,Khosla Ventures Acquisition Co. II,$10.00,$11.12,11.20%
+671,"Mar 24, 2021",ACVA,ACV Auctions,$25.00,$18.05,-27.80%
+672,"Mar 24, 2021",NGC,Northern Genesis Acquisition III,$10.00,$9.70,-3.00%
+673,"Mar 24, 2021",DISA,Disruptive Acquisition I,$10.00,$9.75,-2.50%
+674,"Mar 24, 2021",DOCN,DigitalOcean Holdings,$47.00,$81.47,73.34%
+675,"Mar 24, 2021",DCRC,Decarbonization Plus Acquisition III,$10.00,$13.01,30.10%
+676,"Mar 24, 2021",CRZN,Corazon Capital V838 Monoceros,$10.00,$9.70,-3.00%
+677,"Mar 24, 2021",KVSC,Khosla Ventures Acquisition Co. III,$10.00,$9.85,-1.50%
+678,"Mar 23, 2021",LEGA,"Lead Edge Growth Opportunities,",$10.00,$9.79,-2.10%
+679,"Mar 23, 2021",RKTA,Rocket Internet Growth Opportunities,$10.00,$9.75,-2.50%
+680,"Mar 23, 2021",MOVE,Movano,$5.00,$3.21,-35.80%
+681,"Mar 23, 2021",ACTD,ArcLight Clean Transition II,$10.00,$9.94,-0.60%
+682,"Mar 23, 2021",STRE,Supernova Partners Acquisition Company III,$10.00,$9.76,-2.40%
+683,"Mar 23, 2021",TBSA,TB SA Acquisition,$10.00,$9.72,-2.80%
+684,"Mar 23, 2021",VGII,Virgin Group Acquisition II,$10.00,$9.85,-1.50%
+685,"Mar 23, 2021",UPC,Universe Pharmaceuticals,$5.00,$1.68,-66.40%
+686,"Mar 23, 2021",NBST,Newbury Street Acquisition,$10.00,$9.73,-2.70%
+687,"Mar 23, 2021",NGCA,NextGen Acquisition II,$10.00,$9.98,-0.20%
+688,"Mar 23, 2021",GGPI,Gores Guggenheim,$10.00,$11.25,12.50%
+689,"Mar 23, 2021",DGNU,Dragoneer Growth Opportunities III,$10.00,$9.86,-1.40%
+690,"Mar 23, 2021",OPA,Magnum Opus Acquisition,$10.00,$9.88,-1.20%
+691,"Mar 23, 2021",GLHA,Glass Houses Acquisition,$10.00,$9.70,-3.00%
+692,"Mar 19, 2021",LGV,Longview Acquisition II,$10.00,$9.73,-2.70%
+693,"Mar 19, 2021",LDHA,LDH Growth I,$10.00,$9.81,-1.90%
+694,"Mar 19, 2021",TIL,Instil Bio,$20.00,$15.37,-23.15%
+695,"Mar 19, 2021",LVRA,Levere Holdings,$10.00,$9.80,-2.00%
+696,"Mar 19, 2021",AFCG,AFC Gamma,$19.00,$20.64,8.63%
+697,"Mar 19, 2021",AFAQ,AF Acquisition,$10.00,$9.69,-3.10%
+698,"Mar 19, 2021",GGMC,Glenfarne Merger,$10.00,$9.74,-2.60%
+699,"Mar 19, 2021",CNTB,Connect Biopharma Holdings,$17.00,$4.65,-72.65%
+700,"Mar 19, 2021",BYTS,BYTE Acquisition,$10.00,$9.75,-2.50%
+701,"Mar 19, 2021",FNCH,Finch Therapeutics Group,$17.00,$9.50,-44.12%
+702,"Mar 18, 2021",GANX,Gain Therapeutics,$11.00,$5.74,-47.82%
+703,"Mar 18, 2021",AMAO,American Acquisition Opportunity,$10.00,$10.00,0.00%
+704,"Mar 18, 2021",TUYA,"Tuya, Inc.",$21.00,$6.14,-70.76%
+705,"Mar 18, 2021",GXII,GX Acquisition II,$10.00,$9.72,-2.80%
+706,"Mar 18, 2021",VEI,Vine Energy,$14.00,$17.58,25.57%
+707,"Mar 18, 2021",REVH,Revolution Healthcare Acquisition,$10.00,$9.78,-2.20%
+708,"Mar 18, 2021",FMIV,Forum Merger IV,$10.00,$9.72,-2.80%
+709,"Mar 18, 2021",NAPA,The Duckhorn Portfolio,$15.00,$22.26,48.40%
+710,"Mar 18, 2021",RACB,Research Alliance II,$10.00,$9.85,-1.50%
+711,"Mar 18, 2021",AAQC,Accelerate Acquisition,$10.00,$9.71,-2.90%
+712,"Mar 17, 2021",TETC,Tech & Energy Transition,$10.00,$9.70,-3.00%
+713,"Mar 17, 2021",ATHN,Athena Technology Acquisition,$10.00,$9.97,-0.30%
+714,"Mar 17, 2021",KAHC,KKR Acquisition Holdings I,$10.00,$9.73,-2.70%
+715,"Mar 17, 2021",SNCY,Sun Country Airlines Holdings,$24.00,$26.30,9.58%
+716,"Mar 17, 2021",KSI,Kadem Sustainable Impact,$10.00,$9.74,-2.60%
+717,"Mar 17, 2021",JWEL,Jowell Global,$7.00,$20.26,189.43%
+718,"Mar 17, 2021",GAMC,Golden Arrow Merger,$10.00,$9.71,-2.90%
+719,"Mar 17, 2021",OLO,"Olo, Inc.",$25.00,$22.17,-11.32%
+720,"Mar 17, 2021",BGSX,Build Acquisition,$10.00,$9.80,-2.00%
+721,"Mar 16, 2021",FZT,FAST Acquisition II,$10.00,$9.73,-2.70%
+722,"Mar 16, 2021",FVIV,Fortress Value Acquisition IV,$10.00,$9.76,-2.40%
+723,"Mar 16, 2021",WALD,Waldencast Acquisition,$10.00,$9.99,-0.10%
+724,"Mar 16, 2021",PLMI,Plum Acquisition I,$10.00,$9.71,-2.90%
+725,"Mar 16, 2021",EBAC,European Biotech Acquisition,$10.00,$9.71,-2.90%
+726,"Mar 16, 2021",RTPY,Reinvent Technology Partners Y,$10.00,$9.91,-0.90%
+727,"Mar 12, 2021",SCAQ,Stratim Cloud Acquisition,$10.00,$9.70,-3.00%
+728,"Mar 12, 2021",LBPH,Longboard Pharmaceuticals,$16.00,$5.59,-65.06%
+729,"Mar 12, 2021",HAYW,Hayward Holdings,$17.00,$24.26,42.71%
+730,"Mar 12, 2021",GTPA,Gores Technology Partners,$10.00,$9.90,-1.00%
+731,"Mar 12, 2021",MITC,MeaTech 3D,$10.30,$6.83,-33.69%
+732,"Mar 12, 2021",JOAN,JOANN,$12.00,$10.00,-16.67%
+733,"Mar 12, 2021",GTPB,Gores Technology Partners II,$10.00,$9.83,-1.75%
+734,"Mar 12, 2021",FTPA,FTAC Parnassus Acquisition,$10.00,$9.85,-1.50%
+735,"Mar 12, 2021",ROSS,Ross Acquisition II,$10.00,$9.75,-2.50%
+736,"Mar 12, 2021",CFFE,CF Acquisition VIII,$10.00,$9.96,-0.40%
+737,"Mar 12, 2021",RXDX,Prometheus Biosciences,$19.00,$33.99,78.89%
+738,"Mar 11, 2021",FRON,Frontier Acquisition,$10.00,$9.71,-2.90%
+739,"Mar 11, 2021",PTOC,Pine Technology Acquisition,$10.00,$9.84,-1.60%
+740,"Mar 11, 2021",SPKB,Silver Spike Acquisition II,$10.00,$9.71,-2.90%
+741,"Mar 11, 2021",GAPA,G&P Acquisition,$10.00,$9.83,-1.70%
+742,"Mar 11, 2021",FHS,First High-School Education Group Co.,$10.00,$1.73,-82.70%
+743,"Mar 11, 2021",ATSP,Archimedes Tech SPAC Partners Co.,$10.00,$10.15,1.50%
+744,"Mar 11, 2021",LCAA,L Catterton Asia Acquisition,$10.00,$9.69,-3.10%
+745,"Mar 11, 2021",CPNG,Coupang,$35.00,$29.99,-14.31%
+746,"Mar 10, 2021",FRW,PWP Forward Acquisition I,$10.00,$9.70,-3.00%
+747,"Mar 10, 2021",VAQC,Vector Acquisition II,$10.00,$9.85,-1.50%
+748,"Mar 10, 2021",SBII,Sandbridge X2,$10.00,$9.70,-3.00%
+749,"Mar 10, 2021",AGGR,Agile Growth,$10.00,$9.72,-2.80%
+750,"Mar 10, 2021",DTOC,Digital Transformation Opportunities,$10.00,$9.70,-3.00%
+751,"Mar 10, 2021",FRXB,Forest Road Acquisition II,$10.00,$9.73,-2.70%
+752,"Mar 10, 2021",ESM,ESM Acquisition,$10.00,$9.71,-2.90%
+753,"Mar 10, 2021",CLAA,Colonnade Acquisition II,$10.00,$9.70,-3.00%
+754,"Mar 10, 2021",RBLX,Roblox,$45.00,$102.59,127.98%
+755,"Mar 9, 2021",GROY,Gold Royalty,$5.00,$4.85,-3.00%
+756,"Mar 9, 2021",SVFC,SVF Investment 3,$10.00,$10.01,0.10%
+757,"Mar 9, 2021",ACQR,Independence Holdings,$10.00,$9.73,-2.70%
+758,"Mar 9, 2021",PDOT,Peridot Acquisition II,$10.00,$9.72,-2.80%
+759,"Mar 9, 2021",SVFB,SVF Investment 2,$10.00,$9.86,-1.40%
+760,"Mar 5, 2021",TWNT,Tailwind Two Acquisition,$10.00,$9.88,-1.20%
+761,"Mar 5, 2021",LHAA,Lerer Hippeau Acquisition,$10.00,$9.82,-1.80%
+762,"Mar 5, 2021",ATVC,Tribe Capital Growth I,$10.00,$9.80,-2.00%
+763,"Mar 5, 2021",WPCB,Warburg Pincus Capital Corporation I-B,$10.00,$9.80,-2.00%
+764,"Mar 5, 2021",WPCA,Warburg Pincus Capital Corporation I-A,$10.00,$9.78,-2.20%
+765,"Mar 5, 2021",DMYQ,"dMY Technology Group, Inc. IV",$10.00,$10.81,8.10%
+766,"Mar 5, 2021",IPVA,InterPrivate II Acquisition,$10.00,$9.71,-2.90%
+767,"Mar 5, 2021",IPVF,InterPrivate III Financial Partners,$10.00,$9.93,-0.70%
+768,"Mar 5, 2021",IPVI,InterPrivate IV InfraTech Partners,$10.00,$9.69,-3.10%
+769,"Mar 5, 2021",VPCB,VPC Impact Acquisition Holdings II,$10.00,$9.86,-1.40%
+770,"Mar 5, 2021",VPCC,VPC Impact Acquisition Holdings III,$10.00,$9.96,-0.40%
+771,"Mar 5, 2021",FRSG,First Reserve Sustainable Growth,$10.00,$9.90,-1.00%
+772,"Mar 4, 2021",INNV,Innovage Holding,$21.00,$8.30,-60.48%
+773,"Mar 4, 2021",MBAC,M3-Brigade Acquisition II,$10.00,$9.91,-0.90%
+774,"Mar 4, 2021",ACAH,Atlantic Coastal Acquisition,$10.00,$9.81,-1.90%
+775,"Mar 4, 2021",PSAG,Property Solutions Acquisition II,$10.00,$9.70,-3.00%
+776,"Mar 4, 2021",AURC,Aurora Acquisition,$10.00,$9.90,-1.00%
+777,"Mar 4, 2021",RXRA,RXR Acquisition,$10.00,$9.71,-2.90%
+778,"Mar 4, 2021",KVSA,Khosla Ventures Acquisition Co.,$10.00,$9.75,-2.50%
+779,"Mar 4, 2021",ATAQ,Altimar Acquisition III,$10.00,$9.74,-2.60%
+780,"Mar 4, 2021",TRCA,Twin Ridge Capital Acquisition,$10.00,$9.70,-3.00%
+781,"Mar 4, 2021",HERA,FTAC Hera Acquisition,$10.00,$9.73,-2.70%
+782,"Mar 3, 2021",ROCR,Roth CH Acquisition III Co.,$10.00,$9.91,-0.90%
+783,"Mar 3, 2021",MACC,Mission Advancement,$10.00,$9.75,-2.50%
+784,"Mar 3, 2021",OSCR,Oscar Health,$39.00,$7.82,-79.95%
+785,"Mar 3, 2021",ISOS,Isos Acquisition,$10.00,$10.00,0.00%
+786,"Mar 2, 2021",OHPA,Orion Acquisition,$10.00,$9.79,-2.10%
+787,"Mar 2, 2021",NDAC,Nightdragon Acquisition,$10.00,$9.74,-2.60%
+788,"Mar 2, 2021",ARRW,Arrowroot Acquisition,$10.00,$9.74,-2.60%
+789,"Mar 2, 2021",HYAC,Haymaker Acquisition III,$10.00,$9.81,-1.90%
+790,"Mar 2, 2021",FTEV,FinTech Evolution Acquisition Group,$10.00,$9.70,-3.00%
+791,"Mar 2, 2021",NSTD,Northern Star Investment IV,$10.00,$9.73,-2.70%
+792,"Mar 2, 2021",DHBC,DHB Capital,$10.00,$9.75,-2.50%
+793,"Mar 2, 2021",ANZU,Anzu Special Acquisition I,$10.00,$9.75,-2.50%
+794,"Mar 2, 2021",DHCA,DHC Acquisition,$10.00,$9.73,-2.70%
+795,"Mar 2, 2021",AMPI,Advanced Merger Partners,$10.00,$9.76,-2.40%
+796,"Mar 2, 2021",GBRG,Goldenbridge Acquisition,$10.00,$9.92,-0.80%
+797,"Mar 2, 2021",SNII,Supernova Partners Acquisition Company II,$10.00,$10.33,3.30%
+798,"Mar 2, 2021",TSPQ,TCW Special Purpose Acquisition,$10.00,$9.70,-3.00%
+799,"Mar 2, 2021",LOKM,Live Oak Mobility Acquisition,$10.00,$9.77,-2.30%
+800,"Mar 2, 2021",NSTC,Northern Star Investment III,$10.00,$9.74,-2.60%
+801,"Feb 26, 2021",ASZ,Austerlitz Acquisition II,$10.00,$9.73,-2.70%
+802,"Feb 26, 2021",WARR,Warrior Technologies Acquisition Company,$10.00,$9.82,-1.80%
+803,"Feb 26, 2021",ARYD,ARYA Sciences Acquisition IV,$10.00,$9.85,-1.50%
+804,"Feb 26, 2021",LOCL,Local Bounti,$0.00,$6.03,0.00%
+805,"Feb 26, 2021",FSNB,Fusion Acquisition II,$10.00,$9.70,-3.00%
+806,"Feb 26, 2021",KCAC,Kensington Capital Acquisition II,$10.00,$8.07,-19.30%
+807,"Feb 26, 2021",MACQ,MCAP Acquisition,$10.00,$9.97,-0.30%
+808,"Feb 26, 2021",AGAC,African Gold Acquisition,$10.00,$9.73,-2.70%
+809,"Feb 26, 2021",IBER,Ibere Pharmaceuticals,$10.00,$9.71,-2.90%
+810,"Feb 26, 2021",AUS,Austerlitz Acquisition I,$10.00,$9.77,-2.30%
+811,"Feb 26, 2021",TWLV,Twelve Seas Investment Company II,$10.00,$9.72,-2.80%
+812,"Feb 26, 2021",FACT,Freedom Acquisition I,$10.00,$9.69,-3.15%
+813,"Feb 26, 2021",SBEA,SilverBox Engaged Merger I,$10.00,$10.08,0.80%
+814,"Feb 26, 2021",LIII,Leo Holdings III,$10.00,$9.45,-5.50%
+815,"Feb 25, 2021",EJFA,EJF Acquisition,$10.00,$9.90,-1.00%
+816,"Feb 25, 2021",FLME,Flame Acquisition,$10.00,$9.70,-3.00%
+817,"Feb 25, 2021",SCR,Score Media & Gaming,$27.00,$35.58,31.78%
+818,"Feb 25, 2021",HUGS,USHG Acquisition,$10.00,$10.30,3.00%
+819,"Feb 25, 2021",ISLE,Isleworth Healthcare Acquisition,$10.00,$9.83,-1.70%
+820,"Feb 25, 2021",GIIX,Gores Holdings VIII,$10.00,$10.20,2.00%
+821,"Feb 24, 2021",COLI,Colicity,$10.00,$9.75,-2.50%
+822,"Feb 24, 2021",GLBL,Cartesian Growth,$10.00,$9.91,-0.90%
+823,"Feb 24, 2021",BOAS,BOA Acquisition,$10.00,$9.83,-1.70%
+824,"Feb 24, 2021",HIII,Hudson Executive Investment III,$10.00,$9.73,-2.70%
+825,"Feb 24, 2021",SRNG,Soaring Eagle Acquisition,$10.00,$12.18,21.80%
+826,"Feb 23, 2021",ANAC,Arctos NorthStar Acquisition,$10.00,$9.74,-2.60%
+827,"Feb 23, 2021",VELO,Velocity Acquisition,$10.00,$9.73,-2.70%
+828,"Feb 23, 2021",CMII,CM Life Sciences II,$10.00,$10.63,6.30%
+829,"Feb 23, 2021",SLAM,Slam Corp.,$10.00,$9.75,-2.50%
+830,"Feb 23, 2021",FTAA,FTAC Athena Acquisition,$10.00,$9.90,-1.00%
+831,"Feb 23, 2021",GSEV,Gores Holdings VII,$10.00,$9.82,-1.80%
+832,"Feb 19, 2021",SPGS,Simon Property Group Acquisition Holdings,$10.00,$9.73,-2.70%
+833,"Feb 19, 2021",TWNI,Tailwind International Acquisition,$10.00,$9.73,-2.70%
+834,"Feb 19, 2021",CFVI,CF Acquisition VI,$10.00,$11.67,16.70%
+835,"Feb 19, 2021",FACA,Figure Acquisition I,$10.00,$9.80,-2.00%
+836,"Feb 19, 2021",ASPC,Alpha Capital Acquisition Company,$10.00,$9.83,-1.70%
+837,"Feb 19, 2021",BRPM,B. Riley Principal 150 Merger,$10.00,$10.12,1.20%
+838,"Feb 18, 2021",FSRX,FinServ Acquisition II,$10.00,$9.73,-2.70%
+839,"Feb 18, 2021",KIII,Kismet Acquisition Three,$10.00,$9.71,-2.90%
+840,"Feb 18, 2021",KAII,Kismet Acquisition Two,$10.00,$9.74,-2.60%
+841,"Feb 17, 2021",FSII,FS Development II,$10.00,$10.00,0.00%
+842,"Feb 17, 2021",MACA,Moringa Acquisition,$10.00,$9.72,-2.80%
+843,"Feb 17, 2021",NVSA,New Vista Acquisition,$10.00,$9.74,-2.60%
+844,"Feb 17, 2021",ABGI,ABG Acquisition I,$10.00,$9.80,-2.00%
+845,"Feb 17, 2021",VRPX,Virpax Pharmaceuticals,$10.00,$3.76,-62.40%
+846,"Feb 17, 2021",PFDR,Pathfinder Acquisition,$10.00,$9.73,-2.70%
+847,"Feb 17, 2021",AUUD,Auddia,$4.13,$1.93,-53.21%
+848,"Feb 17, 2021",SPTK,SportsTek Acquisition,$10.00,$9.72,-2.80%
+849,"Feb 16, 2021",MSAC,Medicus Sciences Acquisition,$10.00,$9.72,-2.80%
+850,"Feb 12, 2021",NEXI,NexImmune,$17.00,$5.01,-70.53%
+851,"Feb 12, 2021",DBTX,Decibel Therapeutics,$18.00,$5.43,-69.83%
+852,"Feb 12, 2021",LGVN,Longeveron,$10.00,$17.66,76.60%
+853,"Feb 12, 2021",CVII,Churchill Capital VII,$10.00,$9.78,-2.20%
+854,"Feb 12, 2021",SCLE,Broadscale Acquisition,$10.00,$9.83,-1.70%
+855,"Feb 12, 2021",TSIB,Tishman Speyer Innovation II,$10.00,$9.76,-2.40%
+856,"Feb 12, 2021",TCAC,Tuatara Capital Acquisition,$10.00,$9.82,-1.80%
+857,"Feb 12, 2021",CHAA,Catcha Investment,$10.00,$9.74,-2.60%
+858,"Feb 12, 2021",SLAC,Social Leverage Acquisition I,$10.00,$9.75,-2.50%
+859,"Feb 12, 2021",TLIS,Talis Biomedical,$16.00,$4.34,-72.88%
+860,"Feb 12, 2021",BITE,Bite Acquisition,$10.00,$9.72,-2.80%
+861,"Feb 12, 2021",CCVI,Churchill Capital VI,$10.00,$9.80,-2.00%
+862,"Feb 12, 2021",RCLF,Rosecliff Acquisition I,$10.00,$9.82,-1.85%
+863,"Feb 11, 2021",IACB,ION Acquisition 2,$10.00,$7.95,-20.50%
+864,"Feb 11, 2021",PUCK,Goal Acquisitions,$10.00,$9.72,-2.80%
+865,"Feb 11, 2021",LDI,loanDepot,$14.00,$4.61,-67.07%
+866,"Feb 11, 2021",APR,Apria,$20.00,$30.67,53.35%
+867,"Feb 11, 2021",SGFY,Signify Health,$24.00,$14.46,-39.75%
+868,"Feb 11, 2021",BVS,Bioventus,$13.00,$13.63,4.85%
+869,"Feb 11, 2021",BMBL,Bumble,$43.00,$34.63,-19.47%
+870,"Feb 10, 2021",DSP,Viant Technology,$25.00,$8.54,-65.84%
+871,"Feb 10, 2021",FORE,Foresight Acquisition,$10.00,$9.48,-5.20%
+872,"Feb 10, 2021",BPTS,Biophytis,$16.75,$5.06,-69.79%
+873,"Feb 10, 2021",XPDI,Power & Digital Infrastructure Acquisition,$10.00,$10.54,5.40%
+874,"Feb 10, 2021",VLON,Vallon Pharmaceuticals,$8.00,$6.36,-20.50%
+875,"Feb 10, 2021",APGB,Apollo Strategic Growth Capital II,$10.00,$9.75,-2.50%
+876,"Feb 10, 2021",SCOB,ScION Tech Growth II,$10.00,$9.73,-2.70%
+877,"Feb 10, 2021",LGAC,Lazard Growth Acquisition I,$10.00,$9.73,-2.70%
+878,"Feb 9, 2021",SDH,Global Internet of People,$4.00,$1.61,-59.75%
+879,"Feb 9, 2021",RAAS,Cloopen Group Holding,$16.00,$3.10,-80.63%
+880,"Feb 9, 2021",CPTK,Crown PropTech Acquisitions,$10.00,$9.87,-1.30%
+881,"Feb 9, 2021",EVOJ,Evo Acquisition,$10.00,$9.76,-2.40%
+882,"Feb 9, 2021",ADAG,Adagene,$19.00,$7.92,-58.32%
+883,"Feb 9, 2021",GIG,GigCapital4,$10.00,$10.03,0.30%
+884,"Feb 9, 2021",ENNV,ECP Environmental Growth Opportunities,$10.00,$9.88,-1.20%
+885,"Feb 9, 2021",ADRA,Adara Acquisition,$10.00,$9.81,-1.90%
+886,"Feb 9, 2021",PGRW,Progress Acquisition,$10.00,$9.73,-2.70%
+887,"Feb 9, 2021",SPAQ,Spartan Acquisition III,$10.00,$9.89,-1.10%
+888,"Feb 9, 2021",PICC,Pivotal Investment Corporation III,$10.00,$9.72,-2.80%
+889,"Feb 9, 2021",PMGM,Priveterra Acquisition,$10.00,$9.73,-2.70%
+890,"Feb 9, 2021",VENA,Venus Acquisition,$10.00,$10.05,0.50%
+891,"Feb 8, 2021",BAOS,Baosheng Media Group Holdings,$5.00,$0.89,-82.20%
+892,"Feb 5, 2021",EVAX,Evaxion Biotech,$10.00,$4.13,-58.70%
+893,"Feb 5, 2021",QFTA,Quantum FinTech Acquisition,$10.00,$9.86,-1.40%
+894,"Feb 5, 2021",RMGC,RMG Acquisition III,$10.00,$9.72,-2.80%
+895,"Feb 5, 2021",KURI,Alkuri Global Acquisition,$10.00,$9.20,-8.00%
+896,"Feb 5, 2021",PHVS,"Pharvaris, N.V",$20.00,$15.46,-22.70%
+897,"Feb 5, 2021",LHDX,Lucira Health,$17.00,$6.89,-59.47%
+898,"Feb 5, 2021",CPUH,Compute Health Acquisition,$10.00,$9.74,-2.60%
+899,"Feb 5, 2021",TERN,Terns Pharmaceuticals,$17.00,$6.11,-64.06%
+900,"Feb 5, 2021",HHLA,HH&L Acquisition Co.,$10.00,$9.75,-2.50%
+901,"Feb 5, 2021",BOLT,Bolt Biotherapeutics,$20.00,$4.67,-76.65%
+902,"Feb 5, 2021",GSQD,G Squared Ascend I,$10.00,$9.87,-1.30%
+903,"Feb 5, 2021",COVA,COVA Acquisition,$10.00,$9.72,-2.80%
+904,"Feb 5, 2021",JOFF,JOFF Fintech Acquisition,$10.00,$9.70,-3.00%
+905,"Feb 5, 2021",SDAC,Sustainable Development Acquisition I,$10.00,$9.74,-2.60%
+906,"Feb 5, 2021",FWAA,Fifth Wall Acquisition I,$10.00,$12.10,21.00%
+907,"Feb 5, 2021",ATMR,Altimar Acquisition II,$10.00,$9.77,-2.30%
+908,"Feb 5, 2021",CNEY,CN Energy Group,$4.00,$2.75,-31.25%
+909,"Feb 5, 2021",IMCR,Immunocore Holdings,$26.00,$34.61,33.12%
+910,"Feb 5, 2021",ANGN,Angion Biomedica,$16.00,$2.70,-83.13%
+911,"Feb 5, 2021",VOR,Vor Biopharma,$18.00,$12.05,-33.06%
+912,"Feb 5, 2021",TBCP,Thunder Bridge Capital Partners III,$10.00,$9.74,-2.60%
+913,"Feb 4, 2021",ATC,Atotech,$17.00,$25.00,47.06%
+914,"Feb 4, 2021",NXU,Novus Capital Corporation II,$10.00,$9.92,-0.85%
+915,"Feb 4, 2021",ASAX,Astrea Acquisition,$10.00,$9.89,-1.12%
+916,"Feb 4, 2021",SANA,Sana Biotechnology,$25.00,$16.24,-35.04%
+917,"Feb 4, 2021",SNSE,Sensei Biotherapeutics,$19.00,$5.65,-70.26%
+918,"Feb 4, 2021",DCRN,Decarbonization Plus Acquisition II,$10.00,$9.94,-0.60%
+919,"Feb 4, 2021",ACII,Atlas Crest Investment II,$10.00,$9.75,-2.50%
+920,"Feb 4, 2021",CENH,Centricus Acquisition,$10.00,$8.35,-16.50%
+921,"Feb 4, 2021",LABP,Landos Biopharma,$16.00,$5.26,-67.13%
+922,"Feb 4, 2021",ITQ,Itiquira Acquisition,$10.00,$9.77,-2.30%
+923,"Feb 3, 2021",TMAC,The Music Acquisition,$10.00,$9.73,-2.70%
+924,"Feb 3, 2021",GHAC,Gaming & Hospitality Acquisition,$10.00,$9.77,-2.30%
+925,"Feb 3, 2021",TIXT,TELUS International,$25.00,$31.75,27.00%
+926,"Feb 3, 2021",KRNL,Kernel Group Holdings,$10.00,$9.75,-2.50%
+927,"Feb 3, 2021",PRPC,CC Neuberger Principal Holdings III,$10.00,$9.85,-1.50%
+928,"Feb 3, 2021",ONTF,"ON24, Inc.",$50.00,$17.36,-65.28%
+929,"Feb 2, 2021",NRAC,Noble Rock Acquisition,$10.00,$9.73,-2.70%
+930,"Feb 2, 2021",THMA,Thimble Point Acquisition,$10.00,$9.30,-7.00%
+931,"Feb 2, 2021",MDH,MDH Acquisition,$10.00,$9.80,-2.00%
+932,"Feb 2, 2021",AAC,Ares Acquisition,$10.00,$9.76,-2.40%
+933,"Feb 2, 2021",JWSM,Jaws Mustang Acquisition,$10.00,$9.78,-2.20%
+934,"Jan 29, 2021",TRIN,Trinity Capital,$14.00,$16.73,19.50%
+935,"Jan 29, 2021",BCAC,Brookline Capital Acquisition,$10.00,$9.97,-0.30%
+936,"Jan 29, 2021",BLUA,BlueRiver Acquisition,$10.00,$9.74,-2.60%
+937,"Jan 29, 2021",CFV,CF Acquisition V,$10.00,$9.96,-0.40%
+938,"Jan 29, 2021",MIT,Mason Industrial Technology,$10.00,$9.71,-2.90%
+939,"Jan 29, 2021",CLRM,Clarim Acquisition,$10.00,$9.73,-2.70%
+940,"Jan 29, 2021",HMPT,Home Point Capital,$13.00,$4.51,-65.31%
+941,"Jan 29, 2021",NLSP,NLS Pharmaceutics,$4.15,$1.31,-68.43%
+942,"Jan 29, 2021",ZWRK,Z-Work Acquisition,$10.00,$9.74,-2.60%
+943,"Jan 29, 2021",GCAC,Growth Capital Acquisition,$10.00,$9.97,-0.30%
+944,"Jan 29, 2021",EQHA,EQ Health Acquisition,$10.00,$9.75,-2.50%
+945,"Jan 28, 2021",AGFY,Agrify,$10.00,$10.30,3.00%
+946,"Jan 28, 2021",XM,Qualtrics International,$30.00,$35.30,17.67%
+947,"Jan 28, 2021",IGNY,Ignyte Acquisition,$10.00,$9.78,-2.20%
+948,"Jan 28, 2021",OCDX,Ortho Clinical Diagnostics Holdings,$17.00,$19.49,14.65%
+949,"Jan 28, 2021",ITHX,ITHAX Acquisition,$10.00,$9.77,-2.30%
+950,"Jan 28, 2021",TLGA,TLG Acquisition One,$10.00,$9.74,-2.60%
+951,"Jan 28, 2021",ZIM,ZIM Integrated Shipping Services,$15.00,$52.12,247.47%
+952,"Jan 28, 2021",VINP,Vinci Partners Investments,$18.00,$11.01,-38.83%
+953,"Jan 27, 2021",FSSI,Fortistar Sustainable Solutions,$10.00,$9.74,-2.60%
+954,"Jan 27, 2021",CLIM,Climate Real Impact Solutions II Acquisition,$10.00,$9.78,-2.20%
+955,"Jan 27, 2021",SHLS,Shoals Technologies Group,$25.00,$25.76,3.04%
+956,"Jan 27, 2021",HCAQ,HealthCor Catalio Acquisition,$10.00,$10.43,4.30%
+957,"Jan 27, 2021",CSTA,Constellation Acquisition I,$10.00,$9.77,-2.30%
+958,"Jan 27, 2021",TIRX,Tian Ruixiang Holdings,$4.00,$1.61,-59.75%
+959,"Jan 27, 2021",CAHC,CA Healthcare Acquisition,$10.00,$9.94,-0.60%
+960,"Jan 26, 2021",LMAO,LMF Acquisition Opportunities,$10.00,$10.03,0.30%
+961,"Jan 26, 2021",LMDX,LumiraDx,$0.00,$9.02,0.00%
+962,"Jan 26, 2021",DHHC,DiamondHead Holdings,$10.00,$9.72,-2.80%
+963,"Jan 26, 2021",HCII,Hudson Executive Investment II,$10.00,$9.75,-2.50%
+964,"Jan 26, 2021",BIOT,Biotech Acquisition Company,$10.00,$9.82,-1.80%
+965,"Jan 26, 2021",DNZ,D & Z Media Acquisition,$10.00,$9.75,-2.50%
+966,"Jan 26, 2021",NSTB,Northern Star Investment II,$10.00,$9.72,-2.80%
+967,"Jan 26, 2021",BTNB,Bridgetown 2 Holdings,$10.00,$9.89,-1.10%
+968,"Jan 26, 2021",EZGO,EZGO Technologies,$4.00,$1.75,-56.25%
+969,"Jan 26, 2021",SSAA,Science Strategic Acquisition Alpha,$10.00,$9.74,-2.60%
+970,"Jan 22, 2021",HUDI,Huadi International Group Co.,$8.00,$32.32,304.00%
+971,"Jan 22, 2021",PV,Primavera Capital Acquisition,$10.00,$9.75,-2.50%
+972,"Jan 22, 2021",JCIC,Jack Creek Investment,$10.00,$9.77,-2.30%
+973,"Jan 22, 2021",NAAC,North Atlantic Acquisition,$10.00,$9.83,-1.70%
+974,"Jan 22, 2021",PAX,Patria Investments,$17.00,$16.02,-5.76%
+975,"Jan 22, 2021",WEJO,Wejo Group,$0.00,$5.28,0.00%
+976,"Jan 22, 2021",LMACA,Liberty Media Acquisition,$10.00,$10.25,2.50%
+977,"Jan 22, 2021",RLX,RLX Technology,$12.00,$3.76,-68.67%
+978,"Jan 22, 2021",EUSG,European Sustainable Growth Acquisition,$10.00,$9.81,-1.90%
+979,"Jan 22, 2021",OEPW,One Equity Partners Open Water I,$10.00,$9.72,-2.80%
+980,"Jan 22, 2021",MNTK,Montauk Renewables,$8.50,$10.20,20.00%
+981,"Jan 22, 2021",VOSO,Virtuoso Acquisition,$10.00,$14.51,45.10%
+982,"Jan 22, 2021",SHAC,SCP & CO Healthcare Acquisition Company,$10.00,$9.75,-2.50%
+983,"Jan 21, 2021",DFH,Dream Finders Homes,$13.00,$18.65,43.46%
+984,"Jan 21, 2021",MYTE,MYT Netherlands Parent B.V.,$26.00,$21.02,-19.15%
+985,"Jan 20, 2021",LEGO,Legato Merger,$10.00,$11.25,12.50%
+986,"Jan 20, 2021",GMII,Gores Metropoulos II,$10.00,$9.87,-1.30%
+987,"Jan 20, 2021",OSTR,Oyster Enterprises Acquisition,$10.00,$9.75,-2.50%
+988,"Jan 20, 2021",GMBT,Queen's Gambit Growth Capital,$10.00,$9.87,-1.30%
+989,"Jan 20, 2021",TZPS,TZP Strategies Acquisition,$10.00,$9.75,-2.50%
+990,"Jan 20, 2021",FOXW,FoxWayne Enterprises Acquisition,$10.00,$9.92,-0.80%
+991,"Jan 15, 2021",HCIC,Hennessy Capital Investment V,$10.00,$9.84,-1.60%
+992,"Jan 15, 2021",HCCC,Healthcare Capital,$10.00,$9.86,-1.40%
+993,"Jan 15, 2021",AEAC,Authentic Equity Acquisition,$10.00,$9.75,-2.50%
+994,"Jan 15, 2021",GNAC,Group Nine Acquisition,$10.00,$9.75,-2.50%
+995,"Jan 15, 2021",ADER,26 Capital Acquisition,$10.00,$9.83,-1.70%
+996,"Jan 15, 2021",DRVN,Driven Brands Holdings,$22.00,$31.64,43.82%
+997,"Jan 15, 2021",PLTK,Playtika Holding,$27.00,$18.01,-33.30%
+998,"Jan 15, 2021",CLAS,Class Acceleration,$10.00,$9.72,-2.80%
+999,"Jan 15, 2021",TBA,Thoma Bravo Advantage,$10.00,$0.00,0.00%
+1000,"Jan 15, 2021",OCAX,OCA Acquisition,$10.00,$9.97,-0.30%
+1001,"Jan 15, 2021",ROT,Rotor Acquisition,$10.00,$10.05,0.50%
+1002,"Jan 15, 2021",EAC,Edify Acquisition,$10.00,$9.74,-2.60%
+1003,"Jan 14, 2021",POSH,Poshmark,$42.00,$18.70,-55.48%
+1004,"Jan 14, 2021",WOOF,Petco Health And Wellness Company,$18.00,$19.59,8.83%
+1005,"Jan 14, 2021",ENVI,Environmental Impact Acquisition,$10.00,$9.97,-0.30%
+1006,"Jan 14, 2021",MON,Monument Circle Acquisition,$10.00,$9.77,-2.30%
+1007,"Jan 14, 2021",SLCR,Silver Crest Acquisition,$10.00,$9.78,-2.20%
+1008,"Jan 13, 2021",PNTM,Pontem,$10.00,$9.80,-2.00%
+1009,"Jan 13, 2021",HLAH,Hamilton Lane Alliance Holdings I,$10.00,$9.76,-2.40%
+1010,"Jan 13, 2021",FINM,Marlin Technology,$10.00,$9.76,-2.40%
+1011,"Jan 13, 2021",NGAB,Northern Genesis Acquisition II,$10.00,$9.93,-0.70%
+1012,"Jan 13, 2021",MSGM,Motorsport Games,$20.00,$4.45,-77.75%
+1013,"Jan 13, 2021",FCAX,Fortress Capital Acquisition,$10.00,$9.77,-2.30%
+1014,"Jan 13, 2021",DLCA,Deep Lake Capital Acquisition,$10.00,$9.76,-2.40%
+1015,"Jan 13, 2021",AFRM,Affirm Holdings,$49.00,$103.63,111.49%
+1016,"Jan 12, 2021",SWET,Athlon Acquisition,$10.00,$9.73,-2.70%
+1017,"Jan 12, 2021",KUKE,Kuke Music Holding,$10.00,$4.00,-59.96%
+1018,"Jan 12, 2021",GPAC,Global Partner Acquisition II,$10.00,$9.70,-3.00%
+1019,"Jan 12, 2021",QLI,Qilian International Holding Group,$5.00,$2.91,-41.80%
+1020,"Jan 12, 2021",ADEX,Adit EdTech Acquisition,$10.00,$9.88,-1.25%
+1021,"Jan 12, 2021",BCYP,Big Cypress Acquisition,$10.00,$8.44,-15.60%
+1022,"Jan 12, 2021",ENFA,890 5th Avenue Partners,$10.00,$9.62,-3.80%
+1023,"Jan 11, 2021",LJAQ,LightJump Acquisition,$10.00,$9.88,-1.20%
+1024,"Jan 8, 2021",POW,Powered Brands,$10.00,$9.78,-2.20%
+1025,"Jan 8, 2021",PACX,Pioneer Merger,$10.00,$9.85,-1.50%
+1026,"Jan 8, 2021",PAQC,Provident Acquisition,$10.00,$9.71,-2.90%
+1027,"Jan 8, 2021",EPHY,Epiphany Technology Acquisition,$10.00,$9.76,-2.40%
+1028,"Jan 8, 2021",CGEM,Cullinan Oncology,$21.00,$16.53,-21.29%
+1029,"Jan 8, 2021",TMKR,Tastemaker Acquisition,$10.00,$9.81,-1.90%
+1030,"Jan 8, 2021",GRCL,Gracell Biotechnologies,$19.00,$6.46,-66.00%
+1031,"Jan 8, 2021",SVFA,SVF Investment,$10.00,$9.97,-0.30%
+1032,"Jan 8, 2021",SWBK,Switchback II,$10.00,$9.35,-6.50%
+1033,"Jan 8, 2021",GSAQ,Global Synergy Acquisition,$10.00,$9.86,-1.40%
+1034,"Jan 8, 2021",EPWR,Empowerment & Inclusion Capital I,$10.00,$9.75,-2.50%
+1035,"Jan 8, 2021",PRSR,Prospector Capital,$10.00,$9.72,-2.80%
+1036,"Jan 8, 2021",LWAC,Locust Walk Acquisition,$10.00,$16.98,69.80%
+1037,"Jan 8, 2021",LHC,Leo Holdings II,$10.00,$9.75,-2.50%
+1038,"Jan 8, 2021",MCAD,Mountain Crest Acquisition II,$10.00,$10.43,4.30%
+1039,"Jan 8, 2021",KLAQ,KL Acquisition,$10.00,$9.79,-2.10%
+1040,"Jan 7, 2021",VCKA,Vickers Vantage I,$10.00,$10.06,0.60%
+1041,"Jan 7, 2021",BLTS,Bright Lights Acquisition,$10.00,$9.85,-1.50%
+1042,"Jan 7, 2021",IVAN,Ivanhoe Capital Acquisition,$10.00,$9.92,-0.80%
+1043,"Jan 7, 2021",INKA,KludeIn I Acquisition,$10.00,$9.84,-1.60%
+1044,"Jan 7, 2021",OMEG,Omega Alpha SPAC,$10.00,$9.75,-2.50%
+1045,"Jan 7, 2021",VTIQ,VectoIQ Acquisition II,$10.00,$9.74,-2.60%
+1046,"Jan 7, 2021",AGCB,Altimeter Growth 2,$10.00,$9.82,-1.80%
+1047,"Jan 6, 2021",PPGH,Poema Global Holdings,$10.00,$9.89,-1.10%
+1048,"Jan 6, 2021",AKIC,Sports Ventures Acquisition,$10.00,$9.78,-2.20%
+1049,"Jan 6, 2021",KAIR,Kairos Acquisition,$10.00,$9.76,-2.40%
+1050,"Jan 6, 2021",STPC,Star Peak II,$10.00,$9.87,-1.30%
+1051,"Jan 5, 2021",BENE,Benessere Capital Acquisition,$10.00,$10.13,1.30%
+1052,"Jan 5, 2021",FVT,Fortress Value Acquisition III,$10.00,$9.77,-2.30%
+1053,"Jan 5, 2021",CRU,Crucible Acquisition,$10.00,$9.75,-2.50%
+1054,"Dec 29, 2020",MRM,Medirom Healthcare Technologies,$15.00,$6.38,-57.48%
+1055,"Dec 24, 2020",VTAQ,Ventoux CCM Acquisition,$10.00,$10.02,0.20%
+1056,"Dec 23, 2020",IKT,Inhibikase Therapeutics,$10.00,$1.64,-83.60%
+1057,"Dec 23, 2020",HCAR,Healthcare Services Acquisition,$10.00,$9.76,-2.40%
+1058,"Dec 23, 2020",VHAQ,Viveon Health Acquisition,$10.00,$10.03,0.30%
+1059,"Dec 23, 2020",CFIV,CF Acquisition IV,$10.00,$9.78,-2.25%
+1060,"Dec 23, 2020",VII,7GC & Co. Holdings,$10.00,$9.76,-2.40%
+1061,"Dec 23, 2020",GBS,"GBS, Inc.",$17.00,$1.41,-91.71%
+1062,"Dec 21, 2020",ACKIT,Ackrell SPAC Partners I Co.,$10.00,$10.10,1.00%
+1063,"Dec 18, 2020",SVOK,Seven Oaks Acquisition,$10.00,$9.08,-9.20%
+1064,"Dec 18, 2020",MTAC,MedTech Acquisition,$10.00,$9.92,-0.85%
+1065,"Dec 18, 2020",GFX,Golden Falcon Acquisition,$10.00,$9.75,-2.50%
+1066,"Dec 18, 2020",IIII,Insu Acquisition III,$10.00,$9.77,-2.30%
+1067,"Dec 18, 2020",DUNE,Dune Acquisition,$10.00,$9.87,-1.30%
+1068,"Dec 18, 2020",MASS,908 Devices,$20.00,$25.98,29.90%
+1069,"Dec 17, 2020",VIRI,Virios Therapeutics,$10.00,$5.78,-42.20%
+1070,"Dec 17, 2020",MDWT,Midwest Holding,$70.00,$15.94,-77.23%
+1071,"Dec 17, 2020",SCOA,ScION Tech Growth I,$10.00,$9.76,-2.40%
+1072,"Dec 17, 2020",COOL,Corner Growth Acquisition,$10.00,$9.78,-2.20%
+1073,"Dec 16, 2020",CCV,Churchill Capital Corp V,$10.00,$9.87,-1.31%
+1074,"Dec 16, 2020",BCAB,BioAtla,$18.00,$19.97,10.94%
+1075,"Dec 16, 2020",WISH,ContextLogic,$24.00,$3.54,-85.25%
+1076,"Dec 16, 2020",UPST,Upstart Holdings,$20.00,$149.48,647.40%
+1077,"Dec 16, 2020",SCPS,Scopus Biopharma,$5.50,$2.06,-62.55%
+1078,"Dec 15, 2020",BLUW,Blue Water Acquisition,$10.00,$9.63,-3.70%
+1079,"Dec 15, 2020",WNW,Wunong Net Technology Company,$5.00,$2.35,-53.00%
+1080,"Dec 15, 2020",OCG,Oriental Culture Holding,$4.00,$4.78,19.50%
+1081,"Dec 15, 2020",MRAC,Marquee Raine Acquisition,$10.00,$10.92,9.20%
+1082,"Dec 15, 2020",ATA,Americas Technology Acquisition,$10.00,$10.13,1.30%
+1083,"Dec 15, 2020",KINZ,Kins Technology Group,$10.00,$9.97,-0.30%
+1084,"Dec 11, 2020",CBAH,CBRE Acquisition Holdings,$10.00,$10.75,7.50%
+1085,"Dec 11, 2020",NBTX,Nanobiotix,$13.50,$7.95,-41.11%
+1086,"Dec 11, 2020",FDMT,4D Molecular Therapeutics,$23.00,$20.99,-8.74%
+1087,"Dec 11, 2020",GHVI,Gores Holdings VI,$10.00,$14.47,44.70%
+1088,"Dec 11, 2020",DWIN,Delwinds Insurance Acquisition,$10.00,$9.87,-1.30%
+1089,"Dec 11, 2020",VVOS,Vivos Therapeutics,$6.00,$2.73,-54.50%
+1090,"Dec 11, 2020",ABCL,AbCellera Biologics,$20.00,$15.74,-21.30%
+1091,"Dec 11, 2020",ROCC,Roth CC Acquisition II,$10.00,$9.49,-5.10%
+1092,"Dec 11, 2020",CERT,Certara,$23.00,$28.58,24.26%
+1093,"Dec 11, 2020",EDTX,EdtechX Holdings Acquisition II,$10.00,$9.99,-0.10%
+1094,"Dec 11, 2020",TVAC,Thayer Ventures Acquisition,$10.00,$10.16,1.60%
+1095,"Dec 11, 2020",SNRH,Senior Connect Acquisition I,$10.00,$9.74,-2.60%
+1096,"Dec 11, 2020",MOTV,Motive Capital,$10.00,$9.88,-1.20%
+1097,"Dec 11, 2020",GLAQ,Globis Acquisition,$10.00,$10.12,1.15%
+1098,"Dec 10, 2020",ABNB,Airbnb,$68.00,$165.66,143.62%
+1099,"Dec 10, 2020",CTAQ,Carney Technology Acquisition II,$10.00,$9.77,-2.30%
+1100,"Dec 10, 2020",PCPC,Periphas Capital Partnering,$25.00,$24.30,-2.80%
+1101,"Dec 10, 2020",RMGB,RMG Acquisition II,$10.00,$8.85,-11.50%
+1102,"Dec 10, 2020",HYFM,Hydrofarm Holdings Group,$20.00,$27.29,36.45%
+1103,"Dec 9, 2020",AI,C3.ai,$42.00,$33.64,-19.90%
+1104,"Dec 9, 2020",FLAC,Frazier Lifesciences Acquisition,$10.00,$9.79,-2.10%
+1105,"Dec 9, 2020",ALTU,Altitude Acquisition,$10.00,$9.86,-1.40%
+1106,"Dec 9, 2020",HMCO,HumanCo Acquisition,$10.00,$9.76,-2.40%
+1107,"Dec 9, 2020",NEBC,Nebula Caravel Acquisition,$10.00,$10.99,9.90%
+1108,"Dec 9, 2020",DASH,DoorDash,$102.00,$151.61,48.64%
+1109,"Dec 9, 2020",PUBM,PubMatic,$20.00,$35.39,76.95%
+1110,"Dec 8, 2020",RAAC,Revolution Acceleration Acquisition,$10.00,$9.30,-7.00%
+1111,"Dec 8, 2020",CND,Concord Acquisition,$10.00,$10.33,3.30%
+1112,"Dec 8, 2020",DDMX,DD3 Acquisition II,$10.00,$9.42,-5.80%
+1113,"Dec 8, 2020",MUDS,Mudrick Capital Acquisition II,$10.00,$9.92,-0.80%
+1114,"Dec 4, 2020",SGTX,Sigilon Therapeutics,$18.00,$2.85,-84.17%
+1115,"Dec 4, 2020",PTIC,Proptech Investment Corporation II,$10.00,$9.75,-2.50%
+1116,"Dec 4, 2020",SEER,"Seer, Inc.",$19.00,$24.09,26.79%
+1117,"Dec 4, 2020",FTCV,FinTech Acquisition V,$10.00,$9.85,-1.50%
+1118,"Dec 4, 2020",SBTX,Silverback Therapeutics,$21.00,$6.77,-67.76%
+1119,"Dec 4, 2020",YQ,17 Education & Technology Group,$10.50,$1.28,-87.81%
+1120,"Dec 3, 2020",DCBO,Docebo,$52.21,$67.36,29.02%
+1121,"Dec 3, 2020",FPAC,Far Peak Acquisition,$10.00,$10.09,0.90%
+1122,"Dec 3, 2020",LOKB,Live Oak Acquisition Corp II,$10.00,$13.38,33.80%
+1123,"Dec 3, 2020",SPFR,Jaws Spitfire Acquisition,$10.00,$8.44,-15.60%
+1124,"Dec 3, 2020",KNTE,Kinnate Biopharma,$20.00,$17.36,-13.20%
+1125,"Dec 3, 2020",HTPA,Highland Transcend Partners I,$10.00,$9.94,-0.60%
+1126,"Dec 2, 2020",RSVA,Rodgers Silicon Valley Acquisition,$10.00,$20.36,103.60%
+1127,"Dec 2, 2020",TACA,Trepont Acquisition I,$10.00,$9.97,-0.30%
+1128,"Dec 2, 2020",CAP,Capitol Investment V,$10.00,$7.95,-20.50%
+1129,"Nov 30, 2020",SGAM,Seaport Global Acquisition,$10.00,$9.62,-3.80%
+1130,"Nov 25, 2020",SPRQ,Spartan Acquisition II,$10.00,$9.46,-5.40%
+1131,"Nov 25, 2020",FRX,Forest Road Acquisition,$10.00,$12.00,20.00%
+1132,"Nov 24, 2020",SV,Spring Valley Acquisition,$10.00,$10.03,0.30%
+1133,"Nov 24, 2020",GNPK,Genesis Park Acquisition,$10.00,$10.50,5.00%
+1134,"Nov 24, 2020",TINV,Tiga Acquisition,$10.00,$10.12,1.20%
+1135,"Nov 24, 2020",VMAR,Vision Marine Technologies,$10.00,$5.13,-48.70%
+1136,"Nov 24, 2020",HFEN,HF Enterprises,$7.00,$6.15,-12.14%
+1137,"Nov 24, 2020",VCVC,10X Capital Venture Acquisition,$10.00,$9.85,-1.50%
+1138,"Nov 24, 2020",OZON,Ozon Holdings,$30.00,$31.22,4.07%
+1139,"Nov 23, 2020",BREZ,Breeze Holdings Acquisition,$10.00,$10.21,2.10%
+1140,"Nov 20, 2020",KWAC,Kingswood Acquisition,$10.00,$10.13,1.30%
+1141,"Nov 20, 2020",LSAQ,LifeSci Acquisition II,$10.00,$9.01,-9.90%
+1142,"Nov 20, 2020",SHC,Sotera Health Company,$23.00,$23.17,0.74%
+1143,"Nov 20, 2020",ARBG,Aequi Acquisition,$10.00,$9.78,-2.20%
+1144,"Nov 20, 2020",MRVI,Maravai LifeSciences Holdings,$27.00,$41.38,53.26%
+1145,"Nov 20, 2020",CAS,Cascade Acquisition,$10.00,$9.95,-0.50%
+1146,"Nov 20, 2020",OCA,Omnichannel Acquisition,$10.00,$9.92,-0.80%
+1147,"Nov 19, 2020",IIAC,Investindustrial Acquisition,$10.00,$10.14,1.40%
+1148,"Nov 19, 2020",CHFW,Consonance-HFW Acquisition,$10.00,$9.79,-2.10%
+1149,"Nov 19, 2020",NGMS,NeoGames,$17.00,$27.29,60.53%
+1150,"Nov 19, 2020",LNFA,L&F Acquisition,$10.00,$10.04,0.40%
+1151,"Nov 19, 2020",TLS,Telos,$17.00,$15.84,-6.82%
+1152,"Nov 19, 2020",YSG,Yatsen Holding,$10.50,$1.96,-81.33%
+1153,"Nov 19, 2020",RTPZ,Reinvent Technology Partners Z,$10.00,$9.79,-2.10%
+1154,"Nov 19, 2020",JYAC,Jiya Acquisition,$10.00,$9.78,-2.20%
+1155,"Nov 19, 2020",OLMA,Olema Pharmaceuticals,$19.00,$9.78,-48.53%
+1156,"Nov 18, 2020",PHIC,Population Health Investment Co.,$10.00,$9.74,-2.60%
+1157,"Nov 17, 2020",DGNS,Dragoneer Growth Opportunities II,$10.00,$10.20,2.00%
+1158,"Nov 17, 2020",ZNTE,Zanite Acquisition,$10.00,$10.17,1.70%
+1159,"Nov 17, 2020",PIPP,Pine Island Acquisition,$10.00,$9.92,-0.80%
+1160,"Nov 17, 2020",OTRA,OTR Acquisition,$10.00,$10.11,1.10%
+1161,"Nov 13, 2020",CFAC,CF Finance Acquisition III,$10.00,$8.97,-10.30%
+1162,"Nov 13, 2020",HAAC,Health Assurance Acquisition,$10.00,$9.78,-2.20%
+1163,"Nov 13, 2020",DMYI,"dMY Technology Group, Inc. III",$10.00,$10.40,4.00%
+1164,"Nov 13, 2020",BWAC,Better World Acquisition,$10.00,$10.17,1.70%
+1165,"Nov 11, 2020",NOAC,Natural Order Acquisition,$10.00,$9.77,-2.30%
+1166,"Nov 11, 2020",STIC,Northern Star Acquisition,$10.00,$12.19,21.90%
+1167,"Nov 10, 2020",ADOC,Edoc Acquisition,$10.00,$10.21,2.11%
+1168,"Nov 10, 2020",TSIA,TS Innovation Acquisitions,$10.00,$10.83,8.30%
+1169,"Nov 6, 2020",DBDR,Roman DBDR Tech Acquisition,$10.00,$9.99,-0.10%
+1170,"Oct 30, 2020",AVIR,Atea Pharmaceuticals,$24.00,$8.56,-64.33%
+1171,"Oct 30, 2020",NBA,New Beginnings Acquisition,$10.00,$9.75,-2.50%
+1172,"Oct 30, 2020",SQZ,SQZ Biotechnologies Company,$16.00,$9.42,-41.13%
+1173,"Oct 30, 2020",JUPW,Jupiter Wellness,$7.50,$1.39,-81.47%
+1174,"Oct 30, 2020",BHSE,Bull Horn Holdings,$10.00,$9.99,-0.10%
+1175,"Oct 30, 2020",CONX,CONX Corp.,$10.00,$9.78,-2.20%
+1176,"Oct 30, 2020",LU,Lufax Holding,$13.50,$5.72,-57.63%
+1177,"Oct 29, 2020",LESL,Leslie's,$17.00,$22.98,35.18%
+1178,"Oct 29, 2020",GLTO,Galecto,$15.00,$3.00,-80.00%
+1179,"Oct 29, 2020",DSAC,Duddell Street Acquisition,$10.00,$9.89,-1.10%
+1180,"Oct 29, 2020",ALGM,Allegro MicroSystems,$14.00,$33.83,141.64%
+1181,"Oct 28, 2020",ACIC,Atlas Crest Investment,$10.00,$9.48,-5.20%
+1182,"Oct 28, 2020",BOAC,Bluescape Opportunities Acquisition,$10.00,$9.79,-2.10%
+1183,"Oct 28, 2020",AJAX,Ajax I,$10.00,$8.72,-12.80%
+1184,"Oct 28, 2020",MAX,MediaAlpha,$19.00,$15.39,-19.00%
+1185,"Oct 28, 2020",GATO,Gatos Silver,$7.00,$10.71,53.00%
+1186,"Oct 28, 2020",ABST,Absolute Software,$11.00,$9.31,-15.36%
+1187,"Oct 28, 2020",BDSX,Biodesix,$18.00,$4.46,-75.22%
+1188,"Oct 28, 2020",ROOT,"Root, Inc.",$27.00,$3.16,-88.30%
+1189,"Oct 27, 2020",MACU,Mallard Acquisition,$10.00,$10.02,0.20%
+1190,"Oct 27, 2020",LUXA,Lux Health Tech Acquisition,$10.00,$9.88,-1.20%
+1191,"Oct 23, 2020",ACAC,Acies Acquisition,$10.00,$8.39,-16.10%
+1192,"Oct 23, 2020",EUCR,Eucrates Biomedical Acquisition,$10.00,$9.80,-2.00%
+1193,"Oct 23, 2020",FHTX,Foghorn Therapeutics,$16.00,$20.13,25.81%
+1194,"Oct 23, 2020",ATAC,Altimar Acquisition,$10.00,$10.01,0.10%
+1195,"Oct 22, 2020",BLSA,BCLS Acquisition,$10.00,$9.85,-1.50%
+1196,"Oct 22, 2020",YSAC,Yellowstone Acquisition Company,$10.00,$10.16,1.60%
+1197,"Oct 22, 2020",TEKK,Tekkorp Digital Acquisition,$10.00,$9.89,-1.10%
+1198,"Oct 22, 2020",GHLD,Guild Holdings Company,$15.00,$14.20,-5.33%
+1199,"Oct 22, 2020",CTAC,Cerberus Telecom Acquisition,$10.00,$7.81,-21.90%
+1200,"Oct 22, 2020",ABCM,Abcam,$17.50,$21.52,22.97%
+1201,"Oct 22, 2020",MCFE,McAfee,$20.00,$25.76,28.80%
+1202,"Oct 22, 2020",RICE,Rice Acquisition,$10.00,$18.27,82.70%
+1203,"Oct 21, 2020",SRSA,Sarissa Capital Acquisition,$10.00,$9.78,-2.20%
+1204,"Oct 21, 2020",YGMZ,MingZhu Logistics Holdings,$4.00,$1.83,-54.25%
+1205,"Oct 21, 2020",LFTR,Lefteris Acquisition,$10.00,$9.75,-2.50%
+1206,"Oct 21, 2020",HIGA,H.I.G. Acquisition,$10.00,$9.78,-2.20%
+1207,"Oct 21, 2020",XPOA,DPCM Capital,$10.00,$9.81,-1.90%
+1208,"Oct 21, 2020",SPNV,Supernova Partners Acquisition Company,$10.00,$8.80,-12.00%
+1209,"Oct 21, 2020",MSP,Datto Holding,$27.00,$26.70,-1.11%
+1210,"Oct 20, 2020",DCRB,Decarbonization Plus Acquisition,$10.00,$10.33,3.30%
+1211,"Oct 20, 2020",GWAC,Good Works Acquisition,$10.00,$10.50,5.00%
+1212,"Oct 20, 2020",HLXA,Helix Acquisition,$10.00,$9.95,-0.50%
+1213,"Oct 20, 2020",HZON,Horizon Acquisition II,$10.00,$9.81,-1.90%
+1214,"Oct 16, 2020",EAR,Eargo,$18.00,$4.83,-73.17%
+1215,"Oct 16, 2020",KRBP,Kiromic BioPharma,$12.00,$1.54,-87.17%
+1216,"Oct 16, 2020",TARS,Tarsus Pharmaceuticals,$16.00,$26.88,68.00%
+1217,"Oct 16, 2020",OPT,Opthea,$13.50,$7.47,-44.67%
+1218,"Oct 16, 2020",PRAX,Praxis Precision Medicines,$19.00,$19.01,0.05%
+1219,"Oct 16, 2020",ALGS,Aligos Therapeutics,$15.00,$11.87,-20.87%
+1220,"Oct 16, 2020",BTWN,Bridgetown Holdings,$10.00,$9.80,-2.00%
+1221,"Oct 16, 2020",TMPM,Turmeric Acquisition,$10.00,$9.74,-2.60%
+1222,"Oct 15, 2020",MOTN,Motion Acquisition,$10.00,$10.25,2.50%
+1223,"Oct 15, 2020",EBC,Eastern Bankshares,$10.00,$20.18,101.80%
+1224,"Oct 15, 2020",ARRY,Array Technologies,$22.00,$16.24,-26.18%
+1225,"Oct 15, 2020",TMTS,Spartacus Acquisition,$10.00,$10.86,8.60%
+1226,"Oct 15, 2020",MNSO,Miniso Group Holding,$20.00,$10.32,-48.40%
+1227,"Oct 14, 2020",CDAK,Codiak BioSciences,$15.00,$12.14,-19.07%
+1228,"Oct 14, 2020",FVAM,5:01 Acquisition,$10.00,$9.84,-1.60%
+1229,"Oct 9, 2020",IH,iHuman,$12.00,$2.95,-75.42%
+1230,"Oct 9, 2020",SPRB,Spruce Biosciences,$15.00,$4.17,-72.20%
+1231,"Oct 9, 2020",KRON,Kronos Bio,$19.00,$15.24,-19.79%
+1232,"Oct 9, 2020",LCY,Landcadia Holdings III,$10.00,$12.17,21.70%
+1233,"Oct 9, 2020",INTZ,Intrusion,$8.00,$3.85,-51.88%
+1234,"Oct 9, 2020",IPOF,Social Capital Hedosophia Holdings VI,$10.00,$10.22,2.20%
+1235,"Oct 9, 2020",IPOE,Social Capital Hedosophia Holdings V,$10.00,$20.15,101.50%
+1236,"Oct 9, 2020",IPOD,Social Capital Hedosophia Holdings IV,$10.00,$10.19,1.90%
+1237,"Oct 9, 2020",STTK,Shattuck Labs,$17.00,$8.70,-48.82%
+1238,"Oct 8, 2020",FUBO,FuboTV,$10.00,$16.96,69.60%
+1239,"Oct 8, 2020",AZYO,Aziyo Biologics,$17.00,$6.79,-60.06%
+1240,"Oct 8, 2020",PAIC,Petra Acquisition,$10.00,$10.20,2.00%
+1241,"Oct 7, 2020",EMPW,Empower,$10.00,$9.80,-2.00%
+1242,"Oct 7, 2020",NGAC,NextGen Acquisition,$10.00,$8.83,-11.70%
+1243,"Oct 7, 2020",MAAC,Montes Archimedes Acquisition,$10.00,$9.35,-6.50%
+1244,"Oct 7, 2020",SQFT,Presidio Property Trust,$5.00,$3.86,-22.80%
+1245,"Oct 7, 2020",PACE,TPG Pace Tech Opportunities,$10.00,$11.20,12.00%
+1246,"Oct 7, 2020",TPGY,TPG Pace Beneficial Finance,$10.00,$9.89,-1.10%
+1247,"Oct 6, 2020",FMAC,FirstMark Horizon Acquisition,$10.00,$9.86,-1.40%
+1248,"Oct 2, 2020",SEAH,Sports Entertainment Acquisition,$10.00,$9.95,-0.50%
+1249,"Oct 2, 2020",IMNM,Immunome,$12.00,$15.51,29.25%
+1250,"Oct 2, 2020",IACA,ION Acquisition Corp 1,$10.00,$10.54,5.40%
+1251,"Oct 2, 2020",VGAC,VG Acquisition,$10.00,$10.99,9.90%
+1252,"Oct 2, 2020",ASO,Academy Sports and Outdoors,$13.00,$40.17,209.00%
+1253,"Oct 2, 2020",APSG,Apollo Strategic Growth Capital,$10.00,$9.86,-1.40%
+1254,"Oct 2, 2020",VYGG,Vy Global Growth,$10.00,$9.81,-1.90%
+1255,"Oct 2, 2020",ASAQ,Atlantic Street Acquisition,$10.00,$9.80,-2.00%
+1256,"Oct 2, 2020",ONCR,Oncorus,$15.00,$5.34,-64.40%
+1257,"Oct 2, 2020",AVAN,Avanti Acquisition,$10.00,$9.80,-2.00%
+1258,"Oct 2, 2020",CCCC,C4 Therapeutics,$19.00,$32.42,70.63%
+1259,"Oct 1, 2020",AVO,Mission Produce,$12.00,$17.78,48.17%
+1260,"Oct 1, 2020",RCHG,Recharge Acquisition,$10.00,$9.89,-1.10%
+1261,"Oct 1, 2020",LUNG,Pulmonx,$19.00,$32.13,69.11%
+1262,"Oct 1, 2020",THRY,Thryv Holdings,$10.17,$37.03,264.11%
+1263,"Oct 1, 2020",LXEH,Lixiang Education Holding Co.,$9.25,$9.00,-2.70%
+1264,"Oct 1, 2020",AGC,Altimeter Growth,$10.00,$11.01,10.10%
+1265,"Oct 1, 2020",IMPX,AEA-Bridges Impact,$10.00,$9.99,-0.10%
+1266,"Oct 1, 2020",IGAC,IG Acquisition,$10.00,$9.83,-1.70%
+1267,"Sep 30, 2020",CD,Chindata Group Holdings,$13.50,$6.65,-50.74%
+1268,"Sep 30, 2020",QELL,Qell Acquisition,$10.00,$9.41,-5.90%
+1269,"Sep 30, 2020",BQ,Boqii Holding,$10.00,$0.93,-90.70%
+1270,"Sep 30, 2020",YALA,Yalla Group,$7.50,$6.44,-14.13%
+1271,"Sep 30, 2020",FGNA,FG New America Acquisition,$10.00,$9.97,-0.30%
+1272,"Sep 30, 2020",CLII,Climate Change Crisis Real Impact I Acquisition,$10.00,$14.36,43.60%
+1273,"Sep 30, 2020",ASAN,Asana,$21.00,$79.94,280.67%
+1274,"Sep 30, 2020",VSPR,Vesper Healthcare Acquisition,$10.00,$12.49,24.90%
+1275,"Sep 30, 2020",PLTR,Palantir Technologies,$7.25,$18.90,160.69%
+1276,"Sep 29, 2020",ORPH,Orphazyme,$11.00,$2.94,-73.27%
+1277,"Sep 25, 2020",FTIV,FinTech Acquisition IV,$10.00,$13.28,32.80%
+1278,"Sep 25, 2020",AMST,Amesite,$5.00,$1.14,-77.20%
+1279,"Sep 25, 2020",GLSI,Greenwich LifeSciences,$5.75,$27.76,382.78%
+1280,"Sep 25, 2020",VIAO,VIA optronics AG,$15.00,$6.83,-54.47%
+1281,"Sep 25, 2020",SYTA,Siyata Mobile,$7.25,$3.20,-55.86%
+1282,"Sep 25, 2020",PMVP,PMV Pharmaceuticals,$18.00,$23.25,29.17%
+1283,"Sep 25, 2020",VACQ,Vector Acquisition,$10.00,$11.57,15.70%
+1284,"Sep 25, 2020",GRAY,Graybug Vision,$16.00,$2.03,-87.31%
+1285,"Sep 25, 2020",PRLD,Prelude Therapeutics,$19.00,$13.67,-28.05%
+1286,"Sep 24, 2020",TSHA,Taysha Gene Therapies,$20.00,$13.52,-32.40%
+1287,"Sep 24, 2020",PDAC,Peridot Acquisition,$10.00,$11.23,12.30%
+1288,"Sep 23, 2020",BSY,Bentley Systems,$22.00,$49.57,125.32%
+1289,"Sep 23, 2020",ASPL,Aspirational Consumer Lifestyle,$10.00,$9.93,-0.70%
+1290,"Sep 23, 2020",CRSR,Corsair Gaming,$17.00,$21.56,26.82%
+1291,"Sep 23, 2020",VIH,VPC Impact Acquisition Holdings,$10.00,$9.36,-6.40%
+1292,"Sep 23, 2020",LSF,Laird Superfood,$22.00,$13.00,-40.91%
+1293,"Sep 23, 2020",ACTC,ArcLight Clean Transition,$10.00,$18.09,80.90%
+1294,"Sep 23, 2020",GDRX,GoodRx Holdings,$33.00,$35.83,8.58%
+1295,"Sep 22, 2020",FCAC,Falcon Capital Acquisition,$10.00,$9.00,-10.00%
+1296,"Sep 22, 2020",PMVC,PMV Consumer Acquisition,$10.00,$9.79,-2.10%
+1297,"Sep 18, 2020",CMPS,COMPASS Pathways,$17.00,$23.94,40.82%
+1298,"Sep 18, 2020",NMMC,North Mountain Merger,$10.00,$9.80,-2.00%
+1299,"Sep 18, 2020",AHAC,Alpha Healthcare Acquisition,$10.00,$10.96,9.60%
+1300,"Sep 18, 2020",U,Unity Software,$52.00,$145.84,180.46%
+1301,"Sep 18, 2020",VTRU,Vitru,$16.00,$13.30,-16.88%
+1302,"Sep 18, 2020",ATHA,Athira Pharma,$17.00,$12.43,-26.88%
+1303,"Sep 17, 2020",RTP,Reinvent Technology Partners,$10.00,$10.03,0.30%
+1304,"Sep 17, 2020",PTVE,Pactiv Evergreen,$14.00,$12.37,-11.64%
+1305,"Sep 17, 2020",STWO,ACON S2 Acquisition,$10.00,$8.21,-17.90%
+1306,"Sep 17, 2020",BNL,Broadstone Net Lease,$17.00,$23.96,40.94%
+1307,"Sep 17, 2020",SUMO,Sumo Logic,$22.00,$13.99,-36.41%
+1308,"Sep 17, 2020",AMWL,American Well,$18.00,$6.40,-64.44%
+1309,"Sep 17, 2020",DYN,Dyne Therapeutics,$19.00,$12.40,-34.74%
+1310,"Sep 17, 2020",OACB,Oaktree Acquisition II,$10.00,$9.90,-1.00%
+1311,"Sep 16, 2020",STEP,StepStone Group,$18.00,$39.25,118.06%
+1312,"Sep 16, 2020",ENPC,Executive Network Partnering,$25.00,$9.82,-60.72%
+1313,"Sep 16, 2020",SNOW,Snowflake,$120.00,$354.82,195.68%
+1314,"Sep 16, 2020",EQD,Equity Distribution Acquisition,$10.00,$9.81,-1.90%
+1315,"Sep 16, 2020",MTCR,Metacrine,$13.00,$1.01,-92.23%
+1316,"Sep 16, 2020",FROG,JFrog,$44.00,$30.01,-31.80%
+1317,"Sep 15, 2020",OM,Outset Medical,$27.00,$44.74,65.70%
+1318,"Sep 15, 2020",SBG,Sandbridge Acquisition,$10.00,$8.84,-11.60%
+1319,"Sep 15, 2020",SAII,"Software Acquisition Group, Inc. II",$10.00,$8.98,-10.20%
+1320,"Sep 11, 2020",TWCT,TWC Tech Holdings II,$10.00,$10.06,0.60%
+1321,"Sep 11, 2020",SNPR,Tortoise Acquisition II,$10.00,$9.30,-7.00%
+1322,"Sep 11, 2020",BSN,Broadstone Acquisition,$10.00,$10.68,6.80%
+1323,"Sep 11, 2020",LSPD,Lightspeed Commerce,$30.50,$41.85,37.21%
+1324,"Sep 11, 2020",LEAP,Ribbit LEAP,$10.00,$10.02,0.20%
+1325,"Sep 10, 2020",SVAC,Starboard Value Acquisition,$10.00,$9.55,-4.50%
+1326,"Sep 10, 2020",NSH,NavSight Holdings,$10.00,$9.41,-5.90%
+1327,"Sep 10, 2020",PIAI,Prime Impact Acquisition I,$10.00,$9.80,-2.00%
+1328,"Sep 9, 2020",ITAC,Industrial Tech Acquisitions,$10.00,$8.20,-18.00%
+1329,"Sep 9, 2020",CRHC,Cohn Robbins Holdings,$10.00,$9.83,-1.70%
+1330,"Sep 6, 2020",HEC,Hudson Executive Investment,$10.00,$8.52,-14.80%
+1331,"Sep 4, 2020",TWND,Tailwind Acquisition,$10.00,$9.82,-1.80%
+1332,"Sep 4, 2020",CAPA,HighCape Capital Acquisition,$10.00,$10.68,6.80%
+1333,"Sep 3, 2020",BCTG,BCTG Acquisition,$10.00,$10.20,2.00%
+1334,"Sep 3, 2020",INAQ,INSU Acquisition II,$10.00,$18.00,80.00%
+1335,"Sep 2, 2020",CMLF,CM Life Sciences,$10.00,$11.60,16.00%
+1336,"Sep 1, 2020",PRFX,PainReform,$8.00,$1.54,-80.75%
+1337,"Aug 31, 2020",AUVI,Applied UV,$5.00,$5.09,1.80%
+1338,"Aug 28, 2020",HCDI,Harbor Custom Development,$6.00,$2.80,-53.33%
+1339,"Aug 28, 2020",GP,GreenPower Motor Company,$20.00,$11.55,-42.25%
+1340,"Aug 27, 2020",BTAQ,Burgundy Technology Acquisition,$10.00,$9.99,-0.10%
+1341,"Aug 27, 2020",XPEV,XPeng,$15.00,$43.77,191.80%
+1342,"Aug 27, 2020",CFII,CF Finance Acquisition II,$10.00,$9.19,-8.10%
+1343,"Aug 26, 2020",FTOC,FTAC Olympus Acquisition,$10.00,$10.76,7.60%
+1344,"Aug 21, 2020",FST,FAST Acquisition,$10.00,$10.15,1.50%
+1345,"Aug 21, 2020",NNOX,Nano-X Imaging,$18.00,$18.62,3.44%
+1346,"Aug 21, 2020",HZAC,Horizon Acquisition,$10.00,$12.29,22.90%
+1347,"Aug 21, 2020",CLA,Colonnade Acquisition,$10.00,$12.00,20.00%
+1348,"Aug 21, 2020",KYMR,Kymera Therapeutics,$20.00,$58.69,193.45%
+1349,"Aug 19, 2020",INBX,Inhibrx,$17.00,$41.97,146.88%
+1350,"Aug 19, 2020",BFT,Foley Trasimene Acquisition II,$10.00,$15.10,51.00%
+1351,"Aug 19, 2020",HRMY,Harmony Biosciences Holdings,$24.00,$41.66,73.58%
+1352,"Aug 18, 2020",AONE,One,$10.00,$8.56,-14.40%
+1353,"Aug 18, 2020",NGA,Northern Genesis Acquisition,$10.00,$16.17,61.70%
+1354,"Aug 18, 2020",FIII,Forum Merger III,$10.00,$10.19,1.90%
+1355,"Aug 18, 2020",STPK,Star Peak Energy Transition,$10.00,$26.61,166.10%
+1356,"Aug 14, 2020",DCT,Duck Creek Technologies,$27.00,$29.94,10.89%
+1357,"Aug 14, 2020",DMYD,"dMY Technology Group, Inc. II",$10.00,$16.21,62.10%
+1358,"Aug 14, 2020",LCAP,Lionheart Acquisition II,$10.00,$9.95,-0.50%
+1359,"Aug 14, 2020",DGNR,Dragoneer Growth Opportunities,$10.00,$9.26,-7.40%
+1360,"Aug 14, 2020",CVAC,CureVac,$16.00,$38.89,143.06%
+1361,"Aug 13, 2020",RBAC,RedBall Acquisition,$10.00,$9.90,-1.00%
+1362,"Aug 13, 2020",NTST,NetSTREIT,$18.00,$21.40,18.89%
+1363,"Aug 13, 2020",BEKE,KE Holdings,$20.00,$19.35,-3.25%
+1364,"Aug 12, 2020",FSDC,FS Development,$10.00,$12.66,26.60%
+1365,"Aug 12, 2020",FAII,Fortress Value Acquisition II,$10.00,$10.28,2.80%
+1366,"Aug 12, 2020",KBNT,Kubient,$5.00,$3.11,-37.80%
+1367,"Aug 7, 2020",VMAC,Vistas Media Acquisition Company,$10.00,$10.16,1.55%
+1368,"Aug 7, 2020",FRLN,Freeline Therapeutics Holdings,$18.00,$2.08,-88.44%
+1369,"Aug 7, 2020",CMPI,Checkmate Pharmaceuticals,$15.00,$3.04,-79.73%
+1370,"Aug 7, 2020",IBEX,IBEX Limited,$19.00,$13.43,-29.32%
+1371,"Aug 7, 2020",ARYA,ARYA Sciences Acquisition III,$10.00,$11.16,11.60%
+1372,"Aug 6, 2020",KSMT,Kismet Acquisition One,$10.00,$10.49,4.90%
+1373,"Aug 6, 2020",OSH,Oak Street Health,$21.00,$34.20,62.86%
+1374,"Aug 6, 2020",GRSV,Gores Holdings V,$10.00,$10.59,5.90%
+1375,"Aug 6, 2020",AFIB,Acutus Medical,$18.00,$3.61,-79.94%
+1376,"Aug 6, 2020",RKT,Rocket Companies,$18.00,$14.82,-17.67%
+1377,"Aug 5, 2020",RXT,Rackspace Technology,$21.00,$13.79,-34.33%
+1378,"Aug 5, 2020",GOAC,GO Acquisition,$10.00,$9.83,-1.70%
+1379,"Aug 5, 2020",BIGC,BigCommerce Holdings,$24.00,$38.38,59.92%
+1380,"Aug 5, 2020",HOL,Holicity,$10.00,$12.35,23.50%
+1381,"Aug 5, 2020",BOWX,BowX Acquisition,$10.00,$10.38,3.80%
+1382,"Aug 4, 2020",HSAQ,Health Sciences Acquisitions Corp. 2,$10.00,$9.84,-1.60%
+1383,"Aug 4, 2020",YAC,Yucaipa Acquisition,$10.00,$9.93,-0.70%
+1384,"Jul 31, 2020",PRPB,CC Neuberger Principal Holdings II,$10.00,$9.85,-1.50%
+1385,"Jul 31, 2020",NHIC,NewHold Investment,$10.00,$9.55,-4.50%
+1386,"Jul 31, 2020",ETAC,E.merge Technology Acquisition,$10.00,$9.83,-1.70%
+1387,"Jul 31, 2020",VSTA,Vasta Platform,$19.00,$3.77,-80.16%
+1388,"Jul 31, 2020",GOED,1847 Goedeker,$9.00,$2.58,-71.33%
+1389,"Jul 31, 2020",VITL,Vital Farms,$22.00,$16.70,-24.09%
+1390,"Jul 31, 2020",FTHM,Fathom Holdings,$10.00,$18.17,81.70%
+1391,"Jul 30, 2020",LI,Li Auto,$11.50,$29.97,160.61%
+1392,"Jul 30, 2020",CCIV,Churchill Capital IV,$10.00,$24.25,142.50%
+1393,"Jul 30, 2020",ALVR,AlloVir,$17.00,$14.38,-15.41%
+1394,"Jul 29, 2020",VERX,Vertex,$19.00,$17.15,-9.74%
+1395,"Jul 28, 2020",ACEV,ACE Convergence Acquisition,$10.00,$9.96,-0.40%
+1396,"Jul 24, 2020",ITOS,iTeos Therapeutics,$19.00,$45.05,137.11%
+1397,"Jul 24, 2020",NRIX,Nurix Therapeutics,$19.00,$29.30,54.21%
+1398,"Jul 24, 2020",ACND,Ascendant Digital Acquisition,$10.00,$9.52,-4.80%
+1399,"Jul 24, 2020",GRCY,Greencity Acquisition,$10.00,$10.32,3.20%
+1400,"Jul 24, 2020",INZY,Inozyme Pharma,$16.00,$6.81,-57.44%
+1401,"Jul 24, 2020",ANNX,Annexon,$17.00,$12.38,-27.18%
+1402,"Jul 23, 2020",ERES,East Resources Acquisition Co.,$10.00,$9.85,-1.50%
+1403,"Jul 23, 2020",MEG,Montrose Environmental Group,$15.00,$69.61,364.07%
+1404,"Jul 23, 2020",EDTK,Skillful Craftsman Education Technology,$5.00,$0.96,-80.80%
+1405,"Jul 22, 2020",JAMF,Jamf Holding,$26.00,$37.17,42.96%
+1406,"Jul 22, 2020",PSAC,Property Solutions Acquisition,$10.00,$13.78,37.80%
+1407,"Jul 22, 2020",PSTH,Pershing Square Tontine Holdings,$20.00,$19.71,-1.45%
+1408,"Jul 17, 2020",PAND,Pandion Therapeutics,$18.00,$60.05,233.61%
+1409,"Jul 17, 2020",RNLX,Renalytix,$13.50,$15.45,14.44%
+1410,"Jul 17, 2020",ALXO,ALX Oncology Holdings,$19.00,$22.91,20.58%
+1411,"Jul 17, 2020",DFHT,Deerfield Healthcare Technology Acquisitions,$10.00,$14.92,49.20%
+1412,"Jul 17, 2020",BLI,Berkeley Lights,$22.00,$20.63,-6.23%
+1413,"Jul 16, 2020",TIG,Trean Insurance Group,$15.00,$8.40,-44.00%
+1414,"Jul 16, 2020",RLAY,Relay Therapeutics,$20.00,$31.07,55.35%
+1415,"Jul 15, 2020",DEH,D8 Holdings,$10.00,$11.57,15.70%
+1416,"Jul 15, 2020",MLAC,Malacca Straits Acquisition Company,$10.00,$9.98,-0.20%
+1417,"Jul 15, 2020",HPX,HPX Corp.,$10.00,$9.86,-1.40%
+1418,"Jul 15, 2020",GOCO,GoHealth,$21.00,$3.55,-83.10%
+1419,"Jul 14, 2020",NCNO,nCino,$31.00,$57.43,85.26%
+1420,"Jul 14, 2020",AACQ,Artius Acquisition,$10.00,$9.99,-0.10%
+1421,"Jul 13, 2020",PTK,PTK Acquisition,$10.00,$7.28,-27.20%
+1422,"Jul 10, 2020",PSTX,Poseida Therapeutics,$16.00,$6.90,-56.88%
+1423,"Jul 10, 2020",QH,Quhuo,$10.00,$0.80,-91.96%
+1424,"Jul 10, 2020",NKTX,Nkarta,$18.00,$14.91,-17.17%
+1425,"Jul 10, 2020",IVA,Inventiva,$14.40,$13.25,-7.99%
+1426,"Jul 8, 2020",TXAC,Therapeutics Acquisition,$10.00,$12.96,29.60%
+1427,"Jul 8, 2020",RACA,Therapeutics Acquisition,$10.00,$10.27,2.74%
+1428,"Jul 8, 2020",BLCT,BlueCity Holdings,$16.00,$1.48,-90.75%
+1429,"Jul 2, 2020",CPSR,Capstar Special Purpose Acquisition,$10.00,$9.95,-0.50%
+1430,"Jul 2, 2020",ACCD,Accolade,$22.00,$24.89,13.14%
+1431,"Jul 2, 2020",LMND,Lemonade,$29.00,$45.83,58.03%
+1432,"Jul 1, 2020",DNB,Dun & Bradstreet Holdings,$22.00,$19.59,-10.95%
+1433,"Jul 1, 2020",PANA,Panacea Acquisition,$10.00,$10.42,4.20%
+1434,"Jun 30, 2020",GSAH,GS Acquisition Holdings II,$10.00,$10.26,2.60%
+1435,"Jun 30, 2020",ADTX,Aditx,$9.00,$0.63,-93.02%
+1436,"Jun 26, 2020",FUSN,Fusion Pharmaceuticals,$17.00,$5.00,-70.59%
+1437,"Jun 26, 2020",PYPD,PolyPid,$16.00,$5.87,-63.31%
+1438,"Jun 26, 2020",FUSE,Fusion Acquisition,$10.00,$10.00,0.00%
+1439,"Jun 26, 2020",ACI,Albertsons Companies,$16.00,$29.84,86.50%
+1440,"Jun 26, 2020",EBON,Ebang International Holdings,$5.23,$1.08,-79.35%
+1441,"Jun 26, 2020",API,Agora,$20.00,$16.89,-15.55%
+1442,"Jun 26, 2020",KCAC,Kensington Capital Acquisition,$10.00,$23.50,135.00%
+1443,"Jun 26, 2020",AKUS,Akouos,$17.00,$8.44,-50.35%
+1444,"Jun 24, 2020",BRLI,Brilliant Acquisition,$10.00,$10.18,1.80%
+1445,"Jun 19, 2020",FMTX,Forma Therapeutics Holdings,$20.00,$14.45,-27.75%
+1446,"Jun 19, 2020",NUZE,NuZee,$9.00,$4.35,-51.67%
+1447,"Jun 19, 2020",GTH,Genetron Holdings,$16.00,$6.50,-59.38%
+1448,"Jun 19, 2020",RPTX,Repare Therapeutics,$20.00,$21.78,8.90%
+1449,"Jun 19, 2020",PROG,Progenity,$15.00,$2.43,-83.80%
+1450,"Jun 17, 2020",TREB,Trebia Acquisition,$10.00,$9.93,-0.70%
+1451,"Jun 16, 2020",RPRX,Royalty Pharma,$28.00,$39.22,40.07%
+1452,"Jun 12, 2020",BNR,Burning Rock Biotech,$16.50,$10.74,-34.91%
+1453,"Jun 12, 2020",RNA,Avidity Biosciences,$18.00,$24.14,34.11%
+1454,"Jun 12, 2020",PCVX,Vaxcyte,$16.00,$23.02,43.88%
+1455,"Jun 12, 2020",GBIO,Generation Bio Co.,$19.00,$7.63,-59.84%
+1456,"Jun 12, 2020",AZEK,The AZEK Company,$23.00,$42.99,86.91%
+1457,"Jun 11, 2020",LTRN,Lantern Pharma,$15.00,$7.47,-50.20%
+1458,"Jun 10, 2020",UCL,uCloudlink Group,$18.00,$2.81,-84.39%
+1459,"Jun 9, 2020",VRM,Vroom,$22.00,$11.16,-49.27%
+1460,"Jun 5, 2020",FOUR,Shift4 Payments,$23.00,$60.80,164.35%
+1461,"Jun 5, 2020",DADA,Dada Nexus,$16.00,$14.33,-10.44%
+1462,"Jun 5, 2020",ARYB,ARYA Sciences Acquisition II,$10.00,$10.10,1.00%
+1463,"Jun 5, 2020",AMTI,Applied Molecular Transport,$14.00,$13.52,-3.43%
+1464,"Jun 5, 2020",MCAC,Mountain Crest Acquisition,$10.00,$13.34,33.40%
+1465,"Jun 5, 2020",CALT,Calliditas Therapeutics AB,$19.50,$24.77,27.03%
+1466,"Jun 5, 2020",LEGN,Legend Biotech,$23.00,$48.68,111.65%
+1467,"Jun 4, 2020",ZI,ZoomInfo Technologies,$21.00,$64.58,207.52%
+1468,"Jun 3, 2020",PLRX,Pliant Therapeutics,$16.00,$15.29,-4.44%
+1469,"Jun 3, 2020",WMG,Warner Music Group,$25.00,$41.96,67.84%
+1470,"May 27, 2020",WPF,Foley Trasimene Acquisition,$10.00,$9.75,-2.50%
+1471,"May 22, 2020",NARI,Inari Medical,$19.00,$85.02,347.47%
+1472,"May 21, 2020",SLQT,SelectQuote,$20.00,$8.98,-55.10%
+1473,"May 21, 2020",LGVW,Longview Acquisition,$10.00,$23.05,130.50%
+1474,"May 20, 2020",BMRG,B. Riley Principal Merger II,$10.00,$10.68,6.80%
+1475,"May 15, 2020",ADCT,ADC Therapeutics,$19.00,$20.35,7.11%
+1476,"May 15, 2020",NOVS,Novus Capital,$10.00,$24.95,149.50%
+1477,"May 14, 2020",JWS,Jaws Acquisition,$10.00,$14.75,47.50%
+1478,"May 14, 2020",GIK,GigCapital3,$10.00,$7.82,-21.80%
+1479,"May 8, 2020",CLEU,China Liberal Education Holdings,$6.00,$1.26,-79.00%
+1480,"May 8, 2020",AYLA,Ayala Pharmaceuticals,$15.00,$8.84,-41.08%
+1481,"May 8, 2020",KC,Kingsoft Cloud Holdings,$17.00,$16.05,-5.59%
+1482,"May 6, 2020",SOAC,Sustainable Opportunities Acquisition,$10.00,$10.62,6.20%
+1483,"May 6, 2020",LOAK,Live Oak Acquisition,$10.00,$24.20,142.00%
+1484,"May 5, 2020",ROCH,Roth CH Acquisition I,$10.00,$28.90,189.00%
+1485,"May 5, 2020",GAN,GAN Limited,$8.50,$8.89,4.59%
+1486,"May 1, 2020",CGRO,Collective Growth,$10.00,$9.75,-2.50%
+1487,"May 1, 2020",LYRA,Lyra Therapeutics,$16.00,$4.83,-69.81%
+1488,"Apr 30, 2020",FVAC,Fortress Value Acquisition,$10.00,$14.39,43.90%
+1489,"Apr 28, 2020",IPOB,Social Capital Hedosophia II,$10.00,$29.50,195.00%
+1490,"Apr 24, 2020",ORIC,Oric Pharmaceuticals,$16.00,$16.72,4.50%
+1491,"Apr 24, 2020",CHAQ,Chardan Healthcare Acquisition 2,$10.00,$8.41,-15.90%
+1492,"Apr 24, 2020",PCPL,CC Neuberger Principal Holdings I,$10.00,$10.98,9.80%
+1493,"Apr 22, 2020",IPOC,Social Capital Hedosophia Holdings III,$10.00,$16.02,60.20%
+1494,"Apr 8, 2020",KROS,Keros Therapeutics,$16.00,$54.56,241.00%
+1495,"Apr 3, 2020",ZNTL,Zentalis Pharmaceuticals,$18.00,$80.96,349.78%
+1496,"Apr 1, 2020",WIMI,WiMi Hologram Cloud,$5.50,$3.16,-42.55%
+1497,"Mar 12, 2020",IMRA,IMARA,$16.00,$2.27,-85.81%
+1498,"Mar 11, 2020",DFPH,DFP Healthcare Acquisitions,$10.00,$10.98,9.80%
+1499,"Mar 6, 2020",FEAC,Flying Eagle Acquisition,$10.00,$17.68,76.80%
+1500,"Mar 6, 2020",LSAC,LifeSci Acquisition,$10.00,$19.00,90.00%
+1501,"Mar 3, 2020",GFL,GFL Environmental,$19.00,$36.52,92.21%
+1502,"Feb 28, 2020",PASG,Passage Bio,$18.00,$6.63,-63.17%
+1503,"Feb 24, 2020",ZCMD,Zhongchao,$4.00,$1.81,-54.75%
+1504,"Feb 21, 2020",DMYT,dMY Technology Group,$10.00,$22.76,127.60%
+1505,"Feb 20, 2020",ESSC,East Stone Acquisition,$10.00,$10.65,6.50%
+1506,"Feb 14, 2020",NBAC,Newborn Acquisition,$10.00,$15.52,55.20%
+1507,"Feb 14, 2020",CCXX,Churchill Capital III,$10.00,$9.84,-1.60%
+1508,"Feb 13, 2020",ZGYH,Yunhong International,$10.00,$10.28,2.80%
+1509,"Feb 13, 2020",MEDS,TRxADE HEALTH,$6.50,$2.80,-56.92%
+1510,"Feb 13, 2020",RVMD,Revolution Medicines,$17.00,$25.88,52.24%
+1511,"Feb 13, 2020",GRIL,Muscle Maker,$5.00,$0.79,-84.24%
+1512,"Feb 12, 2020",HUIZ,Huize Holding,$10.50,$1.45,-86.19%
+1513,"Feb 11, 2020",GNRS,Greenrose Acquisition,$10.00,$3.18,-68.20%
+1514,"Feb 11, 2020",CCAC,CITIC Capital Acquisition,$10.00,$10.00,0.00%
+1515,"Feb 7, 2020",NREF,NexPoint Real Estate Finance,$19.00,$19.17,0.89%
+1516,"Feb 7, 2020",ONEW,OneWater Marine,$12.00,$51.71,330.92%
+1517,"Feb 7, 2020",PFHD,Professional Holding,$18.50,$19.05,2.97%
+1518,"Feb 6, 2020",BEAM,Beam Therapeutics,$17.00,$86.35,407.94%
+1519,"Feb 6, 2020",PPD,"PPD, Inc.",$27.00,$47.28,75.11%
+1520,"Feb 6, 2020",SDGR,Schrodinger,$17.00,$36.69,115.82%
+1521,"Feb 6, 2020",CSPR,Casper Sleep,$12.00,$6.69,-44.25%
+1522,"Jan 31, 2020",ONEM,1Life Healthcare,$14.00,$17.25,23.21%
+1523,"Jan 31, 2020",ARQT,Arcutis Biotherapeutics,$17.00,$17.77,4.53%
+1524,"Jan 31, 2020",REYN,Reynolds Consumer Products,$26.00,$30.35,16.73%
+1525,"Jan 30, 2020",BDTX,Black Diamond Therapeutics,$19.00,$5.55,-70.79%
+1526,"Jan 30, 2020",ANPC,AnPac Bio-Medical Science Co.,$12.00,$1.07,-91.08%
+1527,"Jan 29, 2020",ANVS,Annovis Bio,$6.00,$20.34,239.00%
+1528,"Jan 24, 2020",SCVX,SCVX Corp.,$10.00,$9.98,-0.20%
+1529,"Jan 24, 2020",GHIV,Gores Holdings IV,$10.00,$11.54,15.40%
+1530,"Jan 17, 2020",VEL,Velocity Financial,$13.00,$12.91,-0.69%
+1531,"Jan 17, 2020",DNK,Phoenix Tree Holdings,$13.50,$2.37,-82.44%
+1532,"Jan 17, 2020",LIZI,Lizhi,$11.00,$1.70,-84.55%
+1533,"Jan 17, 2020",IMAB,I-Mab,$14.00,$48.10,243.57%
+1534,"Dec 30, 2019",MKD,Molecular Data,$5.38,$0.23,-95.63%
+1535,"Dec 19, 2019",MNPR,Monopar Therapeutics,$8.00,$3.94,-50.75%
+1536,"Dec 19, 2019",INDO,Indonesia Energy,$11.00,$2.96,-73.09%
+1537,"Dec 13, 2019",OCFT,OneConnect Financial Technology Co.,$10.00,$2.40,-76.00%
+1538,"Dec 13, 2019",CIIC,CIIG Merger,$10.00,$21.60,116.00%
+1539,"Dec 13, 2019",HCCO,Healthcare Merger,$10.00,$8.97,-10.30%
+1540,"Dec 13, 2019",SPT,Sprout Social,$17.00,$93.82,451.88%
+1541,"Dec 12, 2019",BILL,Bill.com Holdings,$22.00,$256.29,1064.95%
+1542,"Dec 12, 2019",EH,EHang Holdings,$12.50,$15.83,26.64%
+1543,"Dec 11, 2019",LIVK,LIV Capital Acquisition,$10.00,$10.30,3.00%
+1544,"Dec 11, 2019",XP,XP Inc.,$27.00,$29.49,9.22%
+1545,"Dec 5, 2019",LMPX,LMP Automotive Holdings,$5.00,$7.17,43.40%
+1546,"Nov 26, 2019",ALUS,Alussa Energy Acquisition,$10.00,$9.50,-5.00%
+1547,"Nov 22, 2019",PTAC,PropTech Acquisition,$10.00,$14.81,48.10%
+1548,"Nov 22, 2019",PINE,Alpine Income Property Trust,$19.00,$18.82,-0.95%
+1549,"Nov 22, 2019",CHPM,CHP Merger,$10.00,$10.10,1.00%
+1550,"Nov 21, 2019",GRNV,Greenvision Acquisition,$10.00,$8.14,-18.60%
+1551,"Nov 21, 2019",CAN,Canaan,$9.00,$5.16,-42.67%
+1552,"Nov 21, 2019",SITM,SiTime,$13.00,$272.84,1998.77%
+1553,"Nov 20, 2019",AMHC,Amplitude Healthcare Acquisition,$10.00,$15.12,51.20%
+1554,"Nov 20, 2019",SAQN,Software Acquisition Group,$10.00,$10.10,1.00%
+1555,"Nov 13, 2019",YAYO,"EVmo, Inc.",$4.00,$0.61,-84.77%
+1556,"Nov 11, 2019",ETNB,89bio,$16.00,$12.40,-22.50%
+1557,"Nov 8, 2019",JIH,Juniper Industrial Holdings,$10.00,$13.19,31.90%
+1558,"Nov 8, 2019",SRAC,Stable Road Acquisition,$10.00,$10.97,9.70%
+1559,"Nov 8, 2019",KRKR,36Kr Holdings,$14.50,$1.18,-91.86%
+1560,"Nov 8, 2019",CNSP,CNS Pharmaceuticals,$4.00,$0.91,-77.20%
+1561,"Nov 8, 2019",TELA,TELA Bio,$13.00,$12.80,-1.54%
+1562,"Nov 8, 2019",MOHO,ECMOHO,$10.00,$0.45,-95.52%
+1563,"Nov 7, 2019",GRTX,Galera Therapeutics,$12.00,$4.41,-63.25%
+1564,"Nov 7, 2019",DFNS,LGL Systems Acquisition,$10.00,$13.84,38.40%
+1565,"Nov 7, 2019",CNTG,Centogene,$14.00,$5.17,-63.07%
+1566,"Nov 7, 2019",SI,Silvergate Capital,$12.00,$144.07,1100.58%
+1567,"Nov 5, 2019",QK,Q&K International Group,$17.00,$0.42,-97.50%
+1568,"Nov 5, 2019",MCMJ,Merida Merger I,$10.00,$9.98,-0.20%
+1569,"Nov 1, 2019",SFTW,Osprey Technology Acquisition,$10.00,$11.41,14.10%
+1570,"Nov 1, 2019",FSRV,Finserv Acquisition,$10.00,$14.52,45.20%
+1571,"Nov 1, 2019",DUO,Fangdd Network Group,$13.00,$0.51,-96.08%
+1572,"Oct 31, 2019",OYST,Oyster Point Pharma,$16.00,$15.55,-2.81%
+1573,"Oct 31, 2019",RAPT,Rapt Therapeutics,$12.00,$33.06,175.50%
+1574,"Oct 25, 2019",CABA,Cabaletta Bio,$11.00,$4.30,-60.91%
+1575,"Oct 25, 2019",TFFP,TFF Pharmaceuticals,$5.00,$8.54,70.80%
+1576,"Oct 25, 2019",PHAT,Phathom Pharmaceuticals,$19.00,$19.36,1.89%
+1577,"Oct 25, 2019",PGNY,Progyny,$13.00,$50.16,285.85%
+1578,"Oct 25, 2019",AIH,Aesthetic Medical International Holdings Group,$12.00,$3.18,-73.50%
+1579,"Oct 25, 2019",HAPP,Happiness Biotech Group,$5.50,$0.55,-90.00%
+1580,"Oct 25, 2019",DAO,Youdao,$17.00,$11.88,-30.12%
+1581,"Oct 24, 2019",BRP,BRP Group,$14.00,$33.62,140.14%
+1582,"Oct 18, 2019",GLEO,Galileo Acquisition,$10.00,$8.54,-14.60%
+1583,"Oct 18, 2019",LATN,Union Acquisition II,$10.00,$9.86,-1.40%
+1584,"Oct 17, 2019",IPHA,Innate Pharma,$5.50,$5.02,-8.73%
+1585,"Oct 17, 2019",BRBR,Bellring Brands,$14.00,$27.30,95.00%
+1586,"Oct 11, 2019",HBT,HBT Financial,$16.00,$18.10,13.13%
+1587,"Oct 11, 2019",VIR,Vir Biotechnology,$20.00,$43.37,116.85%
+1588,"Oct 10, 2019",BNTX,BioNTech SE,$15.00,$271.46,1709.73%
+1589,"Oct 3, 2019",APRE,Aprea Therapeutics,$15.00,$3.34,-77.73%
+1590,"Oct 3, 2019",FREQ,Frequency Therapeutics,$14.00,$5.45,-61.07%
+1591,"Oct 3, 2019",VIE,Viela Bio,$19.00,$53.01,179.00%
+1592,"Oct 3, 2019",MCBS,MetroCity Bankshares,$13.50,$25.43,88.37%
+1593,"Sep 26, 2019",OPRT,Oportun Financial,$15.00,$20.66,37.73%
+1594,"Sep 26, 2019",PTON,Peloton Interactive,$29.00,$39.19,35.14%
+1595,"Sep 19, 2019",DDOG,Datadog,$27.00,$177.49,557.37%
+1596,"Sep 19, 2019",PING,Ping Identity Holding,$15.00,$23.10,54.00%
+1597,"Sep 19, 2019",XGN,Exagen,$14.00,$11.48,-18.00%
+1598,"Sep 18, 2019",NVST,Envista Holdings,$22.00,$41.59,89.05%
+1599,"Sep 18, 2019",IGMS,IGM Biosciences,$16.00,$28.28,76.75%
+1600,"Sep 17, 2019",APXT,Apex Technology Acquisition,$10.00,$12.11,21.10%
+1601,"Sep 13, 2019",NET,Cloudflare,$15.00,$144.34,862.27%
+1602,"Sep 13, 2019",SWTX,Springworks Therapeutics,$18.00,$69.00,283.33%
+1603,"Sep 13, 2019",EXPC,Experience Investment,$10.00,$8.70,-13.00%
+1604,"Sep 13, 2019",STSA,Satsuma Pharmaceuticals,$15.00,$4.75,-68.33%
+1605,"Sep 13, 2019",ALRS,Alerus Financial,$21.00,$28.81,37.19%
+1606,"Sep 12, 2019",TXG,10X Genomics,$39.00,$146.22,274.92%
+1607,"Sep 12, 2019",SDC,SmileDirectClub,$23.00,$2.72,-88.17%
+1608,"Sep 11, 2019",SONG,Akazoo,$0.00,$0.00,0.00%
+1609,"Sep 9, 2019",NPA,New Providence Acquisition,$10.00,$11.60,16.00%
+1610,"Aug 15, 2019",CFB,CrossFirst Bankshares,$14.50,$14.94,3.03%
+1611,"Aug 15, 2019",JFU,9F Inc.,$9.50,$1.07,-88.74%
+1612,"Aug 14, 2019",PLIN,China Xiangtai Food Co.,$5.00,$1.64,-67.20%
+1613,"Aug 9, 2019",THBR,Thunder Bridge Acquisition II,$10.00,$10.87,8.70%
+1614,"Aug 8, 2019",INMD,InMode,$14.00,$70.41,402.93%
+1615,"Aug 8, 2019",SSPK,Silver Spike Acquisition,$10.00,$18.84,88.40%
+1616,"Aug 5, 2019",HKIB,AMTD International,$8.38,$3.14,-62.53%
+1617,"Aug 2, 2019",ORSN,Orisun Acquisition,$10.00,$8.17,-18.30%
+1618,"Aug 1, 2019",DT,Dynatrace,$16.00,$60.56,278.50%
+1619,"Aug 1, 2019",SNDL,Sundial Growers,$13.00,$0.63,-95.19%
+1620,"Aug 1, 2019",KRUS,Kura Sushi USA,$14.00,$73.24,423.14%
+1621,"Jul 31, 2019",BORR,Borr Drilling,$9.30,$2.01,-78.39%
+1622,"Jul 31, 2019",NFIN,Netfin Acquisition,$10.00,$11.40,14.00%
+1623,"Jul 26, 2019",VIST,Vista Oil & Gas,$9.00,$5.21,-42.11%
+1624,"Jul 26, 2019",SBE,Switchback Energy Acquisition,$10.00,$30.83,208.30%
+1625,"Jul 26, 2019",BHAT,Blue Hat Interactive Entertainment Technology,$4.00,$0.42,-89.56%
+1626,"Jul 26, 2019",CCX,Churchill Capital Corp II,$10.00,$10.75,7.50%
+1627,"Jul 26, 2019",WSG,Wanda Sports Group Co.,$8.00,$2.50,-68.81%
+1628,"Jul 25, 2019",PROS,ProSight Global,$14.00,$12.85,-8.21%
+1629,"Jul 25, 2019",CSTL,Castle Biosciences,$16.00,$42.82,167.63%
+1630,"Jul 25, 2019",FLLC,Fellazo,$10.00,$10.00,0.00%
+1631,"Jul 25, 2019",LVGO,Livongo Health,$28.00,$139.77,399.18%
+1632,"Jul 25, 2019",HCAT,Health Catalyst,$26.00,$38.42,47.77%
+1633,"Jul 25, 2019",NOVA,Sunnova Energy International,$12.00,$27.07,125.58%
+1634,"Jul 24, 2019",EIC,Eagle Point Income Company,$19.00,$17.27,-9.11%
+1635,"Jul 19, 2019",AFYA,Afya Limited,$19.00,$14.01,-26.26%
+1636,"Jul 19, 2019",IFS,Intercorp Financial Services,$46.00,$24.60,-46.52%
+1637,"Jul 19, 2019",MDLA,Medallia,$21.00,$33.99,61.86%
+1638,"Jul 18, 2019",IHRT,iHeartMedia,$17.00,$20.37,19.82%
+1639,"Jul 18, 2019",FULC,Fulcrum Therapeutics,$16.00,$17.77,11.06%
+1640,"Jul 18, 2019",CPAA,Conyers Park II Acquisition,$10.00,$8.86,-11.40%
+1641,"Jul 18, 2019",PHR,Phreesia,$17.00,$44.18,159.88%
+1642,"Jul 18, 2019",AMK,AssetMark Financial Holdings,$22.00,$25.24,14.73%
+1643,"Jul 18, 2019",ORCC,Owl Rock Capital,$15.30,$14.13,-7.65%
+1644,"Jul 18, 2019",OAC,Oaktree Acquisition,$10.00,$16.38,63.80%
+1645,"Jul 18, 2019",MIRM,Mirum Pharmaceuticals,$15.00,$15.69,4.60%
+1646,"Jul 17, 2019",DOYU,DouYu International Holdings,$11.50,$2.63,-77.13%
+1647,"Jul 12, 2019",SCPE,SC Health,$10.00,$15.84,58.40%
+1648,"Jul 12, 2019",PIC,Pivotal Investment Corporation II,$10.00,$19.54,95.40%
+1649,"Jul 12, 2019",THCA,Tuscan Holdings II,$10.00,$10.20,2.00%
+1650,"Jul 2, 2019",RMBI,Richmond Mutual Bancorporation,$10.00,$16.12,61.20%
+1651,"Jun 28, 2019",KRTX,Karuna Therapeutics,$16.00,$122.76,667.25%
+1652,"Jun 28, 2019",REAL,The RealReal,$20.00,$11.53,-42.35%
+1653,"Jun 27, 2019",CHNG,Change Healthcare,$13.00,$21.05,61.92%
+1654,"Jun 27, 2019",MORF,Morphic Holding,$15.00,$48.64,224.27%
+1655,"Jun 27, 2019",ADPT,Adaptive Biotechnologies,$20.00,$29.35,46.75%
+1656,"Jun 27, 2019",BBIO,BridgeBio Pharma,$17.00,$42.36,149.18%
+1657,"Jun 26, 2019",LINX,Linx S.A.,$9.40,$7.50,-20.21%
+1658,"Jun 26, 2019",CMBM,Cambium Networks,$12.00,$24.80,106.67%
+1659,"Jun 20, 2019",PRVL,Prevail Therapeutics,$17.00,$23.00,35.29%
+1660,"Jun 20, 2019",GO,Grocery Outlet Holding,$22.00,$28.50,29.55%
+1661,"Jun 20, 2019",BCEL,Atreca,$17.00,$3.10,-81.76%
+1662,"Jun 20, 2019",WORK,Slack Technologies,$26.00,$45.20,73.85%
+1663,"Jun 20, 2019",SMMC,South Mountain Merger,$10.00,$16.80,68.00%
+1664,"Jun 20, 2019",AKRO,Akero Therapeutics,$16.00,$21.42,33.88%
+1665,"Jun 20, 2019",PSNL,Personalis,$17.00,$14.67,-13.71%
+1666,"Jun 19, 2019",STOK,Stoke Therapeutics,$18.00,$20.38,13.22%
+1667,"Jun 14, 2019",CHWY,Chewy,$22.00,$55.22,151.00%
+1668,"Jun 13, 2019",FVRR,Fiverr International,$21.00,$121.29,477.57%
+1669,"Jun 12, 2019",CRWD,CrowdStrike Holdings,$34.00,$210.31,518.56%
+1670,"Jun 12, 2019",MWK,Mohawk Group Holdings,$10.00,$23.70,137.00%
+1671,"Jun 7, 2019",RVLV,Revolve Group,$18.00,$55.74,209.67%
+1672,"Jun 7, 2019",HYAC,Haymaker Acquisition II,$10.00,$9.52,-4.80%
+1673,"Jun 6, 2019",GIX,GigCapital2,$10.00,$10.47,4.70%
+1674,"Jun 6, 2019",GOTU,Gaotu Techedu,$10.50,$1.97,-81.24%
+1675,"May 23, 2019",BCYC,Bicycle Therapeutics,$14.00,$57.21,308.64%
+1676,"May 23, 2019",RTLR,Rattler Midstream LP,$17.50,$10.75,-38.57%
+1677,"May 23, 2019",IDYA,IDEAYA Biosciences,$10.00,$22.89,128.90%
+1678,"May 21, 2019",GXGX,GX Acquisition,$10.00,$10.20,2.00%
+1679,"May 17, 2019",LKNCY,Luckin Coffee,$17.00,$10.10,-40.59%
+1680,"May 17, 2019",FSLY,Fastly,$16.00,$40.59,153.69%
+1681,"May 17, 2019",AVTR,Avantor,$14.00,$40.95,192.50%
+1682,"May 15, 2019",PSTL,Postal Realty Trust,$17.00,$18.20,7.06%
+1683,"May 14, 2019",AGBA,AGBA Acquisition,$10.00,$11.02,10.20%
+1684,"May 14, 2019",APLT,Applied Therapeutics,$10.00,$9.99,-0.10%
+1685,"May 10, 2019",SONM,Sonim Technologies,$11.00,$0.98,-91.07%
+1686,"May 10, 2019",JFIN,Jiayin Group,$10.50,$2.50,-76.19%
+1687,"May 10, 2019",UBER,Uber Technologies,$45.00,$41.97,-6.73%
+1688,"May 9, 2019",CRTX,Cortexyme,$17.00,$12.81,-24.65%
+1689,"May 9, 2019",NXTC,NextCure,$15.00,$5.77,-61.53%
+1690,"May 9, 2019",HHR,Headhunter Group,$13.50,$52.28,287.26%
+1691,"May 9, 2019",AXLA,Axcella Health,$20.00,$2.53,-87.35%
+1692,"May 9, 2019",SPFI,South Plains Financial,$17.50,$26.39,50.80%
+1693,"May 9, 2019",MEC,Mayville Engineering Company,$17.00,$13.72,-19.29%
+1694,"May 8, 2019",PSN,Parsons,$27.00,$32.90,21.85%
+1695,"May 7, 2019",LCA,Landcadia Holdings II,$10.00,$25.49,154.90%
+1696,"May 7, 2019",TRVI,Trevi Therapeutics,$10.00,$0.69,-93.06%
+1697,"May 6, 2019",TBBA,TEB Bancorp,$10.00,$9.30,-7.00%
+1698,"May 3, 2019",YJ,Yunji,$11.00,$0.58,-94.73%
+1699,"May 3, 2019",RRBI,Red River Bancshares,$45.00,$53.32,18.49%
+1700,"May 3, 2019",ATIF,ATIF Holdings,$5.00,$3.00,-40.00%
+1701,"May 3, 2019",SCPL,SciPlay,$16.00,$15.31,-4.31%
+1702,"May 2, 2019",BYND,Beyond Meat,$25.00,$70.23,180.92%
+1703,"May 2, 2019",SY,So-Young International,$13.80,$3.24,-76.52%
+1704,"May 2, 2019",TMDX,TransMedics Group,$16.00,$20.98,31.13%
+1705,"Apr 30, 2019",WAFU,Wah Fu Education Group,$5.00,$4.10,-18.00%
+1706,"Apr 18, 2019",HOOK,HOOKIPA Pharma,$14.00,$2.48,-82.29%
+1707,"Apr 18, 2019",ZM,Zoom Video Communications,$36.00,$199.42,453.94%
+1708,"Apr 18, 2019",MNRL,Brigham Minerals,$18.00,$20.61,14.50%
+1709,"Apr 18, 2019",GNLN,Greenlane Holdings,$17.00,$1.02,-94.00%
+1710,"Apr 18, 2019",PINS,Pinterest,$19.00,$36.74,93.37%
+1711,"Apr 17, 2019",PLMR,Palomar Holdings,$15.00,$61.78,311.87%
+1712,"Apr 17, 2019",TPTX,Turning Point Therapeutics,$18.00,$48.16,167.56%
+1713,"Apr 17, 2019",BWAY,Brainsway,$11.00,$7.51,-31.73%
+1714,"Apr 12, 2019",JMIA,Jumia Technologies AG,$14.50,$12.99,-10.41%
+1715,"Apr 11, 2019",PD,PagerDuty,$24.00,$36.89,53.71%
+1716,"Apr 11, 2019",TUFN,Tufin Software Technologies,$14.00,$9.98,-28.71%
+1717,"Apr 5, 2019",GHSI,Guardion Health Sciences,$4.00,$0.83,-79.25%
+1718,"Apr 4, 2019",TW,Tradeweb Markets,$27.00,$94.42,249.70%
+1719,"Apr 4, 2019",RPLA,Replay Acquisition,$10.00,$9.48,-5.20%
+1720,"Apr 4, 2019",SILK,Silk Road Medical,$20.00,$42.65,113.25%
+1721,"Apr 4, 2019",NGM,NGM Biopharmaceuticals,$16.00,$18.66,16.63%
+1722,"Apr 3, 2019",RUHN,Ruhnn Holding,$12.50,$3.40,-72.80%
+1723,"Apr 2, 2019",PBTS,Powerbridge Technologies Co.,$5.00,$0.60,-87.93%
+1724,"Mar 29, 2019",PUYI,Puyi Inc.,$6.00,$6.30,5.00%
+1725,"Mar 29, 2019",LYFT,"Lyft, Inc.",$72.00,$40.91,-43.18%
+1726,"Mar 28, 2019",JFK,8i Enterprises Acquisition,$10.00,$9.00,-10.00%
+1727,"Mar 28, 2019",WTRE,Watford Holdings,$25.26,$34.99,38.52%
+1728,"Mar 28, 2019",DTIL,Precision BioSciences,$16.00,$8.11,-49.31%
+1729,"Mar 27, 2019",GNFT,Genfit,$22.00,$5.30,-75.91%
+1730,"Mar 21, 2019",LEVI,Levi Strauss & Co.,$17.00,$24.03,41.35%
+1731,"Mar 20, 2019",TIGR,UP Fintech Holding,$8.00,$4.97,-37.88%
+1732,"Mar 20, 2019",INSU,Insurance Acquisition,$10.00,$11.66,16.60%
+1733,"Mar 15, 2019",TRNE,Trine Acquisition,$10.00,$24.77,147.70%
+1734,"Mar 8, 2019",FUTU,Futu Holdings,$12.00,$42.42,253.50%
+1735,"Mar 8, 2019",CRSA,Crescent Acquisition,$10.00,$8.81,-11.90%
+1736,"Mar 7, 2019",SWAV,ShockWave Medical,$17.00,$177.75,945.59%
+1737,"Mar 5, 2019",THCB,Tuscan Holdings,$10.00,$10.00,0.00%
+1738,"Mar 1, 2019",HCAC,Hennessy Capital Acquisition Corp IV,$10.00,$19.49,94.90%
+1739,"Feb 28, 2019",DPHC,DiamondPeak Holdings,$10.00,$18.21,82.10%
+1740,"Feb 28, 2019",SHLL,Tortoise Acquisition,$10.00,$44.91,349.10%
+1741,"Feb 28, 2019",KLDO,Kaleido Biosciences,$15.00,$2.96,-80.27%
+1742,"Feb 26, 2019",SLGG,Super League Gaming,$11.00,$2.58,-76.55%
+1743,"Feb 22, 2019",ACAM,Acamar Partners Acquisition,$10.00,$12.30,23.00%
+1744,"Feb 19, 2019",SOLY,Soliton,$5.00,$22.58,351.60%
+1745,"Feb 15, 2019",MITO,Stealth BioTherapeutics,$12.00,$0.86,-92.83%
+1746,"Feb 15, 2019",AREC,American Resources,$4.00,$2.01,-49.75%
+1747,"Feb 15, 2019",HOTH,Hoth Therapeutics,$5.60,$0.74,-86.79%
+1748,"Feb 14, 2019",TCRR,TCR2 Therapeutics,$15.00,$4.75,-68.33%
+1749,"Feb 14, 2019",AVDR,Avedro,$14.00,$22.99,64.21%
+1750,"Feb 13, 2019",IMAC,IMAC Holdings,$5.13,$1.18,-76.98%
+1751,"Feb 12, 2019",ANCN,Anchiano Therapeutics,$11.50,$75.36,555.30%
+1752,"Feb 8, 2019",GOSS,Gossamer Bio,$16.00,$10.82,-32.38%
+1753,"Feb 8, 2019",RMG,RMG Acquisition,$10.00,$27.00,170.00%
+1754,"Feb 8, 2019",HARP,Harpoon Therapeutics,$14.00,$7.39,-47.21%
+1755,"Feb 7, 2019",ALEC,Alector,$19.00,$23.28,22.53%
+1756,"Feb 7, 2019",MNCL,Monocle Acquisition,$10.00,$12.20,22.00%
+1757,"Feb 4, 2019",IPV,InterPrivate Acquisition,$10.00,$13.04,30.40%
+1758,"Feb 4, 2019",INMB,Inmune Bio,$8.00,$10.54,31.75%
+1759,"Feb 1, 2019",GMHI,Gores Metropoulos,$10.00,$18.00,80.00%
+1760,"Jan 31, 2019",NFE,New Fortress Energy,$14.00,$24.27,73.36%
+1761,"Jan 17, 2019",RBKB,Rhinebeck Bancorp,$10.00,$10.61,6.10%
+1762,"Jan 9, 2019",BCOW,1895 Bancorp of Wisconsin,$10.00,$10.93,9.30%
+1763,"Jan 8, 2019",MDJH,MDJM Ltd.,$5.00,$1.91,-61.80%
+1764,"Jan 8, 2019",MTC,MMTec,$4.00,$0.85,-78.73%
+1765,"Jan 4, 2019",SXTC,China SXT Pharmaceuticals,$4.00,$0.58,-85.60%

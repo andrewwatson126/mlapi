@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "diagnostic1",
+        "created_date": "2021-12-21 00:00",
+        "description": "1aim is to diagnose for abc",
+        "data_file": "1abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "sepal-length'",
+            "sepal-width",
+            "petal-length",
+            "petal-width"
+        ],
+        "label": [
+            "class"
+        ],
+        "accuracy": {  }
+    },
+    {
+        "id": 2,
+        "name": "diagnostic2",
+        "created_date": "2021-12-21 00:00",
+        "description": "2aim is to diagnose for abc",
+        "data_file": "2abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Unsupervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ],
+        "accuracy": {}
+    },
+    {
+        "id": 3,
+        "name": "diagnostic3",
+        "created_date": "2021-12-21 00:00",
+        "description": "3aim is to diagnose for abc",
+        "data_file": "3abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "sepal-length'",
+            "sepal-width",
+            "petal-length",
+            "petal-width"
+        ],
+        "label": [
+            "class"
+        ],
+        "accuracy": {
+            "LogisticRegression": [
+                0.9409090909090908,
+                0.07528641362912028
+            ],
+            "LinearDiscriminantAnalysis": [
+                0.975,
+                0.05335936864527373
+            ],
+            "KNeighborsClassifier": [
+                0.9583333333333333,
+                0.05590169943749474
+            ],
+            "DecisionTreeClassifier": [
+                0.9325757575757574,
+                0.07285736470863122
+            ],
+            "GaussianNB": [
+                0.9583333333333333,
+                0.07682953714410741
+            ],
+            "SVC": [
+                0.975,
+                0.05335936864527373
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "name": "44444diagnostic3",
+        "created_date": "2021-12-21T00:00:00",
+        "description": "3aim is to diagnose for abc",
+        "data_file": "3abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "age",
+            "gender",
+            "test2",
+            "test3"
+        ],
+        "label": [
+            "diagnose"
+        ],
+        "accuracy": {}
+    },
+    {
+        "id": 5,
+        "name": "544444diagnostic3",
+        "created_date": "2021-12-21T00:00:00",
+        "description": "53aim is to diagnose for abc",
+        "data_file": "53abc.xlsx",
+        "createdBy": "nevilgultekin",
+        "model": "Supervised",
+        "algorithms": [
+            "LogisticRegression"
+        ],
+        "features": [
+            "sepal-length'",
+            "sepal-width",
+            "petal-length",
+            "petal-width"
+        ],
+        "label": [
+            "class"
+        ],
+        "accuracy": {
+            "LogisticRegression": [
+                0.9409090909090908,
+                0.07528641362912028
+            ],
+            "LinearDiscriminantAnalysis": [
+                0.975,
+                0.05335936864527373
+            ],
+            "KNeighborsClassifier": [
+                0.9583333333333333,
+                0.05590169943749474
+            ],
+            "DecisionTreeClassifier": [
+                0.9325757575757574,
+                0.07285736470863122
+            ],
+            "GaussianNB": [
+                0.9583333333333333,
+                0.07682953714410741
+            ],
+            "SVC": [
+                0.975,
+                0.05335936864527373
+            ]
+        }
+    }
+]
