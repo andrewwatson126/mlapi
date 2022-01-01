@@ -311,7 +311,7 @@ def plot_data(project_id: int, algorithm: str):
     fs = project["features"].copy()
     plot_files = []
     
-    count = 5
+    count = 7
 
     for f1 in project["features"]:
         fs.remove(f1)
@@ -321,7 +321,7 @@ def plot_data(project_id: int, algorithm: str):
             if count <= 0:
                 break
             print(f1 + '-' + f2)
-            g = sns.FacetGrid(ds, hue ="diagnostic",
+            g = sns.FacetGrid(ds, hue =project["label"][0],
                 height = 6)
             g.map(plt.scatter,f1,f2)
             g.add_legend()
@@ -336,9 +336,12 @@ def get_plot_file(project_id: int, plot_file_name: str):
     logger.info("get_plot_file project_id=", str(project_id), " plot_file_name=", plot_file_name)
     project = get_project_by_id(project_id)
     project_path = get_project_path(project)
-
     plot_file_path = project_path + plot_file_name
-    return plot_file_path
+    base64_file_path = plot_file_path.replace("png","txt")
+
+    png_to_base64(project_id, plot_file_path, base64_file_path)
+
+    return base64_file_path
     
 #
 # Algortihms
@@ -513,6 +516,19 @@ def ml():
 #
 # Utils
 #
+
+def png_to_base64(project_id, image_file_path, base64_file_path):
+    encoded_string = ""
+    image_file = open(image_file_path, "rb")
+    encoded_bytes = base64.b64encode(image_file.read() )
+    encoded_string = encoded_bytes.decode("utf-8")  
+    image_file.close()
+
+    base64_file = open(base64_file_path, "w")
+    base64_file.write(str(encoded_string))
+    base64_file.close()
+    return
+
 def modify_project(project: Project):
     print("modify_project projectId=", project)
     p = get_project_by_id(project["id"])
