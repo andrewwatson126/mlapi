@@ -49,6 +49,7 @@ from sklearn.svm import SVC
 import pickle
 
 import aiofiles
+from mlxtend.plotting import plot_decision_regions
 
 
 app = FastAPI()
@@ -83,7 +84,6 @@ app.algorithms = []
 
 
 models = [ 
-        ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')), 
         ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')),
         ('LinearDiscriminantAnalysis', LinearDiscriminantAnalysis()),
         ('KNeighborsClassifier', KNeighborsClassifier()),
@@ -91,7 +91,6 @@ models = [
         ('GaussianNB', GaussianNB()),
         ('SVC', SVC(gamma='auto'))
     ]
-
 
 # BaseModel definitions
 class Project(BaseModel):
@@ -330,6 +329,81 @@ def plot_data(project_id: int, algorithm: str):
             plot_files.append(plot_file_name)
 
     return plot_files
+
+@app.get("/projects/plot/v2/{project_id}")
+def plot_data(project_id: int, algorithm: str):
+    logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
+    # http://rasbt.github.io/mlxtend/user_guide/plotting/plot_decision_regions/#example-2-decision-regions-in-1d
+    project = get_project_by_id(project_id)
+    project_path = get_project_path(project)
+    dataset = load_data_set(project_id)
+    dataArray = dataset.values
+    print('==================', dataArray)
+
+
+    fs = project["features"].copy()
+    plot_files = []
+    
+    count = 7
+
+    for f1 in project["features"]:
+        fs.remove(f1)
+        print('>>>' + str(fs))
+        for f2 in fs:
+            count = count - 1
+            if count <= 0:
+                break
+            print(f1 + '-' + f2)
+
+            model = load_model(project_id, 'KNeighborsClassifier')
+            names = list(dataset.columns)
+            features = []
+            features = names[0: len(names)-1]
+            labels = []
+            labels = names[len(names)-1: len(names)]
+            label = labels[0]
+            print(">>>>>>>>>>>>>>>>>>>>>>> features " + str(features))
+            print(">>>>>>>>>>>>>>>>>>>>>>> len(features) " + str(len(features)))
+            print(">>>>>>>>>>>>>>>>>>>>>>> label " + str(label))
+            #set project features and labels
+            project["features"] = features
+            project["label"] = []
+            project["label"].append(labels[0])
+            print(">>>>>>>>>>>>>>>>>>>>>>>" + str(project))
+            store_project_list()
+
+            #train on a single model
+            # Split-out validation dataset
+            array = dataset.values
+            X = array[0:,0:len(features)]
+            y = array[0:,len(features)]
+            print("X>>>>>>>>>>>>>>>>>>>>>>>" + str(X))
+            print("y>>>>>>>>>>>>>>>>>>>>>>>" + str(y))
+            model.fit(X, y)
+            yNew =  np.array([])
+            for value in y:
+                if value =='Iris-setosa':
+                    yNew = np.append(yNew, [int(0)])
+                if value =='Iris-versicolor':
+                    yNew = np.append(yNew, [int(1)])
+                if value =='Iris-virginica':
+                    yNew = np.append(yNew, [int(2)])
+            yNew = yNew.astype(int)
+            XNew = X.astype(float)
+            print("yNew>>>>>>>>>>>>>>>>>>>>>>>" + str(yNew))
+                                    
+            fig = plot_decision_regions(X=XNew, y=yNew, clf=model, legend=2)
+            plt.xlabel(f1)
+            plt.ylabel(f2)
+            plt.title('Knn with K=')
+            plt.show()            
+            
+            plot_file_name =  f1 +'-'+f2+'.png'
+            plt.savefig(project_path + plot_file_name)
+            plot_files.append(plot_file_name)
+
+    return plot_files
+
 
 @app.get("/projects/plot_file/{project_id}", response_class=FileResponse)
 def get_plot_file(project_id: int, plot_file_name: str):
