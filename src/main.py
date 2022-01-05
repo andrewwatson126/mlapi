@@ -240,6 +240,8 @@ def predict(project_id: int, data: list ):
         print(algorithm_label)
         model = load_model(project_id, algorithm_label)
         d = data 
+        print("postata=" + str(d))
+        print("label=")
         #d = [[6.1,2.9,4.7,1.4]]
         print(model.predict(d))
         predictDict[algorithm_label] = str(model.predict(d))
@@ -508,8 +510,8 @@ def load_file(project_id: int, data_file_name: str):
     y = array[0:,len(features)]
 
     print("prestf>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
-    std = StandardScaler()
-    X = std.fit_transform(X)
+    #std = StandardScaler()
+    #X = std.fit_transform(X)
    
     print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
     print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
