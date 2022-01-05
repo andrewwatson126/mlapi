@@ -34,6 +34,7 @@ import logging.config
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import StratifiedKFold
@@ -147,23 +148,23 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         content = await file.read()  # async read
         await out_file.write(content)  # async write
     
-    try: 
-        load_file(project_id, storeFile)
-        project = get_project_by_id(project_id)
-        project["data_file"] = file.filename
-        modify_project(project)
+    #try: 
+    load_file(project_id, storeFile)
+    project = get_project_by_id(project_id)
+    project["data_file"] = file.filename
+    modify_project(project)
 
-    except Exception as e:
-        logger.error("upload_file()", str(e))
-        return JSONResponse(
-            status_code = status.HTTP_400_BAD_REQUEST,
-            content = { 'message' : str(e) }
-            )
-    else:
-        return JSONResponse(
-            status_code = status.HTTP_200_OK,
-            content = {"result":'result'}
-            )    
+    #except Exception as e:
+    #    logger.error("upload_file()", str(e))
+    #    return JSONResponse(
+    #        status_code = status.HTTP_400_BAD_REQUEST,
+    #        content = { 'message' : str(e) }
+    #        )
+    #else:
+    #    return JSONResponse(
+    #        status_code = status.HTTP_200_OK,
+    #        content = {"result":'result'}
+    #        )    
 
 
 # get project list
@@ -505,7 +506,12 @@ def load_file(project_id: int, data_file_name: str):
     array = dataset.values
     X = array[0:,0:len(features)]
     y = array[0:,len(features)]
-    print(">>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
+
+    print("prestf>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
+    std = StandardScaler()
+    X = std.fit_transform(X)
+   
+    print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
     print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
     X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
 
