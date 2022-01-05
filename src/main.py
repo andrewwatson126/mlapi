@@ -148,23 +148,23 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         content = await file.read()  # async read
         await out_file.write(content)  # async write
     
-    #try: 
-    load_file(project_id, storeFile)
-    project = get_project_by_id(project_id)
-    project["data_file"] = file.filename
-    modify_project(project)
+    try: 
+        load_file(project_id, storeFile)
+        project = get_project_by_id(project_id)
+        project["data_file"] = file.filename
+        modify_project(project)
 
-    #except Exception as e:
-    #    logger.error("upload_file()", str(e))
-    #    return JSONResponse(
-    #        status_code = status.HTTP_400_BAD_REQUEST,
-    #        content = { 'message' : str(e) }
-    #        )
-    #else:
-    #    return JSONResponse(
-    #        status_code = status.HTTP_200_OK,
-    #        content = {"result":'result'}
-    #        )    
+    except Exception as e:
+        logger.error("upload_file()", str(e))
+        return JSONResponse(
+            status_code = status.HTTP_400_BAD_REQUEST,
+            content = { 'message' : str(e) }
+            )
+    else:
+        return JSONResponse(
+            status_code = status.HTTP_200_OK,
+            content = {"result":'result'}
+            )    
 
 
 # get project list
