@@ -51,6 +51,8 @@ import pickle
 
 import aiofiles
 from mlxtend.plotting import plot_decision_regions
+from pickle import load
+from pickle import dump
 
 
 app = FastAPI()
@@ -75,6 +77,7 @@ app.add_middleware(
 ROOT_FOLDER = "data/"
 INPUT_FOLDER = ROOT_FOLDER + "input/"
 ALGORITHM_LIST = INPUT_FOLDER + "algorithms.json"
+SCALER_FILE = "scaler.pkl"
 PROJECT_FOLDER = ROOT_FOLDER + "project/"
 PROJECT_LIST = PROJECT_FOLDER + "project_list.json"
 
@@ -148,23 +151,23 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         content = await file.read()  # async read
         await out_file.write(content)  # async write
     
-    try: 
-        load_file(project_id, storeFile)
-        project = get_project_by_id(project_id)
-        project["data_file"] = file.filename
-        modify_project(project)
+    #try: 
+    load_file(project_id, storeFile)
+    project = get_project_by_id(project_id)
+    project["data_file"] = file.filename
+    modify_project(project)
 
-    except Exception as e:
-        logger.error("upload_file()", str(e))
-        return JSONResponse(
-            status_code = status.HTTP_400_BAD_REQUEST,
-            content = { 'message' : str(e) }
-            )
-    else:
-        return JSONResponse(
-            status_code = status.HTTP_200_OK,
-            content = {"result":'result'}
-            )    
+    #except Exception as e:
+    #    logger.error("upload_file()", str(e))
+    #    return JSONResponse(
+    #        status_code = status.HTTP_400_BAD_REQUEST,
+    #        content = { 'message' : str(e) }
+    #        )
+    #else:
+    #    return JSONResponse(
+    #        status_code = status.HTTP_200_OK,
+    #        content = {"result":'result'}
+    #        )    
 
 
 # get project list
@@ -240,7 +243,22 @@ def predict(project_id: int, data: list ):
         print(algorithm_label)
         model = load_model(project_id, algorithm_label)
         d = data 
-        print("postata=" + str(d))
+        d2 = d[0]
+        d3 = [float(i) for i in d2]
+        d = []
+        d.append(d3)
+        #d.append([1.0,1.0,1.0,1.0])
+        #d.append([5.0,5.0,5.0,5.0])
+        scalar_file_path = get_project_path_by_project_id(project_id) + SCALER_FILE
+        print("scalar_file_path=" + scalar_file_path)
+        std = load(open(scalar_file_path, 'rb'))
+        print("predata=" + str(d))
+        d = std.transform(d)
+        print("postdata=" + str(d))
+        d1 = []
+        d1.append(d[0])
+        d = d1
+        print("postdata2=" + str(d))
         print("label=")
         #d = [[6.1,2.9,4.7,1.4]]
         print(model.predict(d))
@@ -510,8 +528,10 @@ def load_file(project_id: int, data_file_name: str):
     y = array[0:,len(features)]
 
     print("prestf>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
-    #std = StandardScaler()
-    #X = std.fit_transform(X)
+    std = StandardScaler()
+    X = std.fit_transform(X)
+    scalar_file_path = get_project_path_by_project_id(project_id) + SCALER_FILE
+    dump(std, open(scalar_file_path, 'wb'))
    
     print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
     print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
@@ -562,6 +582,9 @@ def get_data_file_path(project):
 
 def get_project_path(project):
     return  PROJECT_FOLDER + str(project['id']) + '/' 
+
+def get_project_path_by_project_id(project_id):
+    return  PROJECT_FOLDER + str(project_id) + '/' 
 
 def ml():
 	# Load dataset
