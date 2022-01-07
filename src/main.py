@@ -1,3 +1,7 @@
+from src import project 
+from src import util
+
+
 from typing import Optional
 import typing
 import os
@@ -31,7 +35,6 @@ import json
 import logging
 import logging.config
 
-from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
 from sklearn.preprocessing import StandardScaler
@@ -87,14 +90,6 @@ app.project_list = []
 app.algorithms = []
 
 
-models = [ 
-        ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')),
-        ('LinearDiscriminantAnalysis', LinearDiscriminantAnalysis()),
-        ('KNeighborsClassifier', KNeighborsClassifier()),
-        ('DecisionTreeClassifier', DecisionTreeClassifier()),
-        ('GaussianNB', GaussianNB()),
-        ('SVC', SVC(gamma='auto'))
-    ]
 
 # BaseModel definitions
 class Project(BaseModel):
@@ -118,8 +113,8 @@ class Project(BaseModel):
 @app.on_event("startup")
 async def startup_event():
     print('Starting up fastapi server...')
-    read_project_list()
-    read_algorithms()
+    app.project_list = util.read_project_list()
+    app.algorithms = util.read_algorithms()
     print('Started up fastapi server')
 
 #
@@ -138,7 +133,6 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         logging.warn("failed to cereate folder, already exists folder=",path, err)
         
     storeFile = PROJECT_FOLDER + str(project_id) + '/' + file.filename
-   
     print("upload_file storeFile=" + storeFile)
     
     # delete file if it exists
@@ -151,11 +145,20 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
         content = await file.read()  # async read
         await out_file.write(content)  # async write
     
+    # save also as orig file
+    project = util.get_project_by_id(project_id)
+    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + project["data_file"]
+    print("upload_file save orig file to " + orig_data_file_path)
+    dataset_orig = read_csv(storeFile)
+    dataset_orig.to_csv(orig_data_file_path, index=False)
+        
+    
     #try: 
-    load_file(project_id, storeFile)
-    project = get_project_by_id(project_id)
+    util.load_file(project_id, storeFile)
+    project = util.get_project_by_id(project_id)
     project["data_file"] = file.filename
-    modify_project(project)
+    util.modify_project(project)
+    app.project_list = util.read_project_list()
 
     #except Exception as e:
     #    logger.error("upload_file()", str(e))
@@ -181,7 +184,7 @@ def get_project_list():
 @app.get("/projects/{project_id}", response_model=Project)
 def get_project(project_id: int):
     print("get_project project_id=", project_id)
-    return get_project_by_id(project_id)
+    return util.get_project_by_id(project_id)
 
 
 # create project 
@@ -189,14 +192,14 @@ def get_project(project_id: int):
 async def create_project(project: Project):
     print("create_project project=", project)
 
-    max = get_max_project_id()
+    max = util.get_max_project_id()
     project.id = max +1
 
     project_json = jsonable_encoder(project)
     app.project_list.append(project_json)
     print("create_project appended=", app.project_list)
         
-    store_project_list()
+    app.project_list = util.store_project_list(app.project_list)
 
     return project
 
@@ -204,7 +207,7 @@ async def create_project(project: Project):
 @app.put("/projects")
 async def update_project(project: Project):
     print("update_project project=", str(project))
-    p = get_project_by_id(project.id)
+    p = util.get_project_by_id(project.id)
     # p["name"] = project.name
     # p["created_date"] = project.created_date
     # p["description"] = project.description
@@ -216,7 +219,9 @@ async def update_project(project: Project):
     p["label"] = project.label
     # p["accuracy"] = project.accuracy
 
-    store_project_list()
+    app.project_list = util.store_project_list(app.project_list)
+    
+    util.update_features_label(project.id, project.features, project.label)
 
     return project
 
@@ -228,20 +233,20 @@ async def delete_project(project_id: int):
         if project.get("id") == project_id:
             app.project_list.remove(project)
             
-    store_project_list()
+    util.store_project_list(app.project_list)
 
 
 @app.post("/projects/predict")
 def predict(project_id: int, data: list ):
     print("predict(project_id=" + str(project_id) + ")")
     predictDict = {}
-    project = get_project_by_id(project_id)
+    project = util.get_project_by_id(project_id)
 
     for algorithm in app.algorithms:
         algorithm_label = algorithm["label"]
         print("label=")
         print(algorithm_label)
-        model = load_model(project_id, algorithm_label)
+        model = util.load_model(project_id, algorithm_label)
         d = data 
         d2 = d[0]
         d3 = [float(i) for i in d2]
@@ -249,7 +254,7 @@ def predict(project_id: int, data: list ):
         d.append(d3)
         #d.append([1.0,1.0,1.0,1.0])
         #d.append([5.0,5.0,5.0,5.0])
-        scalar_file_path = get_project_path_by_project_id(project_id) + SCALER_FILE
+        scalar_file_path = util.get_project_path_by_project_id(project_id) + SCALER_FILE
         print("scalar_file_path=" + scalar_file_path)
         std = load(open(scalar_file_path, 'rb'))
         print("predata=" + str(d))
@@ -272,7 +277,7 @@ def predict(project_id: int, data: list ):
 @app.get("/projects/correlation/{project_id}", response_class=FileResponse)
 def correlation(project_id: int):
     print("correlation project_id=", str(project_id))
-    project = get_project_by_id(project_id)
+    project = util.get_project_by_id(project_id)
     
     local_data_file = PROJECT_FOLDER + str(project_id) + '/' + project["data_file"]
     df = pd.read_csv(local_data_file)
@@ -302,6 +307,8 @@ def correlation(project_id: int):
     base64_file.write(str(encoded_string))
     base64_file.close()
     
+    # calculate correlations
+    print("TODO: add per column calculations")
 
     return local_correlation_base64_file
 
@@ -310,7 +317,7 @@ def correlation(project_id: int):
 @app.get("/projects/features_labels/{project_id}")
 def get_features_and_labels(project_id: int):
     print("get_features_and_labels project_id=", str(project_id))
-    project = get_project_by_id(project_id)
+    project = util.get_project_by_id(project_id)
     
     fl = []
     for feature in project["features"]:
@@ -324,9 +331,9 @@ def get_features_and_labels(project_id: int):
 @app.get("/projects/plot/{project_id}")
 def plot_data(project_id: int, algorithm: str):
     logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
-    project = get_project_by_id(project_id)
-    project_path = get_project_path(project)
-    ds = load_data_set(project_id)
+    project = util.get_project_by_id(project_id)
+    project_path = util.get_project_path(project)
+    ds = util.load_data_set(project_id)
 
     fs = project["features"].copy()
     plot_files = []
@@ -355,9 +362,9 @@ def plot_data(project_id: int, algorithm: str):
 def plot_data(project_id: int, algorithm: str):
     logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
     # http://rasbt.github.io/mlxtend/user_guide/plotting/plot_decision_regions/#example-2-decision-regions-in-1d
-    project = get_project_by_id(project_id)
-    project_path = get_project_path(project)
-    dataset = load_data_set(project_id)
+    project = util.get_project_by_id(project_id)
+    project_path = util.get_project_path(project)
+    dataset = util.load_data_set(project_id)
     dataArray = dataset.values
     print('==================', dataArray)
 
@@ -376,7 +383,7 @@ def plot_data(project_id: int, algorithm: str):
                 break
             print(f1 + '-' + f2)
 
-            model = load_model(project_id, 'KNeighborsClassifier')
+            model = util.load_model(project_id, 'KNeighborsClassifier')
             names = list(dataset.columns)
             features = []
             features = names[0: len(names)-1]
@@ -391,7 +398,7 @@ def plot_data(project_id: int, algorithm: str):
             project["label"] = []
             project["label"].append(labels[0])
             print(">>>>>>>>>>>>>>>>>>>>>>>" + str(project))
-            store_project_list()
+            util.store_project_list()
 
             #train on a single model
             # Split-out validation dataset
@@ -429,15 +436,15 @@ def plot_data(project_id: int, algorithm: str):
 @app.get("/projects/plot_file/{project_id}", response_class=FileResponse)
 def get_plot_file(project_id: int, plot_file_name: str):
     logger.info("get_plot_file project_id=", str(project_id), " plot_file_name=", plot_file_name)
-    project = get_project_by_id(project_id)
-    project_path = get_project_path(project)
+    project = util.get_project_by_id(project_id)
+    project_path = util.get_project_path(project)
     plot_file_path = project_path + plot_file_name
     base64_file_path = plot_file_path.replace("png","txt")
 
-    png_to_base64(project_id, plot_file_path, base64_file_path)
+    util.png_to_base64(project_id, plot_file_path, base64_file_path)
 
     return base64_file_path
-    
+   
 #
 # Algortihms
 #
@@ -447,268 +454,14 @@ def get_plot_file(project_id: int, plot_file_name: str):
 def get_algorithms():
     print("get_algorithms")
     return app.algorithms
- 
-#
-# Private Methods
-#    
-
-#get max project id
-def get_max_project_id():
-    logger.debug("get_max_project_id()")
-    max = 0
-    for p in app.project_list:
-        if p["id"] > max:
-            max = p["id"]
-    logger.debug("get_max_project_id() max=", max)
-    return max
-
-
-# get project by project id
-def get_project_by_id(project_id: int):
-    print("get_project_by_id" + str(project_id))
-    for project in app.project_list:
-        if project.get("id") == project_id:
-            return project
-        
-    raise NotFoundException("Project with id=" + str(project_id) +  " not found")
- 
-
-def update_project_list(project):
-    print("update_project_list")
-    for p in app.project_list:
-        if  p["id"] == project["id"]:
-            p["name"] = project["name"]
-            p["created_date"] = project["created_date"]
-            p["description"] = project["description"]
-            p["data_file"] = project["data_file"]
-            p["created_by"] = project["created_by"]
-            p["model"] = project["model"]
-            p["algorithms"] = project["algorithms"]
-            p["features"] = project["features"]
-            p["label"] = project["label"]
-            p["accuracy"] = project["accuracy"]
-    store_project_list() 
-        
-
-# Machine Learning Methods
-
-def load_file(project_id: int, data_file_name: str):
-    print("load_file project_id=" + str(project_id) + " data_file_name=" + data_file_name)
-    
-    project = get_project_by_id(project_id)
-    
-    # read file - filename provided from the API
-    dataset = read_csv(data_file_name)
-
-    # set supervised/unsupervised - get supervise / unsupervised from the API
-    #se the supervised flag to TRUE in the experiment
-
-    # set the features to from 0:n-2 and label to n-1
-    names = list(dataset.columns)
-    features = []
-    features = names[0: len(names)-1]
-    labels = []
-    labels = names[len(names)-1: len(names)]
-    label = labels[0]
-    print(">>>>>>>>>>>>>>>>>>>>>>> features " + str(features))
-    print(">>>>>>>>>>>>>>>>>>>>>>> len(features) " + str(len(features)))
-    print(">>>>>>>>>>>>>>>>>>>>>>> label " + str(label))
-    
-    #set project features and labels
-    project["features"] = features
-    project["label"] = []
-    project["label"].append(labels[0])
-    print(">>>>>>>>>>>>>>>>>>>>>>>" + str(project))
-    store_project_list()
-
-    #train on a single model
-    # Split-out validation dataset
-    array = dataset.values
-    X = array[0:,0:len(features)]
-    y = array[0:,len(features)]
-
-    print("prestf>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
-    std = StandardScaler()
-    X = std.fit_transform(X)
-    scalar_file_path = get_project_path_by_project_id(project_id) + SCALER_FILE
-    dump(std, open(scalar_file_path, 'wb'))
-   
-    print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
-    print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
-    X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
-
-    # check algorithms
-    # evaluate each model in turn
-    results = []
-    xnames = []
-    accuracy = []
-    accuracyDict = {}
-    model_dict = {}
-    for name, model in models:
-        kfold = StratifiedKFold(n_splits=5, random_state=1, shuffle=True)
-        cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
-        results.append(cv_results)
-        xnames.append(name)
-        accuracy = [cv_results.mean(), cv_results.std()]
-        accuracyDict[name] =  accuracy
-
-        # create model
-        m = model.fit(X_train,Y_train)
-        
-        store_model(project_id, name, m)
-        
-        model_dict[name] = m
-        #model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
-        #print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))          
-
-    # experiment["model_dict"] = model_dict
-    project["accuracy"] = {}
-    project["accuracy"] = accuracyDict
-    update_project_list(project)
-    store_project_list()
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', {"features": features},{"label": label}, {"accuracy": accuracyDict})
-    return {"features": features},{"label": label}, {"accuracy": accuracyDict}
-
-def load_data_set(project_id: int):
-    logger.info("load_data_set project_id=" + str(project_id))
-    
-    project = get_project_by_id(project_id)
-    data_file_path = get_data_file_path(project)
-    return pd.read_csv(data_file_path)
-
-
-def get_data_file_path(project):
-    return  PROJECT_FOLDER + str(project['id']) + '/' + project['data_file']
-
-def get_project_path(project):
-    return  PROJECT_FOLDER + str(project['id']) + '/' 
-
-def get_project_path_by_project_id(project_id):
-    return  PROJECT_FOLDER + str(project_id) + '/' 
-
-def ml():
-	# Load dataset
-	url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-	names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-	dataset = read_csv(url, names=names)
-	# Split-out validation dataset
-	array = dataset.values
-	X = array[:,0:4]
-	y = array[:,4]
-	X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
-	# Spot Check Algorithms
-	models = []
-	models.append(('LR', LogisticRegression(solver='liblinear', multi_class='ovr')))
-	models.append(('LDA', LinearDiscriminantAnalysis()))
-	models.append(('KNN', KNeighborsClassifier()))
-	models.append(('CART', DecisionTreeClassifier()))
-	models.append(('NB', GaussianNB()))
-	models.append(('SVM', SVC(gamma='auto')))
-	# evaluate each model in turn
-	results = []
-	names = []
-	for name, model in models:
-		kfold = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
-		cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
-		results.append(cv_results)
-		names.append(name)
-		print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
-	# Compare Algorithms
-	pyplot.boxplot(results, labels=names)
-	pyplot.title('Algorithm Comparison')
-	pyplot.show()
-
-#
-# Utils
-#
-
-def png_to_base64(project_id, image_file_path, base64_file_path):
-    encoded_string = ""
-    image_file = open(image_file_path, "rb")
-    encoded_bytes = base64.b64encode(image_file.read() )
-    encoded_string = encoded_bytes.decode("utf-8")  
-    image_file.close()
-
-    base64_file = open(base64_file_path, "w")
-    base64_file.write(str(encoded_string))
-    base64_file.close()
-    return
-
-def modify_project(project: Project):
-    print("modify_project projectId=", project)
-    p = get_project_by_id(project["id"])
-    p["name"] = project["name"]
-    p["created_date"] = project["created_date"]
-    p["description"] = project["description"]
-    p["data_file"] = project["data_file"]
-    p["created_by"] = project["created_by"]
-    p["model"] = project["model"]
-    p["algorithms"] = project["algorithms"]
-    p["features"] = project["features"]
-    p["label"] = project["label"]
-    p["accuracy"] = project["accuracy"]
-
-    store_project_list()
-
-    return project
-
-
-
-#
-# Read and Store files
-#
-
-# Store and Read Project List 
-def store_project_list():
-    print("store_project_list=",app.project_list)
-    with open(PROJECT_LIST, 'w') as f:
-        json.dump(app.project_list, f, ensure_ascii=False, indent=4)
-    f.close()
-    read_project_list()
-
-
-def read_project_list():
-    print("Starting read_project_list...")
-    f = open(PROJECT_LIST)
-    app.project_list = json.load(f)
-    print("read_project_list=", app.project_list)
-    f.close()
-
-# Store Model
-def store_model(project_id: int, algorithm_name: str, model):
-    print("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
-
-    filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
-    pickle.dump(model, open(filename, 'wb'))
-
-# Load Model
-def load_model(project_id: int, algorithm_name: str):
-    print("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
-
-    filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
-    return pickle.load(open(filename, 'rb'))
-
-
-def read_algorithms():
-    print("Starting read_algorithms...")
-    f = open(ALGORITHM_LIST)
-    app.algorithms = json.load(f)
-    print("read_algorithms=", app.algorithms)
-    f.close()
-
+     
 #
 # Exceptions
 #
 
-# Exceptions % Exception Handlers
-class NotFoundException(Exception):
-    def __init__(self, message):
-        self.message = message
-        
-        
-@app.exception_handler(NotFoundException)
-async def NotFoundException_exception_handler(request: Request, exc: NotFoundException):
+@app.exception_handler(project.NotFoundException)
+async def NotFoundException_exception_handler(request: Request, exc: project.NotFoundException):
     return JSONResponse(
         status_code=401,
         content={"message": f"Oops! {exc.message} did something. There goes a rainbow..."},
-    )        
+    )  
