@@ -121,7 +121,80 @@ async def startup_event():
 # /project
 #
 
+###############################################################################
+# get project list
+###############################################################################
+@app.get("/projects", response_model=List[Project])
+def get_project_list():
+    print("get_project_list", app.project_list)
+    return app.project_list
+
+
+###############################################################################
+# get project 
+###############################################################################
+@app.get("/projects/{project_id}", response_model=Project)
+def get_project(project_id: int):
+    print("get_project project_id=", project_id)
+    return util.get_project_by_id(project_id)
+
+
+###############################################################################
+# create project 
+###############################################################################
+@app.post("/projects")
+async def create_project(project: Project):
+    print("create_project project=", project)
+
+    max = util.get_max_project_id()
+    project.id = max +1
+
+    project_json = jsonable_encoder(project)
+    app.project_list.append(project_json)
+    print("create_project appended=", app.project_list)
+        
+    app.project_list = util.store_project_list(app.project_list)
+
+    return project
+
+# update project 
+@app.put("/projects")
+async def update_project(project: Project):
+    print("update_project project=", str(project))
+    p = util.get_project_by_id(project.id)
+    # p["name"] = project.name
+    # p["created_date"] = project.created_date
+    # p["description"] = project.description
+    # p["data_file"] = project.data_file
+    # p["created_by"] = project.created_by
+    p["model"] = project.model
+    p["algorithms"] = project.algorithms
+    p["features"] = project.features
+    p["label"] = project.label
+    # p["accuracy"] = project.accuracy
+
+    app.project_list = util.store_project_list(app.project_list)
+    
+    util.update_features_label(project.id, project.features, project.label)
+
+    return project
+
+###############################################################################
+# delete project
+###############################################################################
+@app.delete("/projects/{project_id}")
+async def delete_project(project_id: int):
+    print("delete_project projectId=", project_id)
+    for project in app.project_list:
+        if project.get("id") == project_id:
+            app.project_list.remove(project)
+            
+    util.store_project_list(app.project_list)
+
+
+###############################################################################
 # upload file
+###############################################################################
 @app.post("/projects/uploadfile")
 async def upload_file(project_id: int, file: UploadFile = File(...)):
     print("upload_file file=" + file.filename)
@@ -173,69 +246,9 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
     #        )    
 
 
-# get project list
-@app.get("/projects", response_model=List[Project])
-def get_project_list():
-    print("get_project_list", app.project_list)
-    return app.project_list
-
-
-# get project 
-@app.get("/projects/{project_id}", response_model=Project)
-def get_project(project_id: int):
-    print("get_project project_id=", project_id)
-    return util.get_project_by_id(project_id)
-
-
-# create project 
-@app.post("/projects")
-async def create_project(project: Project):
-    print("create_project project=", project)
-
-    max = util.get_max_project_id()
-    project.id = max +1
-
-    project_json = jsonable_encoder(project)
-    app.project_list.append(project_json)
-    print("create_project appended=", app.project_list)
-        
-    app.project_list = util.store_project_list(app.project_list)
-
-    return project
-
-# update project 
-@app.put("/projects")
-async def update_project(project: Project):
-    print("update_project project=", str(project))
-    p = util.get_project_by_id(project.id)
-    # p["name"] = project.name
-    # p["created_date"] = project.created_date
-    # p["description"] = project.description
-    # p["data_file"] = project.data_file
-    # p["created_by"] = project.created_by
-    p["model"] = project.model
-    p["algorithms"] = project.algorithms
-    p["features"] = project.features
-    p["label"] = project.label
-    # p["accuracy"] = project.accuracy
-
-    app.project_list = util.store_project_list(app.project_list)
-    
-    util.update_features_label(project.id, project.features, project.label)
-
-    return project
-
-# delete
-@app.delete("/projects/{project_id}")
-async def delete_project(project_id: int):
-    print("delete_project projectId=", project_id)
-    for project in app.project_list:
-        if project.get("id") == project_id:
-            app.project_list.remove(project)
-            
-    util.store_project_list(app.project_list)
-
-
+###############################################################################
+# Predict
+###############################################################################
 @app.post("/projects/predict")
 def predict(project_id: int, data: list ):
     print("predict(project_id=" + str(project_id) + ")")
@@ -273,7 +286,9 @@ def predict(project_id: int, data: list ):
     return {"predictDict": predictDict }
 
 
+###############################################################################
 # get correlation
+###############################################################################
 @app.get("/projects/correlation/{project_id}", response_class=FileResponse)
 def correlation(project_id: int):
     print("correlation project_id=", str(project_id))
@@ -313,7 +328,9 @@ def correlation(project_id: int):
     return local_correlation_base64_file
 
 
+###############################################################################
 # get features and labels
+###############################################################################
 @app.get("/projects/features_labels/{project_id}")
 def get_features_and_labels(project_id: int):
     print("get_features_and_labels project_id=", str(project_id))
@@ -327,7 +344,9 @@ def get_features_and_labels(project_id: int):
     
     return fl
         
-# plot model
+###############################################################################
+# plot model (project_id)
+###############################################################################
 @app.get("/projects/plot/{project_id}")
 def plot_data(project_id: int, algorithm: str):
     logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
@@ -358,6 +377,9 @@ def plot_data(project_id: int, algorithm: str):
 
     return plot_files
 
+###############################################################################
+# Plot v2
+###############################################################################
 @app.get("/projects/plot/v2/{project_id}")
 def plot_data(project_id: int, algorithm: str):
     logger.info("plot_model project_id=", str(project_id), " algorithm=", algorithm)
@@ -433,6 +455,9 @@ def plot_data(project_id: int, algorithm: str):
     return plot_files
 
 
+###############################################################################
+# get plot file
+###############################################################################
 @app.get("/projects/plot_file/{project_id}", response_class=FileResponse)
 def get_plot_file(project_id: int, plot_file_name: str):
     logger.info("get_plot_file project_id=", str(project_id), " plot_file_name=", plot_file_name)
@@ -445,11 +470,9 @@ def get_plot_file(project_id: int, plot_file_name: str):
 
     return base64_file_path
    
-#
-# Algortihms
-#
-            
+###############################################################################
 # get algorithms
+###############################################################################
 @app.get("/algorithms")
 def get_algorithms():
     print("get_algorithms")

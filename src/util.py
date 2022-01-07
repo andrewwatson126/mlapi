@@ -85,7 +85,9 @@ models = [
 # Private Methods
 #    
 
+###############################################################################
 #get max project id
+###############################################################################
 def get_max_project_id():
     global project_list
     logger.debug("get_max_project_id()")
@@ -97,7 +99,9 @@ def get_max_project_id():
     return max
 
 
+###############################################################################
 # get project by project id
+###############################################################################
 def get_project_by_id(project_id: int):
     global project_list
     print("get_project_by_id project_id=" + str(project_id))
@@ -108,6 +112,9 @@ def get_project_by_id(project_id: int):
     raise NotFoundException("Project with id=" + str(project_id) +  " not found")
  
 
+###############################################################################
+# upldate project list
+###############################################################################
 def update_project_list(project):
     global project_list
     print("update_project_list")
@@ -128,6 +135,9 @@ def update_project_list(project):
 
 # Machine Learning Methods
 
+###############################################################################
+# load file
+# ###############################################################################
 def load_file(project_id: int, data_file_name: str):
     global project_list
     print("load_file project_id=" + str(project_id) + " data_file_name=" + data_file_name)
@@ -208,6 +218,9 @@ def load_file(project_id: int, data_file_name: str):
     return {"features": features},{"label": label}, {"accuracy": accuracyDict}
     
 
+###############################################################################
+# update features and label
+###############################################################################
 def update_features_label(project_id, features, label):
     global project_list
     print('update_features_label(' + str(project_id) + ',' +  str(features) + ',' +   str(label) + ')')
@@ -246,6 +259,9 @@ def update_features_label(project_id, features, label):
     return
 
 
+###############################################################################
+# load data set
+###############################################################################
 def load_data_set(project_id: int):
     logger.info("load_data_set project_id=" + str(project_id))
     
@@ -254,15 +270,27 @@ def load_data_set(project_id: int):
     return pd.read_csv(data_file_path)
 
 
+###############################################################################
+#get data file path (project)
+###############################################################################
 def get_data_file_path(project):
     return  PROJECT_FOLDER + str(project['id']) + '/' + project['data_file']
 
+###############################################################################
+# get project path (project)
+###############################################################################
 def get_project_path(project):
     return  PROJECT_FOLDER + str(project['id']) + '/' 
 
+###############################################################################
+# get project path by project id
+###############################################################################
 def get_project_path_by_project_id(project_id):
     return  PROJECT_FOLDER + str(project_id) + '/' 
 
+###############################################################################
+# ml
+###############################################################################
 def ml():
 	# Load dataset
 	url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
@@ -299,6 +327,9 @@ def ml():
 # Utils
 #
 
+###############################################################################
+# png to base64
+###############################################################################
 def png_to_base64(project_id, image_file_path, base64_file_path):
     encoded_string = ""
     image_file = open(image_file_path, "rb")
@@ -311,6 +342,9 @@ def png_to_base64(project_id, image_file_path, base64_file_path):
     base64_file.close()
     return
 
+###############################################################################
+# modify project 
+###############################################################################
 def modify_project(project: Project):
     global project_list
     print("modify_project projectId=", project)
@@ -336,7 +370,9 @@ def modify_project(project: Project):
 # Read and Store files
 #
 
+###############################################################################
 # Store and Read Project List 
+###############################################################################
 def store_project_list(project_list):
     print("store_project_list=",project_list)
     with open(PROJECT_LIST, 'w') as f:
@@ -345,6 +381,9 @@ def store_project_list(project_list):
     return read_project_list()
 
 
+###############################################################################
+# read project list
+###############################################################################
 def read_project_list():
     global project_list
     print("Starting read_project_list...")
@@ -354,14 +393,18 @@ def read_project_list():
     f.close()
     return project_list
 
+###############################################################################
 # Store Model
+###############################################################################
 def store_model(project_id: int, algorithm_name: str, model):
     print("store_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
     filename = PROJECT_FOLDER + str(project_id) + '/' + algorithm_name + '.sav'
     pickle.dump(model, open(filename, 'wb'))
 
+###############################################################################
 # Load Model
+###############################################################################
 def load_model(project_id: int, algorithm_name: str):
     print("load_model=project_id", project_id, " algorithm_name=", algorithm_name)
 
@@ -369,6 +412,9 @@ def load_model(project_id: int, algorithm_name: str):
     return pickle.load(open(filename, 'rb'))
 
 
+###############################################################################
+# read algorithms
+###############################################################################
 def read_algorithms():
     print("Starting read_algorithms...")
     f = open(ALGORITHM_LIST)
