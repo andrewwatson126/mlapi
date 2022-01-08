@@ -223,7 +223,7 @@ async def upload_file(project_id: int, file: UploadFile = File(...)):
     
     # save also as orig file
     project = util.get_project_by_id(project_id)
-    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + project["data_file"]
+    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + file.filename
     print("upload_file save orig file to " + orig_data_file_path)
     dataset_orig = read_csv(storeFile)
     dataset_orig.to_csv(orig_data_file_path, index=False)
