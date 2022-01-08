@@ -361,7 +361,7 @@ def correlation(project_id: int):
 
             print(f1 + " - "  + f2 + " = " + str(corr))
             id = id + 1
-            result.append([id, f1, f2, corr])
+            result.append({"feature1": f1, "feature2": f2, "correlation": corr})
 
     print("result=" + str(result))
     return result
