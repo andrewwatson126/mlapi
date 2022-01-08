@@ -260,6 +260,23 @@ def update_features_label(project_id, features, label):
 
 
 ###############################################################################
+# get orig data file features and labels (projet_id)
+###############################################################################
+def get_orig_features_and_labels(project_id):
+    project = get_project_by_id(project_id)
+    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + project["data_file"]
+    print("data_file_path=" + orig_data_file_path)
+    dataset_orig = read_csv(orig_data_file_path)
+
+    fl = []
+    for column in dataset_orig.columns:
+        fl.append({ "label": column.replace(' ','') , "name": column.replace(' ','')})
+    
+    return fl
+
+
+
+###############################################################################
 # load data set
 ###############################################################################
 def load_data_set(project_id: int):

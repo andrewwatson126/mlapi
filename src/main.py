@@ -375,11 +375,13 @@ def get_features_and_labels(project_id: int):
     print("get_features_and_labels project_id=", str(project_id))
     project = util.get_project_by_id(project_id)
     
-    fl = []
-    for feature in project["features"]:
-        fl.append({ "label": feature.replace(' ','') , "name": feature.replace(' ','')})
-    for label in project["label"]:
-        fl.append({ "label": label.replace(' ','') , "name": label.replace(' ','')})
+    fl = util.get_orig_features_and_labels(project_id)
+    
+    #fl = []
+    #for feature in project["features"]:
+    #    fl.append({ "label": feature.replace(' ','') , "name": feature.replace(' ','')})
+    #for label in project["label"]:
+    #    fl.append({ "label": label.replace(' ','') , "name": label.replace(' ','')})
     
     return fl
         
