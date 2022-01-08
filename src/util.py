@@ -90,12 +90,12 @@ models = [
 ###############################################################################
 def get_max_project_id():
     global project_list
-    logger.debug("get_max_project_id()")
+    print("get_max_project_id()")
     max = 0
     for p in project_list:
         if p["id"] > max:
             max = p["id"]
-    logger.debug("get_max_project_id() max=", max)
+    print("get_max_project_id() max=" + str(max))
     return max
 
 
@@ -263,7 +263,7 @@ def update_features_label(project_id, features, label):
 # load data set
 ###############################################################################
 def load_data_set(project_id: int):
-    logger.info("load_data_set project_id=" + str(project_id))
+    print("load_data_set project_id=" + str(project_id))
     
     project = get_project_by_id(project_id)
     data_file_path = get_data_file_path(project)
