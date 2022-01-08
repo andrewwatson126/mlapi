@@ -345,6 +345,7 @@ def correlation(project_id: int):
     # calculate correlations
     fs = project["features"].copy()
     array = df.values
+    id = 0
     for f1 in project["features"]:
         fs.remove(f1)
         print('>>>' + str(fs))
@@ -359,7 +360,8 @@ def correlation(project_id: int):
             corr, _ = spearmanr(array_f1, array_f2)
 
             print(f1 + " - "  + f2 + " = " + str(corr))
-            result.append([f1, f2, corr ])
+            id = id + 1
+            result.append([id, f1, f2, corr])
 
     print("result=" + str(result))
     return result
