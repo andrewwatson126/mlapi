@@ -192,7 +192,8 @@ async def delete_project(project_id: int):
             app.project_list.remove(project)
             
     util.store_project_list(app.project_list)
-
+    util.delete_project_folder(project)
+    
 
 ###############################################################################
 # upload file

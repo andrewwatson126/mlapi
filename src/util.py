@@ -1,6 +1,7 @@
 from types import new_class
 from .project import Project
 from .project import NotFoundException
+import shutil
 
 from pydantic import BaseModel
 from typing import Optional
@@ -392,6 +393,13 @@ def get_index_in_dataframe(df, feature):
 #
 # Read and Store files
 #
+
+###############################################################################
+# Delete Project Folder (project) 
+###############################################################################
+def delete_project_folder(project):
+    project_folder = PROJECT_FOLDER + str(project["id"])
+    shutil.rmtree(project_folder)
 
 ###############################################################################
 # Store and Read Project List 
