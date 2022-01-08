@@ -7,6 +7,8 @@ import typing
 import os
 import base64
 
+from scipy.stats import spearmanr
+
 from fastapi import FastAPI, Request, UploadFile, File, status
 from fastapi import File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -44,6 +46,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import matthews_corrcoef
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -287,7 +290,7 @@ def predict(project_id: int, data: list ):
 
 
 ###############################################################################
-# get correlation
+# get correlation plot
 ###############################################################################
 @app.get("/projects/correlation/{project_id}", response_class=FileResponse)
 def correlation(project_id: int):
@@ -322,10 +325,44 @@ def correlation(project_id: int):
     base64_file.write(str(encoded_string))
     base64_file.close()
     
-    # calculate correlations
-    print("TODO: add per column calculations")
 
     return local_correlation_base64_file
+
+
+###############################################################################
+# get correlation values
+###############################################################################
+@app.get("/projects/correlation_values/{project_id}")
+def correlation(project_id: int):
+    print("correlation project_id=", str(project_id))
+    project = util.get_project_by_id(project_id)
+    
+    local_data_file = PROJECT_FOLDER + str(project_id) + '/' + project["data_file"]
+    df = pd.read_csv(local_data_file)
+
+    result = []
+    
+    # calculate correlations
+    fs = project["features"].copy()
+    array = df.values
+    for f1 in project["features"]:
+        fs.remove(f1)
+        print('>>>' + str(fs))
+        for f2 in fs:
+            index_f1 = util.get_index_in_dataframe(df, f1)
+            index_f2 = util.get_index_in_dataframe(df, f2)
+            array_f1 = array[0:,index_f1]
+            array_f2 = array[0:,index_f2]
+            print("array_f1=" + str(array_f1))
+            print("array_f2=" + str(array_f2))
+            #corr = matthews_corrcoef(array_f1, array_f2)
+            corr, _ = spearmanr(array_f1, array_f2)
+
+            print(f1 + " - "  + f2 + " = " + str(corr))
+            result.append([f1, f2, corr ])
+
+    print("result=" + str(result))
+    return result
 
 
 ###############################################################################

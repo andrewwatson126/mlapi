@@ -364,6 +364,12 @@ def modify_project(project: Project):
 
     return project
 
+###############################################################################
+# Store and Read Project List 
+###############################################################################
+def get_index_in_dataframe(df, feature):
+    cols = df.columns
+    return np.where(cols == feature)[0][0]
 
 
 #
