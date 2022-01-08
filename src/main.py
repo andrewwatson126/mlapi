@@ -1,5 +1,5 @@
-from src import project 
-from src import util
+from . import project 
+from . import util
 
 
 from typing import Optional
@@ -91,7 +91,6 @@ PROJECT_LIST = PROJECT_FOLDER + "project_list.json"
 # Global Variables
 app.project_list = []
 app.algorithms = []
-
 
 
 # BaseModel definitions

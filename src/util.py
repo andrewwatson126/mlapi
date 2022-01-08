@@ -1,6 +1,6 @@
 from types import new_class
-from src.project import Project
-from src.project import NotFoundException
+from .project import Project
+from .project import NotFoundException
 
 from pydantic import BaseModel
 from typing import Optional
