@@ -68,6 +68,7 @@ ALGORITHM_LIST = INPUT_FOLDER + "algorithms.json"
 SCALER_FILE = "scaler.pkl"
 PROJECT_FOLDER = ROOT_FOLDER + "project/"
 PROJECT_LIST = PROJECT_FOLDER + "project_list.json"
+ROC_FILENAME = "roc.png"
 
 # Global Variables
 project_list = []
@@ -220,6 +221,26 @@ def load_file(project_id: int, data_file_name: str):
     
 
 ###############################################################################
+# Get X single colun and y by project Id 
+###############################################################################
+def get_X_and_y_by_project_id(project_id):
+    dataset = get_dataset_by_project_id(project_id)
+    array = dataset.values
+    X = array[0:,0:1]
+    y = array[0:,1]
+    return X,y
+
+
+def get_dataset_by_project_id(project_id):
+    project = get_project_by_id(project_id)    
+    data_file_path = PROJECT_FOLDER + str(project_id) + '/' + project["data_file"]
+    print("data_file_path=" + data_file_path)
+    dataset = read_csv(data_file_path)
+    return dataset
+
+
+
+###############################################################################
 # update features and label
 ###############################################################################
 def update_features_label(project_id, features, label):
@@ -340,6 +361,70 @@ def ml():
 	pyplot.boxplot(results, labels=names)
 	pyplot.title('Algorithm Comparison')
 	pyplot.show()
+
+###############################################################################
+# calculate roc
+# ###############################################################################
+def roc(project_id):
+
+    X,y = get_X_and_y_by_project_id(project_id)
+    #steps = round(  (max(X)[0]-min(X)[0])/100)
+    steps = (max(X)[0]-min(X)[0])/100
+    print("***********************************************************************steps=" + str(steps))
+    thresholds = np.arange (min(X), max(X), steps)
+    
+    fpr = [] 
+    tpr = []
+
+    for threshold in thresholds:
+        y_pred = np.where(X >= threshold, 1, 0)
+        tp = fn = fp = tn = 0
+        for i in range(len(y)):
+            if (y[i] == 1 and y_pred[i] == 1): 
+                tp = tp + 1
+            if (y[i] == 1 and y_pred[i] == 0): 
+                fn = fn + 1
+            if (y[i] == 0 and y_pred[i] == 1): 
+                fp = fp + 1
+            if (y[i] == 0 and y_pred[i] == 0): 
+                tn = tn + 1
+               
+        if ((fp + tn) == 0):
+            fpr.append(0)
+        else:
+            fpr.append(fp / (fp + tn))
+
+        if ((tp + fn) == 0):
+            tpr.append(0)
+        else:
+            tpr.append(tp / (tp + fn))
+
+    x = 0
+    for t in tpr:
+        print("diff=" + str(tpr[x]-fpr[x]))
+        x = x + 1
+
+    plot_roc_by_project_id(project_id, fpr, tpr)
+
+    return np.array(tpr), np.array(fpr), thresholds    
+
+
+def plot_roc_by_project_id(project_id, fpr, tpr):
+    averageX = [0,1]
+    averagey = [0,1]
+
+    #plt.clf()
+    plt.plot(fpr,tpr, '-')
+    plt.plot(averageX,averagey)
+    plt.title("ROC Curve")
+    plt.xlabel("FPR - Specificity FP/(FP+TN)")
+    plt.ylabel("TPR - Sensitivity TP/(TP+FN)")
+    plt.legend(["ROC", "Average"])
+    roc_file = "roc.png"
+    roc_file_path =  PROJECT_FOLDER + str(project_id) + '/' + ROC_FILENAME
+    print("plot_roc_by_project_id roc_file_path=" + roc_file_path)
+    plt.savefig(roc_file_path)
+    return
 
 #
 # Utils

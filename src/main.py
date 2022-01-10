@@ -41,6 +41,7 @@ from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import auc
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import classification_report
@@ -86,6 +87,7 @@ ALGORITHM_LIST = INPUT_FOLDER + "algorithms.json"
 SCALER_FILE = "scaler.pkl"
 PROJECT_FOLDER = ROOT_FOLDER + "project/"
 PROJECT_LIST = PROJECT_FOLDER + "project_list.json"
+ROC_FILENAME = "roc.png"
 
 
 # Global Variables
@@ -314,7 +316,6 @@ def correlation(project_id: int):
     encoded_string = ""
     image_file = open(local_correlation_file, "rb")
     encoded_bytes = base64.b64encode(image_file.read() )
-    #encoded_string = encoded_bytes.decode("ascii")  
     encoded_string = encoded_bytes.decode("utf-8")  
     print("***************************************" + str(encoded_string))
     print("************************************" + str(encoded_string))
@@ -366,6 +367,45 @@ def correlation(project_id: int):
     print("result=" + str(result))
     return result
 
+###############################################################################
+# get ROC
+###############################################################################
+@app.get("/projects/roc/{project_id}")
+def roc(project_id: int):
+    print("roc project_id=", str(project_id))
+
+    # only one feature and one label must be selected 
+    # the label values must be 0s and 1s
+
+    tpr, fpr, thresholds = util.roc(project_id) 
+
+
+    auc_value = auc(fpr, tpr)
+    print("auc_value=" + str(auc_value))
+
+    result = []
+    data = []
+    for i in range(len(tpr)):
+        result.append({"thresholds":  thresholds[i], "sensitivity": tpr[i], "specificity": fpr[i]})
+
+    return { "result" : result, "auc": auc_value }
+    
+
+
+###############################################################################
+# get ROC plot file
+###############################################################################
+@app.get("/projects/roc_plot_file/{project_id}", response_class=FileResponse)
+def get_roc_plot_file(project_id: int):
+    logger.info("get_roc_plot_file project_id=", str(project_id))
+    project = util.get_project_by_id(project_id)
+    roc_file_path =  PROJECT_FOLDER + str(project_id) + '/' + ROC_FILENAME
+    base64_roc_file_path = roc_file_path.replace("png","txt")
+
+    util.png_to_base64(project_id, roc_file_path, base64_roc_file_path)
+
+    return base64_roc_file_path
+
 
 ###############################################################################
 # get features and labels
@@ -376,13 +416,6 @@ def get_features_and_labels(project_id: int):
     project = util.get_project_by_id(project_id)
     
     fl = util.get_orig_features_and_labels(project_id)
-    
-    #fl = []
-    #for feature in project["features"]:
-    #    fl.append({ "label": feature.replace(' ','') , "name": feature.replace(' ','')})
-    #for label in project["label"]:
-    #    fl.append({ "label": label.replace(' ','') , "name": label.replace(' ','')})
-    
     return fl
         
 ###############################################################################
