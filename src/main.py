@@ -119,6 +119,7 @@ async def startup_event():
     print('Starting up fastapi server...')
     app.project_list = util.read_project_list()
     app.algorithms = util.read_algorithms()
+    util.init()
     print('Started up fastapi server')
 
 #
@@ -371,22 +372,34 @@ def correlation(project_id: int):
 # get ROC
 ###############################################################################
 @app.get("/projects/roc/{project_id}")
-def roc(project_id: int):
+def roc(project_id: int, no_of_steps: int):
     print("roc project_id=", str(project_id))
 
     # only one feature and one label must be selected 
     # the label values must be 0s and 1s
 
-    tpr, fpr, thresholds = util.roc(project_id) 
+    tpr, fpr, atp, afp, atn, afn, thresholds = util.roc(project_id, no_of_steps) 
 
+    print("tpr=" + str(tpr))
+
+    print("atp=" + str(atp))
 
     auc_value = auc(fpr, tpr)
     print("auc_value=" + str(auc_value))
 
+    # outcome = util.get_label_count(project_id)
+
     result = []
-    data = []
     for i in range(len(tpr)):
-        result.append({"thresholds":  thresholds[i], "sensitivity": tpr[i], "specificity": fpr[i]})
+        result.append({
+            "thresholds":  thresholds[i], 
+            "sensitivity": tpr[i], 
+            "specificity": fpr[i],
+            "tp": atp[i],
+            "fp": afp[i],
+            "tn": atn[i],
+            "fn": afn[i]
+            })
 
     return { "result" : result, "auc": auc_value }
     

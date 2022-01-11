@@ -4,8 +4,8 @@ set PATH=C:\Python310;%PATH%;
 REM install python
 REM install nodejs
 
-	set PATH=C:\Users\nevil\AppData\Local\Programs\Python\Python39;%PATH%
-	set PATH=C:\Users\nevil\AppData\Local\Programs\Python\Python39\Scripts;%PATH%
+	set PATH=C:\Users\lenovo\AppData\Local\Programs\Python\Python39;%PATH%
+	set PATH=C:\Users\lenovo\AppData\Local\Programs\Python\Python39\Scripts;%PATH%
 	set PATH=C:\Users\nevil\AppData\Roaming\Python\Python39\Scripts;%PATH%
 	set PATH=C:\Program Files\nodejs;%PATH%
 	set PATH=C:\Program Files\git;%PATH%
@@ -25,7 +25,7 @@ pip install StringGenerator
 pip install sklearn
  pip install pickle-mixin
 
- npm uninstall -g create-react-app
+npm uninstall -g create-react-app
 
 npm install axios
 npm install @mui/material @emotion/react @emotion/styled
@@ -49,6 +49,13 @@ http://127.0.0.1:8000/redoc
 
 python -m pip install --upgrade pip
 
+npm uninstall -g create-react-app
+
+npm install axios
+npm install @mui/material @emotion/react @emotion/styled
+npm install @material-ui/core
+npm i @material-ui/core
+
 
 pip install -U Flask
 pip install -U create-react-app
@@ -68,6 +75,7 @@ pip install -U seaborn
 pip install -U memory_profiler
 pip install -U fastapi
 pip install -U sklearn
+pip install aiofiles
 
 npm install @mui/icons-material
 npm install @mui/material @mui/styled-engine-sc styled-component

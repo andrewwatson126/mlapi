@@ -87,6 +87,10 @@ models = [
 # Private Methods
 #    
 
+def init():
+    plt.switch_backend('agg')
+
+
 ###############################################################################
 #get max project id
 ###############################################################################
@@ -365,16 +369,20 @@ def ml():
 ###############################################################################
 # calculate roc
 # ###############################################################################
-def roc(project_id):
+def roc(project_id, no_of_steps):
 
     X,y = get_X_and_y_by_project_id(project_id)
     #steps = round(  (max(X)[0]-min(X)[0])/100)
-    steps = (max(X)[0]-min(X)[0])/100
+    steps = (max(X)[0]-min(X)[0])/no_of_steps
     print("***********************************************************************steps=" + str(steps))
     thresholds = np.arange (min(X), max(X), steps)
     
     fpr = [] 
     tpr = []
+    atp = []
+    afp = []
+    atn = []
+    afn = []
 
     for threshold in thresholds:
         y_pred = np.where(X >= threshold, 1, 0)
@@ -399,21 +407,22 @@ def roc(project_id):
         else:
             tpr.append(tp / (tp + fn))
 
-    x = 0
-    for t in tpr:
-        print("diff=" + str(tpr[x]-fpr[x]))
-        x = x + 1
+        atp.append(tp)
+        afp.append(fp)
+        atn.append(tn)
+        afn.append(fn)
+
 
     plot_roc_by_project_id(project_id, fpr, tpr)
 
-    return np.array(tpr), np.array(fpr), thresholds    
+    return tpr, fpr, atp, afp, atn, afn, thresholds    
 
 
 def plot_roc_by_project_id(project_id, fpr, tpr):
     averageX = [0,1]
     averagey = [0,1]
 
-    #plt.clf()
+    plt.clf()
     plt.plot(fpr,tpr, '-')
     plt.plot(averageX,averagey)
     plt.title("ROC Curve")
