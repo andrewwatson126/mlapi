@@ -56,7 +56,7 @@ from sklearn.svm import SVC
 import pickle
 
 import aiofiles
-from mlxtend.plotting import plot_decision_regions
+#from mlxtend.plotting import plot_decision_regions
 from pickle import load
 from pickle import dump
 

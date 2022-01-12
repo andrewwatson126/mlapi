@@ -19,6 +19,7 @@ install vs code
  git
  
  uvicorn main:app --reload 
+ uvicorn main:app --reload 
  uvicorn main:app --reload --log-config log.ini
  
  http://localhost:8000/docs
@@ -85,7 +86,7 @@ Access key ID
 AKIATOGNLVGMWHV7ZYHA
 
 Secret access key
-n5LAxCAFCGhs+QKdW6SXNizHBDgYVXb3GP5RKJa
+rn5LAxCAFCGhs+QKdW6SXNizHBDgYVXb3GP5RKJa
 
 User name,Password,Access key ID,Secret access key,Console login link
 Administrator,Rusher1290,AKIATOGNLVGMWHV7ZYHA,rn5LAxCAFCGhs+QKdW6SXNizHBDgYVXb3GP5RKJa,https://236653881753.signin.aws.amazon.com/console
@@ -119,6 +120,9 @@ sudo usermod -a -G docker ec2-user
 
 docker login -u AWS -p <password> <aws_account_id>.dkr.ecr.<region>.amazonaws.com
 
+
+TEST
+docker login --username AWS --password Rusher1290 236653881753.dkr.ecr.eu-central-1.amazonaws.com
 
 
 =================================================
@@ -158,3 +162,17 @@ MLSTUDIO
 https://github.com/Schachte/simple-engineer-aws-deployment-tutorial
 
 docker-compose -f docker-compose-development.yml build
+docker run -p 8123:80 --add-host=apiserver:127.0.0.1 mlstudio_deployment-prod
+
+
+docker tag mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
+docker push 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+aws ecr delete-repository --repository-name mlstudio_deployment-prod --region 236653881753 --force
+
+
+
+
+ubuntu 18 
+username=nevilgultekin
+password=Rusher1290

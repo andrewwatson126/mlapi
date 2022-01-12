@@ -57,7 +57,7 @@ from sklearn.svm import SVC
 import pickle
 
 import aiofiles
-from mlxtend.plotting import plot_decision_regions
+#from mlxtend.plotting import plot_decision_regions
 from pickle import load
 from pickle import dump
 
@@ -70,6 +70,8 @@ logger = logging.getLogger(__name__)
 origins = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://127.0.0.1:8123",
+    "http://localhost:8123",
 ]
 
 app.add_middleware(
