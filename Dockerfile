@@ -10,10 +10,10 @@ WORKDIR /app
 COPY ./requirements.txt .
 
 # Copy everything from ./src directory to /app in the container
-COPY ./src .
+COPY . .
 COPY ./data ./data
 
 RUN pip install -r requirements.txt
 
 # Run the application in the port 8000
-CMD ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "main:app"]
+CMD ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "src.main:app"]

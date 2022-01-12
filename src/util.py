@@ -2,6 +2,7 @@ from types import new_class
 from .project import Project
 from .project import NotFoundException
 import shutil
+import itertools
 
 from pydantic import BaseModel
 from typing import Optional
@@ -74,13 +75,17 @@ ROC_FILENAME = "roc.png"
 project_list = []
 algorithms = []
 
+#models = [ 
+#        ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')),
+#        ('LinearDiscriminantAnalysis', LinearDiscriminantAnalysis()),
+#        ('KNeighborsClassifier', KNeighborsClassifier()),
+#        ('DecisionTreeClassifier', DecisionTreeClassifier()),
+#        ('GaussianNB', GaussianNB()),
+#        ('SVC', SVC(gamma='auto'))
+#    ]
+
 models = [ 
-        ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr')),
-        ('LinearDiscriminantAnalysis', LinearDiscriminantAnalysis()),
-        ('KNeighborsClassifier', KNeighborsClassifier()),
-        ('DecisionTreeClassifier', DecisionTreeClassifier()),
-        ('GaussianNB', GaussianNB()),
-        ('SVC', SVC(gamma='auto'))
+        ('LogisticRegression', LogisticRegression(solver='liblinear', multi_class='ovr'))
     ]
 
 #
@@ -181,14 +186,31 @@ def load_file(project_id: int, data_file_name: str):
     X = array[0:,0:len(features)]
     y = array[0:,len(features)]
 
-    print("prestf>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
+    accuracyDict =  model(project, X, y, True)
+
+    project["accuracy"] = {}
+    project["accuracy"] = accuracyDict
+    update_project_list(project)
+    store_project_list(project_list)
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', {"features": features},{"label": label}, {"accuracy": accuracyDict})
+
+    return {"features": features},{"label": label}, {"accuracy": accuracyDict}
+
+
+
+###############################################################################
+# get best model and parameters
+###############################################################################
+def model(project, X, y, is_store_model):
+    #print("model(X=" + str(X) + "," + str(y) + ")")
+    project_id = project["id"]
     std = StandardScaler()
     X = std.fit_transform(X)
     scalar_file_path = get_project_path_by_project_id(project_id) + SCALER_FILE
     dump(std, open(scalar_file_path, 'wb'))
    
-    print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
-    print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
+    #print("poststd>>>>>>>>>>>>>>>>>>>>>>> x " + str(X))
+    #print(">>>>>>>>>>>>>>>>>>>>>>> y " + str(y))
     X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1, shuffle=True)
 
     # check algorithms
@@ -209,20 +231,107 @@ def load_file(project_id: int, data_file_name: str):
         # create model
         m = model.fit(X_train,Y_train)
         
-        store_model(project_id, name, m)
+        if is_store_model == True:
+            store_model(project_id, name, m)
         
         model_dict[name] = m
         #model_dict[name].predict([[1,7,1,1,0,0,0,1,0,11.2,2,0.02,273,5,10100,3520,561000,13.2]])
         #print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))          
 
-    # experiment["model_dict"] = model_dict
-    project["accuracy"] = {}
-    project["accuracy"] = accuracyDict
-    update_project_list(project)
-    store_project_list(project_list)
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', {"features": features},{"label": label}, {"accuracy": accuracyDict})
-    return {"features": features},{"label": label}, {"accuracy": accuracyDict}
+    return accuracyDict
+
+
+
+###############################################################################
+# get best model and parameters
+###############################################################################
+def best_model(project_id: int, top_n: int, start_from_index: int):
+    # result =  [ { "parameters": [], "model" : "model-name", accuracy: accuracy:float } ]
+
+    print("best_model(" + str(project_id) + "," + str(top_n) + ")")
     
+    project = get_project_by_id(project_id)
+
+    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + project["data_file"]
+    dataset_orig = read_csv(orig_data_file_path)
+    
+    # set the features to from 0:n-2 and label to n-1
+    names = list(dataset_orig.columns)
+
+    print("name=" + str(names))
+    print("len name=" + str(len(names)))
+
+    a_list = range(0,  len(names)-1)
+    print("a_list=" + str(a_list))
+    all_combinations = []
+    for r in range(2, len(names) ):
+        combinations_object = itertools.combinations(a_list, r)
+        combinations_list = list(combinations_object)
+        all_combinations += combinations_list
+
+    #print("all_combinations=" + str(all_combinations))
+    #print("len all_combinations=" + str(len(all_combinations)))
+    #print("all_combinations[0]=" + str(all_combinations[0]))
+    best_model_path = PROJECT_FOLDER + str(project_id) + "/best_model_higher_than_095_iteration_2.json"
+
+    parameters = []
+    accuracies = []
+    result = []
+    array = dataset_orig.values
+    y = array[0:,len(names)-1]
+    #print("y=" + str(y))
+    for i in range(len(all_combinations)):
+        if (i > start_from_index):
+            X = array[0:,all_combinations[i]]
+            #print("*************************** all_combinations[i]=" + str(all_combinations[i]))
+            #print("*************************** X=" + str(X))
+
+            accuracy = model(project, X, y, False)
+            max = get_max_accuracy(accuracy)
+            #if len(result) == 0:
+            #        result.append({"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
+            #else: 
+            #    index = 0
+            #    added = False
+            #    for r in result:
+            #        #print("max=" + str(max) + "r['max']=" + str(r["max"]))
+            #       if (max >= r["max"]):
+            #           #print('index=' + str(index))
+            #            #print('len(restult)=' + str(len(result)))
+            #            result.insert(index, {"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
+            #            added = True
+            #            break
+            #        index = index + 1
+            #    if added == False:
+            #        result.append({"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
+            #if len(result) > top_n:
+            #    result.pop()
+
+            if max > 0.95:
+                   result.append({"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
+
+            if i % 10000 == 0:
+                now = datetime.now()
+                current_time = now.strftime("%H:%M:%S")
+                print("store file at " + current_time + " index=" + str(i))
+                with open(best_model_path, 'a') as f:
+                    json.dump(result, f, ensure_ascii=True, indent=4)
+                f.close()
+    
+    print('result=' + str(result))
+    return  result
+
+###############################################################################
+# get max accuracy 
+###############################################################################
+def get_max_accuracy(accuracy):
+
+    list = []
+    for a in accuracy.items():
+        #print("a="+ str(a))
+        list.append(a[1][0])
+        #print("a[0][0]="+ str(a[1][0]))
+    return max(list)
 
 ###############################################################################
 # Get X single colun and y by project Id 
@@ -347,11 +456,11 @@ def ml():
 	# Spot Check Algorithms
 	models = []
 	models.append(('LR', LogisticRegression(solver='liblinear', multi_class='ovr')))
-	models.append(('LDA', LinearDiscriminantAnalysis()))
-	models.append(('KNN', KNeighborsClassifier()))
-	models.append(('CART', DecisionTreeClassifier()))
-	models.append(('NB', GaussianNB()))
-	models.append(('SVM', SVC(gamma='auto')))
+	#models.append(('LDA', LinearDiscriminantAnalysis()))
+	#models.append(('KNN', KNeighborsClassifier()))
+	#models.append(('CART', DecisionTreeClassifier()))
+	#models.append(('NB', GaussianNB()))
+	#models.append(('SVM', SVC(gamma='auto')))
 	# evaluate each model in turn
 	results = []
 	names = []
