@@ -77,6 +77,8 @@ aws ecr delete-repository --repository-name mlapi --region 236653881753 --force
 docker pull 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
 
 
+root account id
+796468841154 for nevil.gultekin@gmail.com
 
 aws account id
 236653881753
@@ -121,9 +123,6 @@ sudo usermod -a -G docker ec2-user
 docker login -u AWS -p <password> <aws_account_id>.dkr.ecr.<region>.amazonaws.com
 
 
-TEST
-docker login --username AWS --password Rusher1290 236653881753.dkr.ecr.eu-central-1.amazonaws.com
-
 
 =================================================
 MLAPI
@@ -141,7 +140,7 @@ docker run -p 8000:8000 mlapi
 docker tag mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
 aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
 docker push 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
-aws ecr delete-repository --repository-name mlapi --region 236653881753 --force
+aws ecr delete-repository --repository-name mlapi --region eu-central-1 --force
 
 
 
@@ -165,10 +164,14 @@ docker-compose -f docker-compose-development.yml build
 docker run -p 8123:80 --add-host=apiserver:127.0.0.1 mlstudio_deployment-prod
 
 
-docker tag mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+docker tag mlstudio_deployment-prod 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
 aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
 docker push 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
-aws ecr delete-repository --repository-name mlstudio_deployment-prod --region 236653881753 --force
+aws ecr delete-repository --repository-name mlstudio_deployment-prod --region eu-central-1 --force
+EC2
+aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
+docker pull 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+docker run  -p 8000:8000 mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
 
 
 
@@ -176,3 +179,37 @@ aws ecr delete-repository --repository-name mlstudio_deployment-prod --region 23
 ubuntu 18 
 username=nevilgultekin
 password=Rusher1290
+
+
+
+
+
+Echo  Build Images
+Echo =================================
+cd C:\Users\lenovo\projects\mlapi
+docker build -t mlapi .
+cd C:\Users\lenovo\projects\mlstudio
+docker-compose -f docker-compose-development.yml build
+
+Echo Push Tags
+Echo =================================
+docker tag mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
+aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
+docker push 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
+
+docker tag mlstudio_deployment-prod 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+aws ecr get-login-password | docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
+docker push 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+
+
+AWS 
+=====================================
+sudo yum update -y
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+aws ecr get-login-password | sudo docker login --username AWS --password-stdin 236653881753.dkr.ecr.eu-central-1.amazonaws.com
+sudo docker pull 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
+sudo docker run -p 8000:8000 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlapi
+sudo docker pull 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod
+sudo docker run  -p 8000:8000 mlapi 236653881753.dkr.ecr.eu-central-1.amazonaws.com/mlstudio_deployment-prod

@@ -1,5 +1,6 @@
 from . import project 
 from . import util
+import math
 
 
 from typing import Optional
@@ -67,12 +68,15 @@ app = FastAPI()
 logger = logging.getLogger(__name__)
 
 
-origins = [
-    "http://127.0.0.1:3000",
-    "http://localhost:3000",
-    "http://127.0.0.1:8123",
-    "http://localhost:8123",
-]
+#origins = [
+#    "http://127.0.0.1:3000",
+#    "http://localhost:3000",
+#    "http://127.0.0.1:8123",
+#    "http://localhost:8123",
+#]
+
+origins = origins = ['*']
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -348,6 +352,9 @@ def correlation(project_id: int):
     
     # calculate correlations
     fs = project["features"].copy()
+    print("*******************************")
+    print("features=" + str(fs))
+    print("*******************************")
     array = df.values
     id = 0
     for f1 in project["features"]:
@@ -362,6 +369,9 @@ def correlation(project_id: int):
             print("array_f2=" + str(array_f2))
             #corr = matthews_corrcoef(array_f1, array_f2)
             corr, _ = spearmanr(array_f1, array_f2)
+
+            if math.isnan(corr):
+                corr = -1
 
             print(f1 + " - "  + f2 + " = " + str(corr))
             id = id + 1
