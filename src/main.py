@@ -336,10 +336,11 @@ def correlation(project_id: int):
 
     return local_correlation_base64_file
 
+
 ###############################################################################
 # get best model and parameters
 ###############################################################################
-@app.get("/projects/best_model/{project_id}")
+@app.get("/projects/best_model/{project_id}")             
 def best_model(project_id: int, top_n: int, start_from_index: int):
     # result =  [ { "parameters": [], "model" : "model-name", accuracy: accuracy:float } ]
     result = util.best_model(project_id, top_n, start_from_index)
