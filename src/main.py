@@ -340,11 +340,12 @@ def correlation(project_id: int):
 ###############################################################################
 # get best model and parameters
 ###############################################################################
-@app.get("/projects/best_model/{project_id}")             
-def best_model(project_id: int, top_n: int, start_from_index: int):
+@app.post("/projects/best_model")             
+def best_model(project_id: int, start_from_index: int, top_n: list ):
+    print("best_model(" + str(project_id) + "," + str(start_from_index) + "," + str(top_n) + ")")
     # result =  [ { "parameters": [], "model" : "model-name", accuracy: accuracy:float } ]
     result = util.best_model(project_id, top_n, start_from_index)
-    return result
+    return result   
 
 ###############################################################################
 # get correlation values

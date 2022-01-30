@@ -1,17 +1,18 @@
 set PATH=C:\Users\Cem Gültekin\bin\python-3.9.9-embed-amd64;%PATH%
 
-pip install numpy
-pip install pandas
-pip install fastapi[all]
-pip install uvicorn
-pip install starlette
-pip install matplotlib
-pip install StringGenerator
-pip install sklearn
-pip install python-multipart
-pip install aiofiles
-pip install seaborn
-pip install pytest
+pip3 install numpy
+pip3 install pandas
+pip3 install fastapi[all]
+pip3 install uvicorn
+pip3 install starlette
+pip3 install matplotlib
+pip3 install StringGenerator
+pip3 install sklearn
+pip3 install python-multipart
+pip3 install aiofiles
+pip3 install seaborn
+pip3 install pytest
+pip3 install requests
 
 install vs code
  nodejs 

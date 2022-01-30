@@ -221,7 +221,8 @@ def model(project, X, y, is_store_model):
     accuracyDict = {}
     model_dict = {}
     for name, model in models:
-        kfold = StratifiedKFold(n_splits=5, random_state=1, shuffle=True)
+        kfold = StratifiedKFold(n_splits=2, random_state=1, shuffle=True)
+        #cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy', n_jobs=8)
         cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
         results.append(cv_results)
         xnames.append(name)
@@ -244,7 +245,65 @@ def model(project, X, y, is_store_model):
 ###############################################################################
 # get best model and parameters
 ###############################################################################
-def best_model(project_id: int, top_n: int, start_from_index: int):
+def best_model(project_id: int, top_n: list, start_from_index: int):
+    # result =  [ { "parameters": [], "model" : "model-name", accuracy: accuracy:float } ]
+
+    print("best_model(" + str(project_id) + "," + str(top_n) + ")")
+    
+    project = get_project_by_id(project_id)
+
+    orig_data_file_path = PROJECT_FOLDER + str(project_id) + '/' + "orig_" + project["data_file"]
+    dataset_orig = read_csv(orig_data_file_path)
+    
+    # set the features to from 0:n-2 and label to n-1
+    names = list(dataset_orig.columns)
+
+    print("name=" + str(names))
+    print("len name=" + str(len(names)))
+
+    a_list = range(0,  len(names)-1)
+    print("a_list=" + str(a_list))
+    all_combinations = []
+    for r in top_n:
+        combinations_object = itertools.combinations(a_list, r)
+        combinations_list = list(combinations_object)
+        all_combinations += combinations_list
+
+    best_model_path = PROJECT_FOLDER + str(project_id) + "/best_model_higher_than_095_iteration_2801_" + str(start_from_index) + ".json"
+
+    parameters = []
+    accuracies = []
+    result = []
+    array = dataset_orig.values
+    y = array[0:,len(names)-1]
+    #print("y=" + str(y))
+    for i in range(len(all_combinations)):
+        X = array[0:,all_combinations[i]]
+        #print("*************************** all_combinations[i]=" + str(all_combinations[i]))
+        #print("*************************** X=" + str(X))
+
+        accuracy = model(project, X, y, False)
+        max = get_max_accuracy(accuracy)
+
+        if max > 0.973:
+                result.append({"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
+
+        if i % 10000 == 0:
+            now = datetime.now()
+            current_time = now.strftime("%H:%M:%S")
+            print("store file at " + current_time + " index=" + str(i))
+            #with open(best_model_path, 'a') as f:
+            #    json.dump(result, f, ensure_ascii=True, indent=4)
+            #f.close()
+    
+    #print('result=' + str(result))
+    with open(best_model_path, 'a') as f:
+        json.dump(result, f, ensure_ascii=True, indent=4)
+    f.close()
+    return  result
+
+
+def best_model1(project_id: int, top_n: int, start_from_index: int):
     # result =  [ { "parameters": [], "model" : "model-name", accuracy: accuracy:float } ]
 
     print("best_model(" + str(project_id) + "," + str(top_n) + ")")
@@ -271,7 +330,7 @@ def best_model(project_id: int, top_n: int, start_from_index: int):
     #print("all_combinations=" + str(all_combinations))
     #print("len all_combinations=" + str(len(all_combinations)))
     #print("all_combinations[0]=" + str(all_combinations[0]))
-    best_model_path = PROJECT_FOLDER + str(project_id) + "/best_model_higher_than_095_iteration_2.json"
+    best_model_path = PROJECT_FOLDER + str(project_id) + "/best_model_higher_than_095_iteration_2801.json"
 
     parameters = []
     accuracies = []
@@ -306,10 +365,10 @@ def best_model(project_id: int, top_n: int, start_from_index: int):
             #if len(result) > top_n:
             #    result.pop()
 
-            if max > 0.95:
+            if max > 0.973:
                    result.append({"index": i, "parameter": all_combinations[i], "accuracies": accuracy, "max":max } ) 
 
-            if i % 10000 == 0:
+            if i % 100000 == 0:
                 now = datetime.now()
                 current_time = now.strftime("%H:%M:%S")
                 print("store file at " + current_time + " index=" + str(i))
